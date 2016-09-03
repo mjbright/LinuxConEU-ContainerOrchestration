@@ -12,14 +12,20 @@ KUBE_RELEASE=1.3.6
 KUBE_RELEASE_FILE_SIZE=1488182774
 KUBE_RELEASE_FILE_md5=7dbbbb70b2b0c2a614cb4fd70e61c62a
 KUBE_UNTAR_DIR=$INSTALL_DIR
-KUBE_DIR=$INSTALL_DIR/kubernetes_$KUBE_RELEASE
+KUBE_ROOT_DIR=$INSTALL_DIR/kubernetes_$KUBE_RELEASE
 
 MESOS_RELEASE=1.0.1
 MESOS_RELEASE_FILE_SIZE=41765234
 MESOS_RELEASE_FILE_md5=1aaca00a0ffb20f4b31c2dcc2447c2c5
 MESOS_UNTAR_DIR=$INSTALL_DIR
-MESOS_UNPACK_DIR=$INSTALL_DIR/mesos-$MESOS_RELEASE
-MESOS_DIR=$INSTALL_DIR/mesos_$MESOS_RELEASE
+MESOS_ROOT_DIR=$INSTALL_DIR/mesos_$MESOS_RELEASE
+
+#DOCKER_RELEASE=latest
+DOCKER_RELEASE=1.12.1
+DOCKER_RELEASE_FILE_SIZE=28845850
+DOCKER_RELEASE_FILE_md5=6249d7b0be08762f9de506fff32aba9f
+DOCKER_UNTAR_DIR=$INSTALL_DIR
+DOCKER_ROOT_DIR=$INSTALL_DIR/docker_$DOCKER_RELEASE
 
 VERBOSE=0
 
@@ -53,11 +59,11 @@ INSTALL_sw() {
     ARCHIVE_FILE=$1; shift
     ARCHIVE_FILE_SIZE=$1; shift
     ARCHIVE_FILE_MD5=$1; shift
-    SW_UNPACK_DIR=$1; shift
+    SW_TAR_TOP_DIR=$1; shift
     SW_UNTAR_DIR=$1; shift
-    SW_INSTALL_DIR=$1; shift
+    SW_FINAL_ROOT_DIR=$1; shift
 
-    if [ -z "$SW_INSTALL_DIR" ];then
+    if [ -z "$SW_FINAL_ROOT_DIR" ];then
         echo "Error: some parameters to $0 missing";
         set | grep -E "^(ARCHIVE_|SW_|SW=)"
         die "Some parameters to $0 missing";
@@ -94,8 +100,8 @@ INSTALL_sw() {
         }
     }
 
-    if [ -d $SW_INSTALL_DIR ];then
-        [ $VERBOSE -ne 0 ] && echo "---- $SW INSTALL_DIR exists: <$SW_INSTALL_DIR>"
+    if [ -d $SW_FINAL_ROOT_DIR ];then
+        [ $VERBOSE -ne 0 ] && echo "---- $SW INSTALL_DIR exists: <$SW_FINAL_ROOT_DIR>"
     else
         echo "-- Unpacking archive for $SW release <$SW_RELEASE>";
         echo "--- to <$SW_UNTAR_DIR>";
@@ -116,12 +122,12 @@ INSTALL_sw() {
         echo $CMD
         $CMD
 
-        echo "SW_UNPACK_DIR=$SW_UNPACK_DIR"
+        echo "SW_TAR_TOP_DIR=$SW_TAR_TOP_DIR"
         echo "SW_UNTAR_DIR=$SW_UNTAR_DIR"
-        echo "SW_INSTALL_DIR=$SW_INSTALL_DIR"
+        echo "SW_FINAL_ROOT_DIR=$SW_FINAL_ROOT_DIR"
 
-        if [ "$SW_UNTAR_DIR" != "$SW_INSTALL_DIR" ]; then
-            CMD="mv $SW_UNPACK_DIR $SW_INSTALL_DIR"
+        if [ "$SW_UNTAR_DIR" != "$SW_FINAL_ROOT_DIR" ]; then
+            CMD="mv $SW_TAR_TOP_DIR $SW_FINAL_ROOT_DIR"
             echo $CMD
             $CMD
         fi
@@ -130,30 +136,48 @@ INSTALL_sw() {
 
 
 INSTALL_kubernetes() {
+    KUBE_RELEASE=$1; shift
+
     KUBE_URL=https://storage.googleapis.com/kubernetes-release/release/v$KUBE_RELEASE/kubernetes.tar.gz
     KUBE_FILE=kubernetes_v$KUBE_RELEASE.tar.gz
     KUBE_DOWNLOAD=1
 
     # This is the top-level dir within the tar (need special treatment if .)
-    KUBE_UNPACK_DIR=$INSTALL_DIR/kubernetes
+    KUBE_TAR_TOP_DIR=$INSTALL_DIR/kubernetes
 
     INSTALL_sw "kubernetes" $KUBE_RELEASE $KUBE_URL KUBE_DOWNLOAD $KUBE_FILE \
                             $KUBE_RELEASE_FILE_SIZE $KUBE_RELEASE_FILE_md5 \
-                            $KUBE_UNPACK_DIR $KUBE_UNTAR_DIR $KUBE_DIR
+                            $KUBE_TAR_TOP_DIR $KUBE_UNTAR_DIR $KUBE_ROOT_DIR
 }
 
 INSTALL_mesos() {
-    #MESOS_URL=http://www.apache.org/dist/mesos/$RELEASE/mesos-$RELEASE.tar.gz
+    MESOS_RELEASE=$1; shift
+
     MESOS_URL=http://archive.apache.org/dist/mesos/$MESOS_RELEASE/mesos-$MESOS_RELEASE.tar.gz
     MESOS_FILE=mesos_v$MESOS_RELEASE.tar.gz
     MESOS_DOWNLOAD=1
 
     # This is the top-level dir within the tar (need special treatment if .)
-    MESOS_UNPACK_DIR=$INSTALL_DIR/mesos-$MESOS_RELEASE
+    MESOS_TAR_TOP_DIR=$INSTALL_DIR/mesos-$MESOS_RELEASE
 
     INSTALL_sw "mesos" $MESOS_RELEASE $MESOS_URL $MESOS_DOWNLOAD $MESOS_FILE \
                             $MESOS_RELEASE_FILE_SIZE $MESOS_RELEASE_FILE_md5 \
-                            $MESOS_UNPACK_DIR $MESOS_UNTAR_DIR $MESOS_DIR
+                            $MESOS_TAR_TOP_DIR $MESOS_UNTAR_DIR $MESOS_ROOT_DIR
+}
+
+INSTALL_docker() {
+    DOCKER_RELEASE=$1; shift
+
+    DOCKER_URL="https://get.docker.com/builds/Linux/x86_64/docker-${DOCKER_RELEASE}.tgz"
+    DOCKER_FILE=docker_v$DOCKER_RELEASE.tar.gz
+    DOCKER_DOWNLOAD=1
+
+    # This is the top-level dir within the tar (need special treatment if .)
+    DOCKER_TAR_TOP_DIR=$INSTALL_DIR/docker
+
+    INSTALL_sw "docker" $DOCKER_RELEASE $DOCKER_URL $DOCKER_DOWNLOAD $DOCKER_FILE \
+                            $DOCKER_RELEASE_FILE_SIZE $DOCKER_RELEASE_FILE_md5 \
+                            $DOCKER_TAR_TOP_DIR $DOCKER_UNTAR_DIR $DOCKER_ROOT_DIR
 }
 
 ################################################################################
@@ -188,5 +212,6 @@ INSTALL_kubernetes $KUBE_RELEASE
 
 INSTALL_mesos $MESOS_RELEASE
 
+INSTALL_docker $DOCKER_RELEASE
 
 

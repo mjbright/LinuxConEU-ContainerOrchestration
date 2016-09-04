@@ -73,7 +73,7 @@ INSTALL_sw() {
     ARCHIVE_PATH=$ARCHIVE_DIR/$ARCHIVE_FILE
 
     echo "--------------------------"
-    echo "- Installing $SW"
+    echo "- Downloading/Unpacking $SW"
 
     #[ $VERBOSE -ne 0 ] && [ -f $ARCHIVE_PATH ] && echo "---- $SW archive file exists: <$ARCHIVE_PATH>"
     if [ -f $ARCHIVE_PATH ]; then
@@ -145,7 +145,7 @@ INSTALL_kubernetes() {
     # This is the top-level dir within the tar (need special treatment if .)
     KUBE_TAR_TOP_DIR=$INSTALL_DIR/kubernetes
 
-    INSTALL_sw "kubernetes" $KUBE_RELEASE $KUBE_URL KUBE_DOWNLOAD $KUBE_FILE \
+    INSTALL_sw "kubernetes" $KUBE_RELEASE $KUBE_URL $KUBE_DOWNLOAD $KUBE_FILE \
                             $KUBE_RELEASE_FILE_SIZE $KUBE_RELEASE_FILE_md5 \
                             $KUBE_TAR_TOP_DIR $KUBE_UNTAR_DIR $KUBE_ROOT_DIR
 }

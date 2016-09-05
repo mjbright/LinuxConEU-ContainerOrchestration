@@ -1,16 +1,12 @@
-
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
-    <meta name="keywords" content="remark,remarkjs,markdown,slideshow,presentation" />
-    <meta name="description" content="A simple, in-browser, markdown-driven slideshow tool." />
-    <title>Remark</title>
+    <title>Container Orchestration Lab</title>
+    <meta charset="utf-8">
     <style>
       @import url(https://fonts.googleapis.com/css?family=Droid+Serif);
       @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
       @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
-
       body {
         font-family: 'Droid Serif';
       }
@@ -27,9 +23,8 @@
         bottom: 3em;
       }
       li p { line-height: 1.25em; }
-      .blue { color: #0000fa; }
       .red { color: #fa0000; }
-      .green { color: #00fa00; }
+      .green { color: #008000; }
       .large { font-size: 2em; }
       a, a > code {
         color: rgb(249, 38, 114);
@@ -68,7 +63,6 @@
         color: #f3f3f3;
         line-height: 0.8em;
       }
-
       /* Slide-specific styling */
       #slide-inverse .footnote {
         bottom: 12px;
@@ -103,7 +97,6 @@
         background: #fff;
         z-index: 0;
       }
-
       /* Two-column layout */
       .left-column {
         color: #777;
@@ -122,34 +115,14 @@
     </style>
   </head>
   <body>
-    <!-- <textarea id="source"> </textarea> -->
-    <script src="https://gnab.github.io/remark/downloads/remark-latest.min.js"> </script>
+    <!--
+    <textarea id="source">
+    </textarea>
+    -->
+    <script src="https://gnab.github.io/remark/downloads/remark-latest.min.js">
+    </script>
     <script>
       var slideshow = remark.create({ sourceUrl: 'ContainerConEU2016_Lab.md'});
     </script>
-    <script src="assets/remark-latest.min.js"></script>
-    <script>
-      var hljs = remark.highlighter.engine;
-    </script>
-    <script>
-      var slideshow = remark.create({
-          highlightStyle: 'monokai',
-          highlightLanguage: 'remark',
-          highlightLines: true
-        }) ;
-    </script>
-    <script>
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-44561333-1']);
-      _gaq.push(['_trackPageview']);
-
-      (function() {
-        var ga = document.createElement('script');
-        ga.src = 'https://ssl.google-analytics.com/ga.js';
-        var s = document.scripts[0];
-        s.parentNode.insertBefore(ga, s);
-      }());
-    </script>
   </body>
 </html>
-

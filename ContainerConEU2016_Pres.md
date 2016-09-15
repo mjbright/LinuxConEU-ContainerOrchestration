@@ -6,21 +6,21 @@ class: center, middle, inverse
 ---
 ##Container Orchestration: Which Conductor?
 [.bold.green[Container Orchestration: Swarm, Mesos, Kubernetes - Which Conductor?]]
-####ContainerCon Europe, Berlin, Oct 2016
+###ContainerCon Europe, Berlin, Oct 2016
 
-### Mike Bright, HPE
-### Haikel Guemar, RedHat
-### Mario Loriedo, RedHat
+### Mike Bright, HPE, @mjbright
+### Haikel Guemar, RedHat, @hguemar
+### Mario Loriedo, RedHat, @mariolet
 
 ---
 name: title2_inversed_mixedText
 
 ##Container Orchestration: Which Conductor?
-####ContainerCon Europe, Berlin, Oct 2016
+###ContainerCon Europe, Berlin, Oct 2016
 <!-- [.bold.green[Container Orchestration: Swarm, Mesos, Kubernetes - Which Conductor?]] -->
-<h3> <img width=120 src="images/Hewlett_Packard_Enterprise_whiteText_logo.svg" /> &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; Mike Bright </h3>
-<h3> <img width=93 height=30 src="images/RedHat_logo.svg" /> &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp; Haikel Guemar </h3>
-<h3> <img width=93 height=30 src="images/RedHat_logo.svg" /> &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; Mario Loriedo </h3>
+<h3> <img width=120 src="images/Hewlett_Packard_Enterprise_whiteText_logo.svg" /> &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; Mike Bright, @mjbright </h3>
+<h3> <img width=93 height=30 src="images/RedHat_logo.svg" /> &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp; Haikel Guemar, @hguemar </h3>
+<h3> <img width=93 height=30 src="images/RedHat_logo.svg" /> &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; Mario Loriedo, @mariolet </h3>
 
 <!-- [.bold.red[It's all about the tooling]] -->
 
@@ -28,11 +28,11 @@ name: title2_inversed_mixedText
 name: title3_inversed_whiteText
 
 ##Container Orchestration: Which Conductor?
-####ContainerCon Europe, Berlin, Oct 2016
+###ContainerCon Europe, Berlin, Oct 2016
 <!-- [.bold.green[Container Orchestration: Swarm, Mesos, Kubernetes - Which Conductor?]] -->
-<h3> <img width=120 src="images/Hewlett_Packard_Enterprise_whiteText_logo.svg" /> &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; Mike Bright </h3>
-<h3> <img width=93 height=30 src="images/RedHat_whiteText_logo.svg" /> &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp; Haikel Guemar </h3>
-<h3> <img width=93 height=30 src="images/RedHat_whiteText_logo.svg" /> &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; Mario Loriedo </h3>
+<h3> <img width=120 src="images/Hewlett_Packard_Enterprise_whiteText_logo.svg" /> &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; Mike Bright, @mjbright </h3>
+<h3> <img width=93 height=30 src="images/RedHat_whiteText_logo.svg" /> &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp; Haikel Guemar, @hguemar </h3>
+<h3> <img width=93 height=30 src="images/RedHat_whiteText_logo.svg" /> &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; Mario Loriedo, @mariolet </h3>
 
 <!-- [.bold.red[It's all about the tooling]] -->
 
@@ -40,11 +40,11 @@ name: title3_inversed_whiteText
 name: title4_inversed
 class: center, middle, inverse
 ##Container Orchestration: Which Conductor?
-####ContainerCon Europe, Berlin, Oct 2016
+###ContainerCon Europe, Berlin, Oct 2016
 <!-- [.bold.green[Container Orchestration: Swarm, Mesos, Kubernetes - Which Conductor?]] -->
-<h3> <img width=120 src="images/Hewlett_Packard_Enterprise_logo.svg" /> &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; Mike Bright </h3>
-<h3> <img width=93 height=30 src="images/RedHat_logo.svg" /> &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp; Haikel Guemar </h3>
-<h3> <img width=93 height=30 src="images/RedHat_logo.svg" /> &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; Mario Loriedo </h3>
+<h3> <img width=120 src="images/Hewlett_Packard_Enterprise_logo.svg" /> &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; Mike Bright, @mjbright </h3>
+<h3> <img width=93 height=30 src="images/RedHat_logo.svg" /> &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp; Haikel Guemar, @hguemar </h3>
+<h3> <img width=93 height=30 src="images/RedHat_logo.svg" /> &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; Mario Loriedo, @mariolet </h3>
 
 
 ---
@@ -53,11 +53,11 @@ layout: false
 class: center, middle, 
 
 ##Container Orchestration: Which Conductor?
-####ContainerCon Europe, Berlin, Oct 2016
+###ContainerCon Europe, Berlin, Oct 2016
 <!-- [.bold.green[Container Orchestration: Swarm, Mesos, Kubernetes - Which Conductor?]] -->
-<h3> <img width=120 src="images/Hewlett_Packard_Enterprise_logo.svg" /> &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; Mike Bright </h3>
-<h3> <img width=93 height=30 src="images/RedHat_logo.svg" /> &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp; Haikel Guemar </h3>
-<h3> <img width=93 height=30 src="images/RedHat_logo.svg" /> &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; Mario Loriedo </h3>
+<h3> <img width=120 src="images/Hewlett_Packard_Enterprise_logo.svg" /> &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; Mike Bright, @mjbright </h3>
+<h3> <img width=93 height=30 src="images/RedHat_logo.svg" /> &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp; Haikel Guemar, @hguemar </h3>
+<h3> <img width=93 height=30 src="images/RedHat_logo.svg" /> &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; Mario Loriedo, @mariolet </h3>
 
 
 ???
@@ -87,8 +87,133 @@ I'm not an expert in this fast moving field, but I hope to give you an overview 
 ---
 layout: false
 class: center, middle
-## So many choices ... what to do?
-## Does it really matter?
+## A little bit of history
+
+So let's first look at what's happened in a very short time.
+
+<img width=800 src="images/timeline.svg" />
+
+---
+layout: false
+class: center, middle
+## History - Containers
+
+- LXC
+- Docker
+- rkt, LXD, runC/OCI, Garden(?)
+
+<img width=400 height=300 src="images/TREND.svg" />
+
+???
+SpeakerNotes:
+talk about
+- pre-historique containers (Solaris Zones, BSD Jails, HPUX xxx)
+- Linux Containers (LXC) in mainline kernel from 2010
+- Then came Docker
+  Of course containers existed already, but Docker made them usable
+  Of course Docker also did an incredible job marketing their tools
+  and inciting developers to adopt and evangelize.
+
+  Docker continue to push boundaries to do complex stuff whilst keeping
+  their software simple to use.
+
+  Nevertheless other players wanted more influence and pushed for an open standard.
+
+- OCI was formed in June 2015.
+
+- Alternatives: rkt, LXD, Garden(?) but Docker has the mindshare and continues to make great progress.  So although I'm pleased to see alternatives - Open Source alternatives - when I talk about container (engines) I generally consider Docker as a given.
+
+  
+
+---
+layout: false
+class: center, middle
+## History - &mu;-OSes
+
+- CoreOS          (CoreOS)
+- Project Atomic  (RedHat)
+- Photon          (VMWare)
+- RancherOS       (Rancher)
+- ??
+
+???
+SpeakerNotes:
+Describe the raison d'etre of micro-OSes
+- small, including only what's needed
+- security: small attack surface
+- "atomic" updates to OS (CoreOS?)
+
+
+---
+layout: false
+class: center, middle
+## History - &mu;-services
+
+---
+layout: false
+class: center, middle
+## History - from monoliths to &mu;-services
+
+---
+layout: false
+class: center, middle
+## History - from monoliths to &mu;-services
+#### Remember when high availability meant this ...?
+
+- Active-Standby
+- Monolithic components
+
+<img width=400 height=300 src="images/Active-Standby.svg" />
+
+#### In the past applications tended to be monolithic.
+
+#### Scaling meant to "scale up" by adding more power (CPU, RAM, disk) to a node.
+
+
+---
+layout: false
+class: center, middle
+## History - from monoliths to &mu;-services
+
+#### To scale we broke into an N-tier architecture
+
+<img width=100 height=120 src="images/Beaker (1).svg" />
+<img width=100 height=120 src="images/Beaker.svg" />
+<img width=100 height=120 src="images/Becherglas-leer-simpel.svg" />
+<img width=100 height=120 src="images/Becherglas-leer-Skala.svg" />
+<img width=100 height=120 src="images/becher.svg" />
+
+---
+layout: false
+class: center, middle
+## History - from monoliths to &mu;-services
+
+#### Then came &mu;-services ..
+
+<img width=100 height=120 src="images/Bearker_balls.svg" />
+<img width=100 height=120 src="images/Liquid-separted-in-beaker.svg" />
+<img width=100 height=120 src="images/Solution-in-beaker.svg" />
+
+Now we can achieve much better hardware utilisation because of the smaller size of components.
+
+---
+layout: false
+class: center, middle
+## History - from monoliths to &mu;-services
+
+#### But 1000's of nodes are unmanageable ... aren't they?
+But now there are 1000's of nodes, we can't take care of our <img width=100 height=120 src="images/johnny-automatic-sad-dog-with-a-broken-leg.svg" />, we have to treat them like <img width=100 height=120 src="images/Holstein-Cow.svg" />
+
+--
+## So we need orchestration
+
+And we already have so many choices ...
+- Docker Swarm (and now "Swarm Mode")
+- Kubernetes
+- Apache Mesos
+- Fleet
+- Cattle (Rancher)
+- ...
 
 ---
 layout: false
@@ -106,20 +231,7 @@ class: middle
     - why do we need them
     - is there a winner - do we need a winner ?
 
----
-layout: false
-# The trend to micro-services
 
-## In the past applications tended to be monolithic.
-
-## Scaling meant to "scale up" by adding more power (CPU, RAM, disk) to a node.
----
-layout: false
-# Container Orchestration - what/why?
-
-## In the past applications tended to be monolithic.
-
-## Scaling meant to "scale up" by adding more power (CPU, RAM, disk) to a node.
 ---
 layout: false
 # How containers help?
@@ -139,7 +251,8 @@ layout: false
   <img src=images/docker.png width=100 /><br/>
   <img src=images/mesos-logo.png width=100 /><br/>
   <img src=images/kubernetes.png width=100 /><br/>
-  .footnote[.red[] [????](https://docker.com)]
+  .footnote[.red[] [But lets not forget alternatives exist]]
+  <!-- .footnote[.red[] [????](https://docker.com)] -->
 ]
 
 .right-column[
@@ -473,35 +586,6 @@ layout: false
   <img src="images/other_orchestrators.png" />
 
 ]
----
-layout: false
-.left-column[
-  ## Combining Orchestrators
-]
-
-.right-column[
-  Combining Orchestrators
-
-- ????
-
-![image](images/????.png)
-
-]
-
----
-layout: false
-.left-column[
-  ## Demo ????
-]
-
-.right-column[
-  Demo ????
-
-- ????
-
-![image](images/????.png)
-
-]
 
 ---
 layout: false
@@ -548,27 +632,100 @@ layout: false
 ---
 layout: false
 .left-column[
-   ## So are they all the same?
+  ## What's common
 ]
 
+.right-column[
 - they are converging on many points
 
-- differences ...
+They all move to a declarative specification.
+
+It's no longer feasible for an operator to decide on which node to deploy especially when complex constraints exist
+- making use of specialized hardware, e.g. SSD best for some operations
+- adapting to hardware failures
+
+An operator specifies the "desired state" and the orchestrator does the rest.
+
+![image](images/????.png)
+
+]
 
 ---
 layout: false
-# Also - our own lab ...
+.left-column[
+  ## What's different
+]
 
-Come along tomorrow
+.right-column[
+
+
+Rancher lightweight
+
+
+![image](images/????.png)
+
+]
+
+---
+layout: false
+.left-column[
+  ## Docker Swarm Demo
+]
+
+.right-column[
+  Demo ????
+
+- ????
+
+![image](images/????.png)
+
+]
+
+---
+layout: false
+.left-column[
+  ## Orchestration Lab
+]
+
+.right-column[
+  Come along to our lab tomorrow
+
+    - Link to schedule
+
+    - Link to lab
+       - Docker Swarm
+       - Kubernetes
+       - Apache Mesos
+
+    - Link to github repo
 
 or just follow along on github
 
 
----
+- Come along to Marios' presn
+
+    - Link to schedule
+
+    - Link to lab
+
+    - Link to github repo
+
+![image](images/????.png)
+
+]
+
+
 ---
 name: last-page
 template: inverse
+class: center, middle, 
 
-## That's all folks (for now)!
+## Questions?
 
-Slideshow created using [remark](http://github.com/gnab/remark).
+## Thank you
+<h3> <img width=120 src="images/Hewlett_Packard_Enterprise_logo.svg" /> &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; Mike Bright, @mjbright </h3>
+<h3> <img width=93 height=30 src="images/RedHat_logo.svg" /> &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp; Haikel Guemar, @hguemar </h3>
+<h3> <img width=93 height=30 src="images/RedHat_logo.svg" /> &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; Mario Loriedo, @mariolet </h3>
+
+
+

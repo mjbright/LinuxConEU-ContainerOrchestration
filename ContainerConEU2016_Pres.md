@@ -1,16 +1,64 @@
 
-name: inverse
+name: title1_inverse
 layout: true
 class: center, middle, inverse
+
 ---
 ##Container Orchestration: Which Conductor?
 [.bold.green[Container Orchestration: Swarm, Mesos, Kubernetes - Which Conductor?]]
+####ContainerCon Europe, Berlin, Oct 2016
+
 ### Mike Bright, HPE
 ### Haikel Guemar, RedHat
 ### Mario Loriedo, RedHat
-##ContainerCon Europe, Berlin, Oct 2016
 
-[.bold.red[It's all about the tooling]]
+---
+name: title2_inversed_mixedText
+
+##Container Orchestration: Which Conductor?
+####ContainerCon Europe, Berlin, Oct 2016
+<!-- [.bold.green[Container Orchestration: Swarm, Mesos, Kubernetes - Which Conductor?]] -->
+<h3> <img width=120 src="images/Hewlett_Packard_Enterprise_whiteText_logo.svg" /> &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; Mike Bright </h3>
+<h3> <img width=93 height=30 src="images/RedHat_logo.svg" /> &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp; Haikel Guemar </h3>
+<h3> <img width=93 height=30 src="images/RedHat_logo.svg" /> &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; Mario Loriedo </h3>
+
+<!-- [.bold.red[It's all about the tooling]] -->
+
+---
+name: title3_inversed_whiteText
+
+##Container Orchestration: Which Conductor?
+####ContainerCon Europe, Berlin, Oct 2016
+<!-- [.bold.green[Container Orchestration: Swarm, Mesos, Kubernetes - Which Conductor?]] -->
+<h3> <img width=120 src="images/Hewlett_Packard_Enterprise_whiteText_logo.svg" /> &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; Mike Bright </h3>
+<h3> <img width=93 height=30 src="images/RedHat_whiteText_logo.svg" /> &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp; Haikel Guemar </h3>
+<h3> <img width=93 height=30 src="images/RedHat_whiteText_logo.svg" /> &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; Mario Loriedo </h3>
+
+<!-- [.bold.red[It's all about the tooling]] -->
+
+---
+name: title4_inversed
+class: center, middle, inverse
+##Container Orchestration: Which Conductor?
+####ContainerCon Europe, Berlin, Oct 2016
+<!-- [.bold.green[Container Orchestration: Swarm, Mesos, Kubernetes - Which Conductor?]] -->
+<h3> <img width=120 src="images/Hewlett_Packard_Enterprise_logo.svg" /> &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; Mike Bright </h3>
+<h3> <img width=93 height=30 src="images/RedHat_logo.svg" /> &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp; Haikel Guemar </h3>
+<h3> <img width=93 height=30 src="images/RedHat_logo.svg" /> &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; Mario Loriedo </h3>
+
+
+---
+name: title5
+layout: false
+class: center, middle, 
+
+##Container Orchestration: Which Conductor?
+####ContainerCon Europe, Berlin, Oct 2016
+<!-- [.bold.green[Container Orchestration: Swarm, Mesos, Kubernetes - Which Conductor?]] -->
+<h3> <img width=120 src="images/Hewlett_Packard_Enterprise_logo.svg" /> &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; Mike Bright </h3>
+<h3> <img width=93 height=30 src="images/RedHat_logo.svg" /> &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp; Haikel Guemar </h3>
+<h3> <img width=93 height=30 src="images/RedHat_logo.svg" /> &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; Mario Loriedo </h3>
+
 
 ???
 
@@ -18,7 +66,6 @@ SpeakerNotes:
 Abstract
 ---------
 #### .footnote[This presentation on [github](https://github.com/mjbright/LinuxConEU-ContainerOrchestration) on [ContainerCon Schedule](https://linuxconcontainerconeurope2016.sched.org/event/7oHV/container-orchestration-swarm-mesos-kubernetes-which-conductor-mike-bright-hpe)]
-
 
 
 Oh my, as if we didn’t have enough container choices with LXC, Docker, rkt, LXD, we still have to choose a container orchestrator and there are lots of them !
@@ -38,10 +85,14 @@ We’ll compare and contrast the existing solutions, look at where they are head
 I'm not an expert in this fast moving field, but I hope to give you an overview so you better understand the many tools on offer, so you can differentiate between them.
 
 ---
+layout: false
+class: center, middle
 ## So many choices ... what to do?
 ## Does it really matter?
+
 ---
 layout: false
+class: middle
 # We've come a long way already
 
 - History of containers, orchestration ...

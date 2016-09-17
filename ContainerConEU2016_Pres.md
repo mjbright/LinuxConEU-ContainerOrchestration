@@ -84,6 +84,8 @@ We’ll compare and contrast the existing solutions, look at where they are head
 
 I'm not an expert in this fast moving field, but I hope to give you an overview so you better understand the many tools on offer, so you can differentiate between them.
 
+Everything I tell you may be factual today, but will surely be false in a few months as these fast moving projects vie for position.
+
 ---
 layout: false
 class: center, middle
@@ -93,16 +95,22 @@ So let's first look at what's happened in a very short time.
 
 <img width=800 src="images/timeline.svg" />
 
+???
+SpeakerNotes:
+
 ---
 layout: false
 class: center, middle
-## History - Containers
+.left-column[
+    ## History
+]
+.right-column[
+    ## Containers
 
-- LXC
-- Docker
-- rkt, LXD, runC/OCI, Garden(?)
-
+#### TODO: image showing "growth" (?) of containers ...
+- LXC, Docker, rkt, LXD, runC/OCI, Garden
 <img width=400 height=300 src="images/TREND.svg" />
+]
 
 ???
 SpeakerNotes:
@@ -120,110 +128,203 @@ talk about
   Nevertheless other players wanted more influence and pushed for an open standard.
 
 - OCI was formed in June 2015.
+   https://www.opencontainers.org/
+   Docker donated libcontainer code        ==> runC
+                  base format (+rkt appc?) ==> OCF
 
-- Alternatives: rkt, LXD, Garden(?) but Docker has the mindshare and continues to make great progress.  So although I'm pleased to see alternatives - Open Source alternatives - when I talk about container (engines) I generally consider Docker as a given.
+- Alternatives: rkt, LXD, Garden/Guardian(?)
+      but Docker has the mindshare and continues to make great progress. 
+       So although I'm pleased to see alternatives - Open Source alternatives - when I talk about container (engines) I generally consider Docker as a given.
 
   
 
 ---
 layout: false
 class: center, middle
-## History - &mu;-OSes
+.left-column[
+    ## History
+]
+.right-column[
+## &mu;-OSes
+
+Several vendors are developing &mu;-OSes, small OS (mainly Linux) implementations to be the basis for container engine hosts
+whether they be bare-metal or virtual **host machines**.
+
+These OSes are small, with fast startup, deployment, small attack surface and often *"atomic"* software updates.
 
 - CoreOS          (CoreOS)
 - Project Atomic  (RedHat)
 - Photon          (VMWare)
 - RancherOS       (Rancher)
-- ??
+- Nano Server OS  (Microsoft)
+]
 
 ???
 SpeakerNotes:
 Describe the raison d'etre of micro-OSes
 - small, including only what's needed
 - security: small attack surface
-- "atomic" updates to OS (CoreOS?)
+- "atomic" updates to OS (CoreOS?): explain
+
+Mention HPE ContainerOS for The Machine (HPE Linux)
+
+TODO: http://www.lemagit.fr/conseil/Nano-Server-Microsoft-entre-de-plein-pied-dans-le-monde-des-micro-services
 
 
 ---
 layout: false
 class: center, middle
-## History - &mu;-services
+.left-column[
+    ## History
+]
+.right-column[
+    ## &mu;-Services
+]
+
+???
+SpeakerNotes:
 
 ---
 layout: false
 class: center, middle
-## History - from monoliths to &mu;-services
+.left-column[
+    ## History
+]
+.right-column[
+    ##From monoliths to &mu;-services
+]
+
+???
+SpeakerNotes:
 
 ---
 layout: false
 class: center, middle
-## History - from monoliths to &mu;-services
-#### Remember when high availability meant this ...?
-
-- Active-Standby
-- Monolithic components
+.left-column[
+    ## History
+]
+.right-column[
+    ## From monoliths to &mu;-services
+Remember when **high availability** meant this ...?
 
 <img width=400 height=300 src="images/Active-Standby.svg" />
 
-#### In the past applications tended to be monolithic.
+Server nodes running **monolithic applications** in **Active-Standby** modes,
+as 1+1, N+1, or N+M
 
-#### Scaling meant to "scale up" by adding more power (CPU, RAM, disk) to a node.
+Scaling meant to **"scale up"** by adding CPU, RAM, disk.
+But there's a limit to this ... then you have to **scale out**
+]
 
+
+???
+SpeakerNotes:
+
+But there's a limit to scaling up ... then you have to manage your application across multiple nodes which means
+orchestration, load balancing, monitoring across nodes.
 
 ---
 layout: false
 class: center, middle
-## History - from monoliths to &mu;-services
+.left-column[
+    ## History
+]
+.right-column[
+    ## From monoliths to &mu;-services
 
 #### To scale we broke into an N-tier architecture
+
+TODO: schema to demonstrate breaking down of monoliths to N-tier allowing
+      flexibility to scale out, possibility of better h/w utilisation
+
+      ==> beakers with different coloured, different size balls ...
 
 <img width=100 height=120 src="images/Beaker (1).svg" />
 <img width=100 height=120 src="images/Beaker.svg" />
 <img width=100 height=120 src="images/Becherglas-leer-simpel.svg" />
 <img width=100 height=120 src="images/Becherglas-leer-Skala.svg" />
 <img width=100 height=120 src="images/becher.svg" />
+]
+
+???
+SpeakerNotes:
 
 ---
 layout: false
 class: center, middle
-## History - from monoliths to &mu;-services
+.left-column[
+    ## History
+]
+.right-column[
+    ## From monoliths to &mu;-services
 
 #### Then came &mu;-services ..
 
+TODO: schema
+      ==> more/smaller beakers/balls ...
 <img width=100 height=120 src="images/Bearker_balls.svg" />
 <img width=100 height=120 src="images/Liquid-separted-in-beaker.svg" />
 <img width=100 height=120 src="images/Solution-in-beaker.svg" />
 
 Now we can achieve much better hardware utilisation because of the smaller size of components.
+]
+
+???
+SpeakerNotes:
 
 ---
 layout: false
 class: center, middle
-## History - from monoliths to &mu;-services
+.left-column[
+    ## History
+]
+.right-column[
+    ## From monoliths to &mu;-services
 
-#### But 1000's of nodes are unmanageable ... aren't they?
-But now there are 1000's of nodes, we can't take care of our <img width=100 height=120 src="images/johnny-automatic-sad-dog-with-a-broken-leg.svg" />, we have to treat them like <img width=100 height=120 src="images/Holstein-Cow.svg" />
+But 1000's of nodes are unmanageable ... aren't they?
 
---
-## So we need orchestration
+|   |   |
+|---|---|
+| We can't take care of our | <img width=100 height=120 src="images/johnny-automatic-sad-dog-with-a-broken-leg.svg" />, |
+| so we have to treat them like | <img width=100 height=120 src="images/Holstein-Cow.svg" /> |
 
-And we already have so many choices ...
-- Docker Swarm (and now "Swarm Mode")
-- Kubernetes
-- Apache Mesos
-- Fleet
-- Cattle (Rancher)
-- ...
+that's cloud native !
+
+
+]
+
+???
+SpeakerNotes:
 
 ---
 layout: false
-class: middle
-# We've come a long way already
+class: center, middle
+.left-column[
+    ## Orchestration
+]
+.right-column[
+## So we need orchestration
 
-- History of containers, orchestration ...
-  - Docker is a given
+And we already have many choices for<br/>
+**Container Orchestration Engines**
 
-- This is the new battleground 
+|         | |         |
+|:--------|-|:--------|
+| Docker Swarm | :  | Docker Inc.      |
+| Kubernetes   | :  | Cloud Native Computng Foundation      |
+| Apache Mesos | :  | Apache Software Foundation      |
+| Fleet        | :  | CoreOS      |
+| Cattle | :  | Rancher  |
+| Nomad  | :  | HashiCorp |
+
+<br/>
+These COEs are to varying degrees<br/> **Imperative** or **Declarative**
+]
+
+???
+SpeakerNotes:
+
+- This is the new battleground  (Container Orchestration Wars)
   - We can choose amongst Docker Swarm(*), Kubernetes, Apache Mesos(*), Fleet, Rancher, ...
     - or combinations thereof ...
   - But
@@ -231,18 +332,62 @@ class: middle
     - why do we need them
     - is there a winner - do we need a winner ?
 
+---
+layout: false
+class: center, middle
+.left-column[
+    ## Orchestration
+]
+.right-column[
+## Imperative or Declarative
+
+<br/> <br/>
+
+|                   |         Imperative     |               Declarative      |
+| ----------------- | ---------------------- | ------------------------------ |
+| **Tell the system**   | what to do             | desired state                  |
+|                   | *"start a new node"* | *"3 mysql nodes"* |
+| **Intelligence**      | Operator               | Orchestration Engine           |
+|                       | ...                    |                                |
+| **Flexibility**       | Best                   | Least                          |
+
+
+
+]
+
+
+???
+SpeakerNotes:
+
+Container Orchestration Engines can be imperative or declarative
+
+We'll see that Docker Swarm is mostly imperative for now, this has the advantage of being very flexible an operator can request changes precisely as needed.
+Docker compose brings a declarative element.
+
+Kubernetes allows to tag all system elements with metadata.
+This greatly facilitates declarative requests, e.g. we can say I want 3 Mysql nodes to run **and** they must all have SSDs **and** they must all be in the SW region.
+Kubernetes will take care of the rest taking into account available resources as nodes fail/come back on line or apps fail/come back on line.
+
+Apache Mesos is quite imperative, depending upon the scheduler framework used.
+Kubernetes can be used as a scheduler enabling declarative scheduling.
+It tends to require a set of specialists to manage a cluster.
+
+
 
 ---
 layout: false
 # How containers help?
 
-#### Container solutions such as Docker got beyond the isolation capabilities of LXC by providing simple to use software solutions to enable package of apps with their dependencies allowing portable applications between systems.
+Container solutions such as Docker go beyond the isolation capabilities of LXC by providing simple to use software solutions to enable packaging of apps with their dependencies allowing portable applications between systems.
 
-#### Containers are lightweight
+Containers are lightweight
 
-#### Containers can be shared
+Containers can be shared
 
-#### Containers allow to use the same application binaries on development, test and production systems whether that be on a laptop, server or in the cloud.
+Containers allow to use the same application binaries on development, test and production systems whether that be on a laptop, server or in the cloud.
+
+???
+SpeakerNotes:
 
 ---
 layout: false
@@ -251,12 +396,10 @@ layout: false
   <img src=images/docker.png width=100 /><br/>
   <img src=images/mesos-logo.png width=100 /><br/>
   <img src=images/kubernetes.png width=100 /><br/>
-  .footnote[.red[] [But lets not forget alternatives exist]]
-  <!-- .footnote[.red[] [????](https://docker.com)] -->
 ]
 
 .right-column[
-## Orchestration Choices: The big 3
+## Main Orchestration Choices
 
 - Docker Swarm
   - Docker swarm
@@ -265,14 +408,29 @@ layout: false
 
 - Apache Mesos
   - Frameworks
-    - Marathon
-    - Chronos
+      - Marathon
+      - Chronos
   - Plugins
     - Jenkins
-  - Minmesos?
+  - Minmesos
+  - Mesosphere, DC/OS
   
 - Kubernetes
+  .footnote[.red[] [But lets not forget the alternatives ...]]
+  <!-- .footnote[.red[] [????](https://docker.com)] -->
 ]
+
+???
+SpeakerNotes:
+
+TODO: Follow Docker logo guidelines here:
+    https://www.docker.com/brand-guidelines
+
+TODO: Comparison of Swarm vs. Swarm Toolkit vs. Swarm Mode
+
+TODO: Mesos vs. fwks (Marathon, Chronos, Kubernetes?, Hadoop?) vs. plugins, Jenkins
+      Mesosphere and DC/OS, Minimesos, ...
+
 
 ---
 .left-column[
@@ -282,11 +440,25 @@ layout: false
 
 .right-column[
 ## Orchestration Choices: The rest ...
-## The rest
-- Rancher, Fleet, 
-- (for static configuration): Ansible, CloudSlang, 
+- Rancher
+-  Fleet
+-  Nomad
+
+The following are static configuration engines which can be used to automate tasks but they are not orchestration engines as such:
+- Ansible
+- CloudSlang
+- Vagrant
 - Juju
 ]
+
+???
+SpeakerNotes:
+- TODO: Add info about
+  - Rancher
+  - Fleet
+  - Nomad
+
+- Juju: https://jujucharms.com/
 
 ---
 layout: false
@@ -307,32 +479,44 @@ layout: false
 
 ]
 
+???
+SpeakerNotes:
+
 ---
 layout: false
 .left-column[
   <img src=images/docker.png width=100 /><br/>
-  ## Docker Swarm Architecture
+  ## Docker Swarm
   .footnote[.red[] [docker.com](https://docker.com)]
 ]
 
 .right-column[
-  Docker swarm Architecture
+  ## Docker Swarm Architecture
 
   <img src=images/docker_swarm_archi.jpg width=600 /><br/>
 ]
 
+???
+SpeakerNotes:
+
+TODO: replace image ...
+
 ---
 layout: false
 .left-column[
   <img src=images/docker.png width=100 /><br/>
-  ## Docker Swarm - Getting started
+  ## Docker Swarm
   .footnote[.red[] [docker.com](https://docker.com)]
 ]
 
 .right-column[
 
+## Getting started
 Refer to Jerome Pettazoni's wshop on github
 ]
+
+???
+SpeakerNotes:
 
 ---
 layout: false
@@ -345,13 +529,26 @@ layout: false
 .right-column[
   Apache Mesos
 
-- ????
+Arguably the most production ready orchestration today, exists since 2009.
 
-- ????
+Used in production by
 
-- ????
+- Twitter
+
+- .... ????
+
+Can scale to ~ 10,000 nodes.
+
+Mesos is used in conjunction with Frameworks such as
+- Marathon: manages long running tasks
+- Chronos: designed for job orchestration
+- Hadoop: (YARN?)
+- Kubernetes: allowing delcarative use
 
 ]
+
+???
+SpeakerNotes:
 
 ---
 layout: false
@@ -365,9 +562,16 @@ layout: false
   Apache Mesos Architecture
 
   <img src=images/mesos_archi.jpg width=300 /><br/>
+
+Image courtesy of
 http://mesos.apache.org/documentation/latest/architecture/
 
 ]
+
+???
+SpeakerNotes:
+
+TODO: redo architecture image?
 
 ---
 layout: false
@@ -381,6 +585,32 @@ layout: false
 
 minimesos?
 ]
+
+???
+SpeakerNotes:
+
+TODO: Add links to more Mesos tutorials, startup systems ...
+
+---
+layout: false
+.left-column[
+  <img src=images/kubernetes.png width=100 /><br/>
+  ## Kubernetes
+  .footnote[.red[] [kubernetes.io](https://kubernetes.io)]
+]
+
+.right-column[
+Kubernetes is an open source project created by Google based on it's extensive experience running containers
+(millions of containers over a decade or so) from it's Borg and Omega projects.
+
+Started ~ Oct 2014, reach v1.0 in in July 2015 and currently at v1.4
+It is managed by the Cloud Native Computing Foundation
+https://cncf.io/
+]
+
+
+???
+SpeakerNotes:
 
 ---
 layout: false
@@ -420,6 +650,9 @@ They act as basic load balancers.
 
 ]
 
+???
+SpeakerNotes:
+
 ---
 layout: false
 .left-column[
@@ -435,11 +668,14 @@ layout: false
 
 - ????
 
-- ????
-
-  <img src=images/kubernetes_archi.png width=300 /><br/>
+  <img src=images/kubernetes_archi.png width=450 /><br/>
 
 ]
+
+???
+SpeakerNotes:
+
+TODO: Recreate Kubernetes architecture image
 
 ---
 layout: false
@@ -454,6 +690,9 @@ See "HPE Kubernetes" references +?
 - minikube?
 - ...
 ]
+
+???
+SpeakerNotes:
 
 ---
 layout: false
@@ -483,6 +722,10 @@ o/docs/).*
     - [User FAQ](https://github.com/kubernetes/kubernetes/wiki/User-FAQ)
 
 ]
+
+???
+SpeakerNotes:
+
 ---
 layout: false
 .left-column[
@@ -511,6 +754,9 @@ layout: false
   - **Contributions from the Kubernetes community**
     - in the [docs/contrib directory](contrib/)
 ]
+???
+SpeakerNotes:
+
 ---
 layout: false
 .left-column[
@@ -545,26 +791,8 @@ ement/2015/07/new-cloud-native-computing-foundation-drive-alignment-among-contai
 
 
 ]
----
-layout: false
-.left-column[
-  ## Other orchestrators
-]
-
-.right-column[
-  Other orchestrators
-
-- Fleet
-
-- Rancher
-
-- Juju
-
-- Ansible
-
-  <img src="images/other_orchestrators.png" />
-
-]
+???
+SpeakerNotes:
 
 ---
 layout: false
@@ -579,13 +807,14 @@ layout: false
 
 - Rancher
 
-- Juju
-
-- Ansible
+- Nomad
 
   <img src="images/other_orchestrators.png" />
 
 ]
+
+???
+SpeakerNotes:
 
 ---
 layout: false
@@ -600,11 +829,29 @@ layout: false
 
 - OpenShift
 
+- Deis
+
+- CloudFoundry PaaS (Has it's own runC implementation: Garden/Guardian, orchestration; Diego)
+
 - EBay : Kubernetes + OVS
+
+- CoreOS: Tectonnic (commercial Kubernetes offering)
+
+- OpenStack Magnum Project; Supports Docker Swarm, Apache Mesos and Kubernetes (concurrently) enabling
+   Infrastructure and Container Management.
+
+- Twitter: Mesos
 
 ![image](images/????.png)
 
 ]
+???
+SpeakerNotes:
+
+Note; App container management can scale out to existing nodes, but cannot manage infrastructure resources.
+OpenStack as a IaaS, via Ironic project can spin up new BM/VM/"LXD?" nodes to provide new resources.
+
+
 ---
 layout: false
 .left-column[
@@ -612,13 +859,13 @@ layout: false
 ]
 
 .right-column[
-  Players
+  Choices made by Industry Players
 
 - RedHat: OpenShift (PaaS), Project Atomic
 
 - CoreOS: CoreOS, GIFFE
 
-- Google
+- Google: Kubernetes used for GCP
 
 - MS
 
@@ -629,6 +876,9 @@ layout: false
 
 ]
 
+???
+SpeakerNotes:
+
 ---
 layout: false
 .left-column[
@@ -636,9 +886,9 @@ layout: false
 ]
 
 .right-column[
-- they are converging on many points
+They are converging on many points
 
-They all move to a declarative specification.
+They are tending to add 'declarative specification' capabilities.
 
 It's no longer feasible for an operator to decide on which node to deploy especially when complex constraints exist
 - making use of specialized hardware, e.g. SSD best for some operations
@@ -649,6 +899,11 @@ An operator specifies the "desired state" and the orchestrator does the rest.
 ![image](images/????.png)
 
 ]
+
+???
+SpeakerNotes:
+
+TODO: hmm, to what extent do they trend to declarative (not either or ...)
 
 ---
 layout: false
@@ -666,20 +921,8 @@ Rancher lightweight
 
 ]
 
----
-layout: false
-.left-column[
-  ## Docker Swarm Demo
-]
-
-.right-column[
-  Demo ????
-
-- ????
-
-![image](images/????.png)
-
-]
+???
+SpeakerNotes:
 
 ---
 layout: false
@@ -714,6 +957,119 @@ or just follow along on github
 
 ]
 
+
+???
+SpeakerNotes:
+
+---
+name: demo-page-1
+template: inverse
+class: center, middle, 
+
+#### Demo - Apache Mesos
+
+<iframe src="https://localhost:9999/" width="800" height="600" >
+  <p>Server is not running</p>
+</iframe>
+
+???
+SpeakerNotes:
+
+TODO: replace with links to animated gifs (from tty2gif)
+
+---
+name: demo-page-2
+template: inverse
+class: center, middle, 
+
+#### Demo - Kubernetes
+
+<iframe src="https://localhost:9999/" width="800" height="600" >
+  <p>Server is not running</p>
+</iframe>
+
+???
+SpeakerNotes:
+TODO: replace with links to animated gifs (from tty2gif)
+
+---
+name: demo-page-3
+template: inverse
+class: center, middle, 
+
+#### Demo - Docker Swarm
+
+<iframe src="https://localhost:9999/" width="800" height="600" >
+  <p>Server is not running</p>
+</iframe>
+
+???
+SpeakerNotes:
+TODO: replace with links to animated gifs (from tty2gif)
+
+---
+name: resources-page-1
+template: inverse
+class: center, middle, 
+layout: false
+.left-column[
+  ## Resources
+]
+
+.right-column[
+
+##Books
+
+| Publisher | Title | Author |    |
+|:-----------|:-------|:--------|----|
+| OReilly   | Docker Cookbook   | Seb ...
+| OReilly   | Docker ??   | Mouat ...
+| OReilly   | [Early Access] Kubernetes   | Kelsey Hightower ...
+| Manning   | [MEAP] CoreOS in Action |    |
+| Manning   | [MEAP] Kubernetes in Action |    |
+
+]
+???
+SpeakerNotes:
+
+---
+name: resources-page-2
+template: inverse
+class: center, middle, 
+.left-column[
+  ## Resources
+]
+
+.right-column[
+
+
+##Articles/Organisms
+
+Cloud Native Computing Foundation - Kubernetes, Prometheus
+https://cncf.io/
+]
+
+???
+SpeakerNotes:
+
+---
+name: resources-page-3
+template: inverse
+class: center, middle, 
+.left-column[
+  ## Resources
+]
+
+.right-column[
+
+##Videos
+
+##Repos
+]
+
+
+???
+SpeakerNotes:
 
 ---
 name: last-page

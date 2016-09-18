@@ -292,15 +292,20 @@ that's cloud native !
 SpeakerNotes:
 
 ---
+name: section_history
+layout: false
+class: center, middle, inverse
+## So we need orchestration
+
+---
 layout: false
 class: center, middle
 .left-column[
     ## Orchestration
 ]
 .right-column[
-## So we need orchestration
 
-And we already have many choices for<br/>
+... we already have many choices for<br/>
 **Container Orchestration Engines**
 
 |         | |         |
@@ -318,6 +323,8 @@ These COEs are to varying degrees<br/> **Imperative** or **Declarative**
 
 ???
 SpeakerNotes:
+
+- Docker : Swarm + Compose (declarative)
 
 - This is the new battleground  (Container Orchestration Wars)
   - We can choose amongst Docker Swarm(*), Kubernetes, Apache Mesos(*), Fleet, Rancher, ...

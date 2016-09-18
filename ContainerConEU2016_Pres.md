@@ -956,6 +956,12 @@ See "HPE Kubernetes" references +?
 ???
 SpeakerNotes:
 
+IaaS: on GCE ($$$), GKE, AWS, OpenStack, Azure
+PaaS: OpenShift
+Local: Vagrant, Ansible,
+The Hard Way !
+Micro-OSes: CoreOS or Atomic
+
 ---
 layout: false
 .left-column[

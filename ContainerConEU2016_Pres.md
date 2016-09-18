@@ -114,6 +114,9 @@ talk about
       but Docker has the mindshare and continues to make great progress. 
        So although I'm pleased to see alternatives - Open Source alternatives - when I talk about container (engines) I generally consider Docker as a given.
 
+DONE??: image showing "growth" (?) of containers ...
+- LXC, Docker, rkt, LXD, runC/OCI, Garden
+
   
 
 ---
@@ -125,7 +128,7 @@ class: center, middle
 .right-column[
 ## &mu;-OSes
 
-Several vendors are developing &mu;-OSes, small OS (mainly Linux) implementations to be the basis for container engine hosts
+Several vendors are developing &mu;-OSes, small OS (mainly Linux) to be the basis for container engine hosts
 whether they be bare-metal or virtual **host machines**.
 
 These OSes are small, with fast startup, deployment, small attack surface and often *"atomic"* software updates.
@@ -135,19 +138,33 @@ These OSes are small, with fast startup, deployment, small attack surface and of
 - Photon          (VMWare)
 - RancherOS       (Rancher)
 - Nano Server OS  (Microsoft)
+- Ubuntu Snappy Core     (Canonical)
+- Nano Server OS  (Microsoft)
+]
+
+--
+.right-column[
+- .bold[.green[...Unikernels (...)]]
 ]
 
 ???
 SpeakerNotes:
 Describe the raison d'etre of micro-OSes
-- small, including only what's needed
-- security: small attack surface
-- "atomic" updates to OS (CoreOS?): explain
+- Ligthweight OSes - small, including only what's needed
+    - SECURITY: small attack surface
+- Docker native support (at least), often Kubernetes, ...
+    - Support deploying containers across a cluster
+- "atomic" updates to OS (CoreOS?): OS is updated as a whole, not package-by-package
+
 
 Mention HPE ContainerOS for The Machine (HPE Linux)
 
 TODO: http://www.lemagit.fr/conseil/Nano-Server-Microsoft-entre-de-plein-pied-dans-le-monde-des-micro-services
 
+Atomic Host not just kernel+docker:
+    Kubernetes, systemd, OpenSSH, Storage: NFS, Gluster, ..., cloud-init, SSSD, Networking (NetworkManager, future: +Open vSwitch), Core dump collection (abrt/systemd-coredump)
+    Flannel for networking
+RPM+OSTree: Atomic host OS upgrades+rollback
 
 ---
 layout: false

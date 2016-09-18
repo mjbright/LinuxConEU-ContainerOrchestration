@@ -43,9 +43,22 @@ I'm not an expert in this fast moving field, but I hope to give you an overview 
 Everything I tell you may be factual today, but will surely be false in a few months as these fast moving projects vie for position.
 
 ---
+name: section_history
+layout: false
+class: center, middle, inverse
+## .cyan[First ...]
+<!-- .red[ TEST ]  .blue[TEST]  .green[TEST]  .yellow[TEST]  .magenta[TEST]  .cyan[TEST]  .pink[TEST] -->
+<!-- .footnote[.green[But lets not forget the alternatives ...]] -->
+
+--
+name: section_history
+layout: false
+class: center, middle, inverse
+## A little bit of history
+
+---
 layout: false
 class: center, middle
-## A little bit of history
 
 So let's first look at what's happened in a very short time.
 

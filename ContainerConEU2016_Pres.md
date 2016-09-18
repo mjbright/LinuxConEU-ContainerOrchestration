@@ -448,18 +448,63 @@ TODO: Comparison of Swarm vs. Swarm Toolkit vs. Swarm Mode
 TODO: Mesos vs. fwks (Marathon, Chronos, Kubernetes?, Hadoop?) vs. plugins, Jenkins
       Mesosphere and DC/OS, Minimesos, ...
 
+Mesosphere (https://mesosphere.com/) produces Mesosphere Enterprise DC/OS
+    Mesosphere Enterprise DC/OS elastically runs containers and data services.
+    Proven in production and fully supported, Enterprise DC/OS lets you run modern enterprise apps with confidence.
+    YouTube Channel: https://www.youtube.com/channel/UCxwCmgwyM7xtHaRULN6-dxg
+
+Mesos Frameworks:
+    http://container-solutions.com/reasons-use-apache-mesos-frameworks/
+    http://mesosframeworks.com/: 
+        - KAFKA: High throughput publish-subscribe messaging on Mesos 
+        - ELK: A fault tolerant, scalable and resilient ELK stack 
+        - KIBANA: Explore and visualize your data on Mesos 
+        - LOGSTASH: Flexible log aggregation for Mesos 
+        - FLOCKER: Seamless software defined storage for Mesos 
+
+    [Rendering Web Crawler for Mesos] http://mesosphere.github.io/presentations/hack-week-2014/#/
+
+    [Mesos] Chronos: https://mesos.github.io/chronos/
+        A fault tolerant job scheduler for Mesos which handles dependencies and ISO8601 based schedules
+        "Cron for the cloud"
+
+    [Mesosphere] Marathon: https://mesosphere.github.io/marathon/
+        A container orchestration platform for Mesos and DCOS
+
+    [Mesosphere] Kubernetes-Mesos: https://github.com/mesosphere/kubernetes-mesos, http://kubernetes.io/docs/getting-started-guides/mesos/
+        This repo contains the components required for building the Kubernetes DCOS Service package.
+        - Managing DCOS Services - Kubernetes
+            - DCOS Overview
+            - Kubernetes on Mesos
+        - Mesos integration has been fully upstreamed into the Kubernetes repo under contrib/mesos.
+            - Getting Started Guide - Mesos
+            - Kubernetes on Mesos in Docker
+        - For development and testing, Kubernetes on Mesos can be run in Docker on a single host.
+            - Getting Started Guide - Mesos/Docker
+
+Mesos+Kubernetes:
+    https://platform9.com/blog/compare-kubernetes-vs-mesos/
+    https://news.ycombinator.com/item?id=9653650
+    http://stackoverflow.com/questions/26705201/whats-the-difference-between-apaches-mesos-and-googles-kubernetes
+    [Mesosphere] http://thenewstack.io/mesosphere-now-includes-kubernetes-for-managing-clustered-containers/
+        The April 2015 preview of Mesosphere’s Data Center Operating System (DCOS) gives developers
+        the means for creating Mesosphere pods around applications, and then launching those applications
+        in a large-scale pooled compute and storage environment.
 
 ---
 .left-column[
-  ## The rest
-  .footnote[.red[] [????](https://docker.com)]
+  ## Orchestration
+
+<img width=120 src="images/Rancher-Logo-Final-300x180.png" /> <br/>
+<img width=120 src="images/CoreOS.svg" /> <br/>
+<img width=120 src="images/nomad-b706442f.svg" />
 ]
 
 .right-column[
-## Orchestration Choices: The rest ...
-- Rancher
--  Fleet
--  Nomad
+## More Choice ...
+- Cattle (Rancher),  https://github.com/rancher/cattle
+- Fleet (CoreOS), https://github.com/coreos/fleet, A distributed init system (between systemd and etcd)
+- Nomad (HashiCorp), https://github.com/hashicorp/nomad
 
 The following are static configuration engines which can be used to automate tasks but they are not orchestration engines as such:
 - Ansible

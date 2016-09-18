@@ -76,10 +76,19 @@ class: center, middle
 .right-column[
     ## Containers
 
-#### TODO: image showing "growth" (?) of containers ...
-- LXC, Docker, rkt, LXD, runC/OCI, Garden
-<img width=400 height=300 src="images/TREND.svg" />
+
 ]
+
+![Google Trends](images/TRENDS_docker_lxc_kube_mesos_containers.png)
+
+
+<!--
+     https://www.google.fr/trends/explore?cat=5&q=%2Fm%2F0wkcjgj,lxc,kubernetes,Mesos,%2Fm%2F0db40
+-->
+
+<!--
+<script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/744_RC08/embed_loader.js"></script> <script type="text/javascript"> trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"/m/0wkcjgj","geo":"","time":"today 5-y"},{"keyword":"lxc","geo":"","time":"today 5-y"},{"keyword":"kubernetes","geo":"","time":"today 5-y"},{"keyword":"Mesos","geo":"","time":"today 5-y"},{"keyword":"/m/0db40","geo":"","time":"today 5-y"}],"category":5,"property":""}, {"guestPath":"https://www.google.fr:443/trends/embed/"}); </script> 
+-->
 
 ???
 SpeakerNotes:

@@ -378,6 +378,11 @@ It tends to require a set of specialists to manage a cluster.
 
 ---
 layout: false
+class: center, middle
+.left-column[
+    ## Orchestration
+]
+.right-column[
 # How containers help?
 
 Container solutions such as Docker go beyond the isolation capabilities of LXC by providing simple to use software solutions to enable packaging of apps with their dependencies allowing portable applications between systems.

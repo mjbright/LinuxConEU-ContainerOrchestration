@@ -515,12 +515,75 @@ The following are static configuration engines which can be used to automate tas
 
 ???
 SpeakerNotes:
+
+Cattle: https://github.com/rancher/cattle ==>
+    Cattle is the orchestration engine that powers Rancher.
+    Its primary role is meta data management and orchestration of external systems.
+    Cattle in fact does no real work, but instead delegates to other components (agents) to do the actual work.
+    You can look at Cattle as the middle management layer in Rancher.
+    Do middle managers really do anything?
+
+Fleet: https://github.com/coreos/fleet ==>
+    Fleet ties together systemd and etcd into a simple distributed init system.
+    Think of it as an extension of systemd that operates at the cluster level instead of the machine level.
+
+    This project is quite low-level, and is designed as a foundation for higher order orchestration.
+    fleet is a cluster-wide elaboration on systemd units, and is not a container manager or orchestration system.
+    fleet supports basic scheduling of systemd units across nodes in a cluster.
+    Those looking for more complex scheduling requirements or a first-class container orchestration system should check out Kubernetes.
+    The fleet and kubernetes comparison table has more information about the two systems.
+
+
+Nomad: Nomad is a cluster manager, designed for both long lived services and short lived batch processing workloads.
+    Developers use a declarative job specification to submit work, and Nomad ensures constraints are satisfied and resource utilization is optimized by efficient task packing.
+    Nomad supports all major operating systems and virtualized, containerized, or standalone applications.
+
+    The key features of Nomad are:
+
+    Docker Support: Jobs can specify tasks which are Docker containers.
+        Nomad will automatically run the containers on clients which have Docker installed, scale up and down based on the number of instances request, and automatically recover from failures.
+
+    Multi-Datacenter and Multi-Region Aware: Nomad is designed to be a global-scale scheduler.
+        Multiple datacenters can be managed as part of a larger region, and jobs can be scheduled across datacenters if requested.
+        Multiple regions join together and federate jobs making it easy to run jobs anywhere.
+
+    Operationally Simple: Nomad runs as a single binary that can be either a client or server, and is completely self contained.
+        Nomad does not require any external services for storage or coordination.
+        This means Nomad combines the features of a resource manager and scheduler in a single system.
+
+    Distributed and Highly-Available: Nomad servers cluster together and perform leader election and state replication to provide high availability in the face of failure.
+        The Nomad scheduling engine is optimized for optimistic concurrency allowing all servers to make scheduling decisions to maximize throughput.
+
+    HashiCorp Ecosystem: Nomad integrates with the entire HashiCorp ecosystem of tools.
+        Along with all HashiCorp tools, Nomad is designed in the unix philosophy of doing something specific and doing it well.
+        Nomad integrates with tools like Packer, Consul, and Terraform to support building artifacts, service discovery, monitoring and capacity management.
+
+
+    1 million container challenge, https://www.hashicorp.com/c1m.html
+        HashiCorp scheduled 1,000,000 Docker containers on 5,000 hosts in under 5 minutes with Nomad, our free and open source cluster scheduler.
+
+    Nomad intro: https://www.nomadproject.io/intro/
+
+
 - TODO: Add info about
-  - Rancher
+  - Cattle (http://rancher.com/tag/kubernetes/,
+          http://rancher.com/tag/cattle/,
+          http://rancher.com/5-keys-running-workloads-resiliently-rancher-docker-part-1/,
+          http://rancher.com/5-keys-running-workloads-resiliently-rancher-docker-part-2/, 
   - Fleet
   - Nomad
 
 - Juju: https://jujucharms.com/
+
+---
+name: section_history
+layout: false
+class: center, middle, inverse
+## Docker Swarm
+  <img src=images/docker.png width=100 /><br/>
+
+???
+SpeakerNotes:
 
 ---
 layout: false

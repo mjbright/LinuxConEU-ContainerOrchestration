@@ -51,7 +51,7 @@ class: center, middle, inverse
 <!-- .footnote[.green[But lets not forget the alternatives ...]] -->
 
 --
-name: section_history
+name: section_history2
 layout: false
 class: center, middle, inverse
 ## A little bit of history
@@ -292,7 +292,7 @@ that's cloud native !
 SpeakerNotes:
 
 ---
-name: section_history
+name: section_coes
 layout: false
 class: center, middle, inverse
 ## So we need orchestration
@@ -378,14 +378,13 @@ It tends to require a set of specialists to manage a cluster.
 
 ---
 layout: false
-class: center, middle
 .left-column[
     ## Orchestration
 ]
 .right-column[
 # How containers help?
 
-Container solutions such as Docker go beyond the isolation capabilities of LXC by providing simple to use software solutions to enable packaging of apps with their dependencies allowing portable applications between systems.
+Container solutions such as Docker go beyond the isolation capabilities of LXC by providing simple to use tools to enable packaging of apps with their dependencies allowing portable applications between systems.
 
 Containers are lightweight
 
@@ -398,10 +397,10 @@ Containers allow to use the same application binaries on development, test and p
 SpeakerNotes:
 
 ---
-name: section_history
+name: section_choices
 layout: false
 class: center, middle, inverse
-## Choice is great - when you know what you want ...
+## .cyan[Choice is great] - when you know what you want ...
 
 ???
 SpeakerNotes:
@@ -497,7 +496,8 @@ Mesos+Kubernetes:
 
 <img width=120 src="images/Rancher-Logo-Final-300x180.png" /> <br/>
 <img width=120 src="images/CoreOS.svg" /> <br/>
-<img width=120 src="images/nomad-b706442f.svg" />
+<!-- <img width=120 src="images/nomad-b706442f.svg" /> blank on white bg -->
+<img width=120 src="images/Nomad_logo.png" />
 ]
 
 .right-column[
@@ -576,7 +576,7 @@ Nomad: Nomad is a cluster manager, designed for both long lived services and sho
 - Juju: https://jujucharms.com/
 
 ---
-name: section_history
+name: section_docker
 layout: false
 class: center, middle, inverse
 ## Docker Swarm
@@ -594,7 +594,6 @@ layout: false
 ]
 
 .right-column[
-  Docker swarm
 
 - Docker engine with Swarm Mode
 
@@ -616,7 +615,7 @@ layout: false
 ]
 
 .right-column[
-  ## Docker Swarm Architecture
+  ## Architecture
 
   <img src=images/docker_swarm_archi.jpg width=600 /><br/>
 ]
@@ -643,7 +642,7 @@ Refer to Jerome Pettazoni's wshop on github
 SpeakerNotes:
 
 ---
-name: section_history
+name: section_mesos
 layout: false
 class: center, middle, inverse
 ## Apache Mesos
@@ -661,7 +660,6 @@ layout: false
 ]
 
 .right-column[
-  Apache Mesos
 
 Arguably the most production ready orchestration today, exists since 2009.
 
@@ -688,12 +686,12 @@ SpeakerNotes:
 layout: false
 .left-column[
   <img src=images/mesos-logo.png width=100 /><br/>
-  ## Apache Mesos Architecture
+  ## Apache Mesos
   .footnote[.red[] [mesos.apache.org](http://mesos.apache.org/)]
 ]
 
 .right-column[
-  Apache Mesos Architecture
+  ## Architecture
 
   <img src=images/mesos_archi.jpg width=300 /><br/>
 
@@ -711,13 +709,20 @@ TODO: redo architecture image?
 layout: false
 .left-column[
   <img src=images/mesos-logo.png width=100 /><br/>
-  ## Apache Mesos - Getting started
+  ## Apache Mesos
   .footnote[.red[] [mesos.apache.org](http://mesos.apache.org/)]
 ]
 
 .right-column[
 
-minimesos?
+## Getting started
+
+- Mesos
+    - minimesos?
+
+- Mesosphere
+
+
 ]
 
 ???
@@ -726,11 +731,13 @@ SpeakerNotes:
 TODO: Add links to more Mesos tutorials, startup systems ...
 
 ---
-name: section_history
+name: section_kubernetes
 layout: false
 class: center, middle, inverse
 ## Kubernetes
   <img src=images/kubernetes.png width=100 /><br/>
+<br/> <br/> <br/>
+  From the Greek: "Steersman, helmsman, sailing master"
 
 ???
 SpeakerNotes:
@@ -767,54 +774,11 @@ layout: false
 ]
 
 .right-column[
-Kubernetes works with the following concepts:
-
-[**Cluster**](docs/admin/README.md)
-: A cluster is a set of physical or virtual machines and other infrastructure resources used by Kubernetes
- to run your applications. Kubernetes can run anywhere! See the [Getting Started Guides](docs/getting-star
-ted-guides/) for instructions for a variety of services.
-
-[**Node**](docs/admin/node.md)
-: A node is a physical or virtual machine running Kubernetes, onto which pods can be scheduled.
-
-[**Pod**](docs/user-guide/pods.md)
-: Pods are a colocated group of application containers with shared volumes. They're the smallest deployabl
-e units that can be created, scheduled, and managed with Kubernetes. Pods can be created individually, but
- it's recommended that you use a replication controller even if creating a single pod.
-
-[**Replication controller**](docs/user-guide/replication-controller.md)
-: Replication controllers manage the lifecycle of pods. They ensure that a specified number of pods are ru
-nning
-at any given time, by creating or killing pods as required.
-
-[**Service**](docs/user-guide/services.md)
-: Services provide a single, stable name and address for a set of pods.
-They act as basic load balancers.
-
-[**Label**](docs/user-guide/labels.md)
-: Labels are used to organize and select groups of objects based on key:value pairs.
-
-]
-
-???
-SpeakerNotes:
-
----
-layout: false
-.left-column[
-  <img src=images/kubernetes.png width=100 /><br/>
-  ## Kubernetes Architecture
-  .footnote[.red[] [kubernetes.io](https://kubernetes.io)]
-]
-
-.right-column[
-  Kubernetes Architecture
-
-- ????
-
-- ????
+## Architecture
 
   <img src=images/kubernetes_archi.png width=450 /><br/>
+
+TODO: replace above image
 
 ]
 
@@ -938,16 +902,57 @@ Services:
 }
 
 
+---
+layout: false
+.left-column[
+  <img src=images/kubernetes.png width=100 /><br/>
+  ## Kubernetes
+  .footnote[.red[] [kubernetes.io](https://kubernetes.io)]
+]
+
+.right-column[
+## Concepts
+[**Cluster**](docs/admin/README.md)
+: A cluster is a set of physical or virtual machines and other infrastructure resources used by Kubernetes
+ to run your applications. Kubernetes can run anywhere! See the [Getting Started Guides](docs/getting-star
+ted-guides/) for instructions for a variety of services.
+
+[**Node**](docs/admin/node.md)
+: A node is a physical or virtual machine running Kubernetes, onto which pods can be scheduled.
+
+[**Pod**](docs/user-guide/pods.md)
+: Pods are a colocated group of application containers with shared volumes. They're the smallest deployabl
+e units that can be created, scheduled, and managed with Kubernetes. Pods can be created individually, but
+ it's recommended that you use a replication controller even if creating a single pod.
+
+[**Replication controller**](docs/user-guide/replication-controller.md)
+: Replication controllers manage the lifecycle of pods. They ensure that a specified number of pods are ru
+nning
+at any given time, by creating or killing pods as required.
+
+[**Service**](docs/user-guide/services.md)
+: Services provide a single, stable name and address for a set of pods.
+They act as basic load balancers.
+
+[**Label**](docs/user-guide/labels.md)
+: Labels are used to organize and select groups of objects based on key:value pairs.
+
+]
+
+???
+SpeakerNotes:
 
 ---
 layout: false
 .left-column[
   <img src=images/kubernetes.png width=100 /><br/>
-  ## Kubernetes - Getting started
+  ## Kubernetes
   .footnote[.red[] [kubernetes.io](https://kubernetes.io)]
 ]
 
 .right-column[
+## Getting started
+
 See "HPE Kubernetes" references +?
 - minikube?
 - ...
@@ -963,130 +968,7 @@ The Hard Way !
 Micro-OSes: CoreOS or Atomic
 
 ---
-layout: false
-.left-column[
-  <img src=images/kubernetes.png width=100 /><br/>
-  ## Kubernetes - Resources
-  .footnote[.red[] [kubernetes.io](https://kubernetes.io)]
-]
-
-
-
-
-
-Kubernetes documentation is organized into several categories.
-
-  - **Getting started guides**
-    - for people who want to create a Kubernetes cluster
-      - in [Creating a Kubernetes Cluster](docs/getting-started-guides/README.md)
-    - for people who want to port Kubernetes to a new environment
-      - in [Getting Started from Scratch](docs/getting-started-guides/scratch.md)
-  - **User documentation**
-    - for people who want to run programs on an existing Kubernetes cluster
-    - in the [Kubernetes User Guide: Managing Applications](docs/user-guide/README.md)
-        *Tip: You can also view help documentation out on [http://kubernetes.io/docs/](http://kubernetes.i
-o/docs/).*
-    - the [Kubectl Command Line Interface](docs/user-guide/kubectl/kubectl.md) is a detailed reference on
-      the `kubectl` CLI
-    - [User FAQ](https://github.com/kubernetes/kubernetes/wiki/User-FAQ)
-
-]
-
-???
-SpeakerNotes:
-
----
-layout: false
-.left-column[
-  <img src=images/kubernetes.png width=100 /><br/>
-  ## Kubernetes - Resources
-  .footnote[.red[] [kubernetes.io](https://kubernetes.io)]
-]
-
-.right-column[
-#### Documentation - 2
-
-  - **Cluster administrator documentation**
-    - for people who want to create a Kubernetes cluster and administer it
-    - in the [Kubernetes Cluster Admin Guide](docs/admin/README.md)
-  - **Developer and API documentation**
-    - for people who want to write programs that access the Kubernetes API, write plugins
-      or extensions, or modify the core Kubernetes code
-    - in the [Kubernetes Developer Guide](docs/devel/README.md)
-    - see also [notes on the API](docs/api.md)
-    - see also the [API object documentation](docs/api-reference/README.md), a
-      detailed description of all fields found in the core API objects
-  - **Walkthroughs and examples**
-    - hands-on introduction and example config files
-    - in the [user guide](docs/user-guide/README.md#quick-walkthrough)
-    - in the [docs/examples directory](examples/)
-  - **Contributions from the Kubernetes community**
-    - in the [docs/contrib directory](contrib/)
-]
-???
-SpeakerNotes:
-
----
-layout: false
-.left-column[
-  <img src=images/kubernetes.png width=100 /><br/>
-  ## Kubernetes - Resources
-  .footnote[.red[] [kubernetes.io](https://kubernetes.io)]
-]
-
-.right-column[
-#### Documentation - 3
-
-  - **Design documentation and design proposals**
-    - for people who want to understand the design of Kubernetes, and feature proposals
-    - design docs in the [Kubernetes Design Overview](docs/design/README.md) and the [docs/design director
-y](docs/design/)
-    - proposals in the [docs/proposals directory](docs/proposals/)
-  - **Wiki/FAQ**
-    - in the [wiki](https://github.com/kubernetes/kubernetes/wiki)
-    - troubleshooting information in the [troubleshooting guide](docs/troubleshooting.md)
-
-#### Community, discussion, contribution, and support
-
-See which companies are committed to driving quality in Kubernetes on our [community page](http://kubernet
-es.io/community/).
-
-Do you want to help "shape the evolution of technologies that are container packaged, dynamically schedule
-d and microservices oriented?"
-
-You should consider joining the [Cloud Native Computing Foundation](https://cncf.io/about). For details ab
-out who's involved and how Kubernetes plays a role, read [their announcement](https://cncf.io/news/announc
-ement/2015/07/new-cloud-native-computing-foundation-drive-alignment-among-container).
-
-
-]
-???
-SpeakerNotes:
-
----
-layout: false
-.left-column[
-  ## Other orchestrators
-]
-
-.right-column[
-  Other orchestrators
-
-- Fleet
-
-- Rancher
-
-- Nomad
-
-  <img src="images/other_orchestrators.png" />
-
-]
-
-???
-SpeakerNotes:
-
----
-name: section_history
+name: section_usecases
 layout: false
 class: center, middle, inverse
 ## How is all this being used today?
@@ -1204,7 +1086,7 @@ SpeakerNotes:
 
 
 ---
-name: section_history
+name: section_handson
 layout: false
 class: center, middle, inverse
 ## Hands on ...
@@ -1213,11 +1095,6 @@ class: center, middle, inverse
 SpeakerNotes:
 
 
----
-name: section_history
-layout: false
-class: center, middle, inverse
-## How is all this being used today?
 ---
 layout: false
 .left-column[
@@ -1315,7 +1192,7 @@ class: center, middle,
 
 
 ---
-name: section_history
+name: section_resources
 layout: false
 class: center, middle, inverse
 ## Resources
@@ -1387,6 +1264,104 @@ class: center, middle,
 ]
 
 
+???
+SpeakerNotes:
+
+---
+layout: false
+.left-column[
+  <img src=images/kubernetes.png width=100 /><br/>
+  ## Kubernetes
+  .footnote[.red[] [kubernetes.io](https://kubernetes.io)]
+]
+
+.right-column[
+## Documentation
+
+  - **Getting started guides**
+    - for people who want to create a Kubernetes cluster
+      - in [Creating a Kubernetes Cluster](docs/getting-started-guides/README.md)
+    - for people who want to port Kubernetes to a new environment
+      - in [Getting Started from Scratch](docs/getting-started-guides/scratch.md)
+  - **User documentation**
+    - for people who want to run programs on an existing Kubernetes cluster
+    - in the [Kubernetes User Guide: Managing Applications](docs/user-guide/README.md)
+        *Tip: You can also view help documentation out on [http://kubernetes.io/docs/](http://kubernetes.i
+o/docs/).*
+    - the [Kubectl Command Line Interface](docs/user-guide/kubectl/kubectl.md) is a detailed reference on
+      the `kubectl` CLI
+    - [User FAQ](https://github.com/kubernetes/kubernetes/wiki/User-FAQ)
+
+]
+
+???
+SpeakerNotes:
+
+---
+layout: false
+.left-column[
+  <img src=images/kubernetes.png width=100 /><br/>
+  ## Kubernetes
+  .footnote[.red[] [kubernetes.io](https://kubernetes.io)]
+]
+
+.right-column[
+#### Documentation - 2
+
+  - **Cluster administrator documentation**
+    - for people who want to create a Kubernetes cluster and administer it
+    - in the [Kubernetes Cluster Admin Guide](docs/admin/README.md)
+  - **Developer and API documentation**
+    - for people who want to write programs that access the Kubernetes API, write plugins
+      or extensions, or modify the core Kubernetes code
+    - in the [Kubernetes Developer Guide](docs/devel/README.md)
+    - see also [notes on the API](docs/api.md)
+    - see also the [API object documentation](docs/api-reference/README.md), a
+      detailed description of all fields found in the core API objects
+  - **Walkthroughs and examples**
+    - hands-on introduction and example config files
+    - in the [user guide](docs/user-guide/README.md#quick-walkthrough)
+    - in the [docs/examples directory](examples/)
+  - **Contributions from the Kubernetes community**
+    - in the [docs/contrib directory](contrib/)
+]
+???
+SpeakerNotes:
+
+---
+layout: false
+.left-column[
+  <img src=images/kubernetes.png width=100 /><br/>
+  ## Kubernetes
+  .footnote[.red[] [kubernetes.io](https://kubernetes.io)]
+]
+
+.right-column[
+## Documentation 3
+
+  - **Design documentation and design proposals**
+    - for people who want to understand the design of Kubernetes, and feature proposals
+    - design docs in the [Kubernetes Design Overview](docs/design/README.md) and the [docs/design director
+y](docs/design/)
+    - proposals in the [docs/proposals directory](docs/proposals/)
+  - **Wiki/FAQ**
+    - in the [wiki](https://github.com/kubernetes/kubernetes/wiki)
+    - troubleshooting information in the [troubleshooting guide](docs/troubleshooting.md)
+
+#### Community, discussion, contribution, and support
+
+See which companies are committed to driving quality in Kubernetes on our [community page](http://kubernet
+es.io/community/).
+
+Do you want to help "shape the evolution of technologies that are container packaged, dynamically schedule
+d and microservices oriented?"
+
+You should consider joining the [Cloud Native Computing Foundation](https://cncf.io/about). For details ab
+out who's involved and how Kubernetes plays a role, read [their announcement](https://cncf.io/news/announc
+ement/2015/07/new-cloud-native-computing-foundation-drive-alignment-among-container).
+
+
+]
 ???
 SpeakerNotes:
 

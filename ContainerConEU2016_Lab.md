@@ -11,32 +11,6 @@ class: center, middle, inverse
 <h3> <img width=93 height=30 src="images/RedHat_whiteText_logo.svg" /> &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; Mario Loriedo, <img src="images/Twitter_Bird.svg" width=24 /> @mariolet </h3>
 
 
-???
-SpeakerNotes:
-
-TODO: Replace (many) images with "hand drawn" images (via Wacom or Inkscape?)
-      Use Jupyter/matplotlib->svg/%%svg for images, graphs, animations ...
-
-Abstract
----------
-#### .footnote[This presentation on [github](https://github.com/mjbright/LinuxConEU-ContainerOrchestration) on [ContainerCon Schedule](https://linuxconcontainerconeurope2016.sched.org/event/7oHV/container-orchestration-swarm-mesos-kubernetes-which-conductor-mike-bright-hpe)]
-
-
-
-Oh my, as if we didn’t have enough container choices with LXC, Docker, rkt, LXD, we still have to choose a container orchestrator and there are lots of them !
-
-Worse - the choice of orchestrator is the new industry battleground.
-Feature sets increase rapidly and industry players are making acquisitions and investments.
-
-It’s still early days in container orchestration and so existing solutions partially overlap meaning that combinations of orchestrators may be needed.
-
-So how should you choose for your use case?
-
-In this talk we’ll take a look at what is orchestration and why you need it.
-We’ll look at the main contenders amongst Docker Swarm, Google’s Kubernetes, Apache Mesos as well as Fleet, Rancher/cattle and Juju.
-
-We’ll compare and contrast the existing solutions, look at where they are heading and how you can use them in your solution today and tomorrow.
-
 ---
 .left-column[
 ## Lab contents
@@ -48,7 +22,29 @@ We’ll compare and contrast the existing solutions, look at where they are head
 - Kubernetes
 - Apache Mesos
 
-In less than 2 hours you won't become expert but will get some hands on experience.
+In less than 2 hours you won't become expert but you will get some hands on experience.
+
+## Instructions
+https://github.com/mjbright/LinuxConEU-ContainerOrchestration/README.md
+
+## Pre-requisites for this lab:
+https://github.com/mjbright/LinuxConEU-ContainerOrchestration/README.md#prereqs
+
+Please make sure that you satisfy these requirements before coming to this session:
+- Your own laptop with >= 8GBy RAM, >= 20GBy free disk space
+- Vagrant (and libvirt of virtualbox provider)
+- OpenVPN (to be detailed at above link)
+
+## Setup instructions
+https://github.com/mjbright/LinuxConEU-ContainerOrchestration/README.md#setup
+
+- Vagrant Box image (to be provided - details at the above link)
+
+## Lab instructions
+https://github.com/mjbright/LinuxConEU-ContainerOrchestration/README.md#lab
+
+- Detailed lab steps will be provided at the above link
+
 ]
 
 ---
@@ -101,8 +97,16 @@ layout: false
 ---
 name: last-page
 template: inverse
+class: center, middle,
 
-## That's all folks (for now)!
+## Questions?
+
+## Thank you
+<h3> <img width=120 src="images/Hewlett_Packard_Enterprise_whiteText_logo.svg" /> &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; Mike Bright, <img src="images/Twitter_Bird.svg" width=24 /> @mjbright </h3>
+<h3> <img width=93 height=30 src="images/RedHat_whiteText_logo.svg" /> &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp; Haikel Guemar, <img src="images/Twitter_Bird.svg" width=24 /> @hguemar </h3>
+<h3> <img width=93 height=30 src="images/RedHat_whiteText_logo.svg" /> &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; Mario Loriedo, <img src="images/Twitter_Bird.svg" width=24 /> @mariolet </h3>
+
+
 
 Slideshow created using [remark](http://github.com/gnab/remark).
 

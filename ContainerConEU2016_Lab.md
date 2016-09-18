@@ -1,19 +1,22 @@
 
-name: inverse
-layout: true
-class: center, middle
----
-class: inverse
+name: title_inversed_whiteText
+layout: false
+class: center, middle, inverse
 
 ##Container Orchestration: Which Conductor?
 [.green.bold[The Lab]]
-### Mike Bright, HPE
-### Haikel Guemar, RedHat
-### Mario Loriedo, RedHat
-##ContainerCon Europe, Berlin, Oct 2016
+###ContainerCon Europe, Berlin, Oct 2016
+<h3> <img width=120 src="images/Hewlett_Packard_Enterprise_whiteText_logo.svg" /> &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; Mike Bright, <img src="images/Twitter_Bird.svg" width=24 /> @mjbright </h3>
+<h3> <img width=93 height=30 src="images/RedHat_whiteText_logo.svg" /> &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp; Haikel Guemar, <img src="images/Twitter_Bird.svg" width=24 /> @hguemar </h3>
+<h3> <img width=93 height=30 src="images/RedHat_whiteText_logo.svg" /> &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; Mario Loriedo, <img src="images/Twitter_Bird.svg" width=24 /> @mariolet </h3>
+
 
 ???
 SpeakerNotes:
+
+TODO: Replace (many) images with "hand drawn" images (via Wacom or Inkscape?)
+      Use Jupyter/matplotlib->svg/%%svg for images, graphs, animations ...
+
 Abstract
 ---------
 #### .footnote[This presentation on [github](https://github.com/mjbright/LinuxConEU-ContainerOrchestration) on [ContainerCon Schedule](https://linuxconcontainerconeurope2016.sched.org/event/7oHV/container-orchestration-swarm-mesos-kubernetes-which-conductor-mike-bright-hpe)]

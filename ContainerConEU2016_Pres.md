@@ -1,68 +1,24 @@
-
-name: title1_inverse
-layout: true
-class: center, middle, inverse
-
----
-##Container Orchestration: Which Conductor?
-[.bold.green[Container Orchestration: Swarm, Mesos, Kubernetes - Which Conductor?]]
-###ContainerCon Europe, Berlin, Oct 2016
-
-### Mike Bright, HPE, @mjbright
-### Haikel Guemar, RedHat, @hguemar
-### Mario Loriedo, RedHat, @mariolet
-
----
-name: title2_inversed_mixedText
-
-##Container Orchestration: Which Conductor?
-###ContainerCon Europe, Berlin, Oct 2016
-<!-- [.bold.green[Container Orchestration: Swarm, Mesos, Kubernetes - Which Conductor?]] -->
-<h3> <img width=120 src="images/Hewlett_Packard_Enterprise_whiteText_logo.svg" /> &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; Mike Bright, @mjbright </h3>
-<h3> <img width=93 height=30 src="images/RedHat_logo.svg" /> &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp; Haikel Guemar, @hguemar </h3>
-<h3> <img width=93 height=30 src="images/RedHat_logo.svg" /> &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; Mario Loriedo, @mariolet </h3>
-
-<!-- [.bold.red[It's all about the tooling]] -->
-
----
-name: title3_inversed_whiteText
-
-##Container Orchestration: Which Conductor?
-###ContainerCon Europe, Berlin, Oct 2016
-<!-- [.bold.green[Container Orchestration: Swarm, Mesos, Kubernetes - Which Conductor?]] -->
-<h3> <img width=120 src="images/Hewlett_Packard_Enterprise_whiteText_logo.svg" /> &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; Mike Bright, @mjbright </h3>
-<h3> <img width=93 height=30 src="images/RedHat_whiteText_logo.svg" /> &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp; Haikel Guemar, @hguemar </h3>
-<h3> <img width=93 height=30 src="images/RedHat_whiteText_logo.svg" /> &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; Mario Loriedo, @mariolet </h3>
-
-<!-- [.bold.red[It's all about the tooling]] -->
-
----
-name: title4_inversed
-class: center, middle, inverse
-##Container Orchestration: Which Conductor?
-###ContainerCon Europe, Berlin, Oct 2016
-<!-- [.bold.green[Container Orchestration: Swarm, Mesos, Kubernetes - Which Conductor?]] -->
-<h3> <img width=120 src="images/Hewlett_Packard_Enterprise_logo.svg" /> &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; Mike Bright, @mjbright </h3>
-<h3> <img width=93 height=30 src="images/RedHat_logo.svg" /> &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp; Haikel Guemar, @hguemar </h3>
-<h3> <img width=93 height=30 src="images/RedHat_logo.svg" /> &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; Mario Loriedo, @mariolet </h3>
-
-
----
-name: title5
+name: title_inversed_whiteText
 layout: false
-class: center, middle, 
+class: center, middle, inverse
 
 ##Container Orchestration: Which Conductor?
 ###ContainerCon Europe, Berlin, Oct 2016
 <!-- [.bold.green[Container Orchestration: Swarm, Mesos, Kubernetes - Which Conductor?]] -->
-<h3> <img width=120 src="images/Hewlett_Packard_Enterprise_logo.svg" /> &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; Mike Bright, @mjbright </h3>
-<h3> <img width=93 height=30 src="images/RedHat_logo.svg" /> &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp; Haikel Guemar, @hguemar </h3>
-<h3> <img width=93 height=30 src="images/RedHat_logo.svg" /> &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; Mario Loriedo, @mariolet </h3>
+<h3> <img width=120 src="images/Hewlett_Packard_Enterprise_whiteText_logo.svg" /> &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; Mike Bright, <img src="images/Twitter_Bird.svg" width=24 /> @mjbright </h3>
+<h3> <img width=93 height=30 src="images/RedHat_whiteText_logo.svg" /> &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp; Haikel Guemar, <img src="images/Twitter_Bird.svg" width=24 /> @hguemar </h3>
+<h3> <img width=93 height=30 src="images/RedHat_whiteText_logo.svg" /> &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; Mario Loriedo, <img src="images/Twitter_Bird.svg" width=24 /> @mariolet </h3>
 
 
 ???
-
 SpeakerNotes:
+
+TODO: Replace (many) images with "hand drawn" images (via Wacom or Inkscape?)
+      Use Jupyter/matplotlib->svg/%%svg for images, graphs, animations ...
+
+TODO: Take tips from this presn: http://asmeurer.github.io/python3-presentation/slides.html#1
+      How does this guy do his titles? http://kjbekkelund.github.io/js-architecture-backbone/#2
+
 Abstract
 ---------
 #### .footnote[This presentation on [github](https://github.com/mjbright/LinuxConEU-ContainerOrchestration) on [ContainerCon Schedule](https://linuxconcontainerconeurope2016.sched.org/event/7oHV/container-orchestration-swarm-mesos-kubernetes-which-conductor-mike-bright-hpe)]

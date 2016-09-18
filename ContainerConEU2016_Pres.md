@@ -1363,6 +1363,9 @@ class: center, middle,
 
 Cloud Native Computing Foundation - Kubernetes, Prometheus
 https://cncf.io/
+
+*"Kubernetes the Hard Way, Kelsey Hightower"* - https://github.com/kelseyhightower/kubernetes-the-hard-way
+*"Kubernetes User Guide, Walkthrought"* - http://kubernetes.io/docs/user-guide/walkthrough/
 ]
 
 ???
@@ -1386,18 +1389,5 @@ class: center, middle,
 
 ???
 SpeakerNotes:
-
----
-name: last-page
-template: inverse
-class: center, middle, 
-
-## Questions?
-
-## Thank you
-<h3> <img width=120 src="images/Hewlett_Packard_Enterprise_logo.svg" /> &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; Mike Bright, @mjbright </h3>
-<h3> <img width=93 height=30 src="images/RedHat_logo.svg" /> &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp; Haikel Guemar, @hguemar </h3>
-<h3> <img width=93 height=30 src="images/RedHat_logo.svg" /> &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; Mario Loriedo, @mariolet </h3>
-
 
 

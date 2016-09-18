@@ -970,8 +970,9 @@ layout: false
   .footnote[.red[] [kubernetes.io](https://kubernetes.io)]
 ]
 
-.right-column[
-#### Documentation1
+
+
+
 
 Kubernetes documentation is organized into several categories.
 
@@ -1085,6 +1086,15 @@ layout: false
 SpeakerNotes:
 
 ---
+name: section_history
+layout: false
+class: center, middle, inverse
+## How is all this being used today?
+
+???
+SpeakerNotes:
+
+---
 layout: false
 .left-column[
   ## Use cases
@@ -1097,7 +1107,7 @@ layout: false
 
 - OpenShift
 
-- Deis
+- Deis http://deis.io
 
 - CloudFoundry PaaS (Has it's own runC implementation: Garden/Guardian, orchestration; Diego)
 
@@ -1192,6 +1202,22 @@ Rancher lightweight
 ???
 SpeakerNotes:
 
+
+---
+name: section_history
+layout: false
+class: center, middle, inverse
+## Hands on ...
+
+???
+SpeakerNotes:
+
+
+---
+name: section_history
+layout: false
+class: center, middle, inverse
+## How is all this being used today?
 ---
 layout: false
 .left-column[

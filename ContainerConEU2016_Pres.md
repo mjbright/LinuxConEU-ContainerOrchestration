@@ -625,7 +625,6 @@ layout: false
 SpeakerNotes:
 
 TODO: replace image ...
-
 ---
 layout: false
 .left-column[
@@ -639,6 +638,16 @@ layout: false
 ## Getting started
 Refer to Jerome Pettazoni's wshop on github
 ]
+
+???
+SpeakerNotes:
+
+---
+name: section_history
+layout: false
+class: center, middle, inverse
+## Apache Mesos
+  <img src=images/mesos-logo.png width=100 /><br/>
 
 ???
 SpeakerNotes:
@@ -715,6 +724,18 @@ minimesos?
 SpeakerNotes:
 
 TODO: Add links to more Mesos tutorials, startup systems ...
+
+---
+name: section_history
+layout: false
+class: center, middle, inverse
+## Kubernetes
+  <img src=images/kubernetes.png width=100 /><br/>
+
+???
+SpeakerNotes:
+
+In old Greek, "Steersman, helmsman, sailing master"
 
 ---
 layout: false
@@ -801,6 +822,122 @@ layout: false
 SpeakerNotes:
 
 TODO: Recreate Kubernetes architecture image
+
+Kubernetes Features
+- Pods - Sets of Containers which share resources
+- Services
+- Non-localized network access
+- Proxy/Load Balancing
+- ReplicationController - HAish
+
+Architecture:
+- Kubelet - container management agent
+- App-Server - service portal
+- Etcd - Clustering, State, Communications
+- Kubectl - Client
+
+
+- Minion (became "Kubernetes Node"): A Docker host running the kubelet and the proxy service.
+  Minion Daemon:
+  - KUBERNETES-KUBELET: works between etcd and docker, performs pod management, logs pod state, instructions from cluster master
+        Primary responsilibity: pod management
+        Maintain a record of pod state
+        Take instructions from the cluster master
+  - KUBERNETES-PROXY: maps port on minion to relevant pods
+ 
+    Forward requests to the right container
+    Load-balance requests
+    Ensure minion subnet isolation
+
+- Pod: One or more inter-related (linked) Docker containers: Master + sidecar
+ 
+- Cluster: A collection of one or more Minions.
+
+etcd: https://github.com/coreos/etcd
+    Highly available key/value data store
+    Built-in clustering support
+    RAFT consensus-based algorithm for updates
+        http://niquola.github.io/coreos-docker-meetup-slides/raft_cons.gif
+        https://raft.github.io/
+
+fleet: https://github.com/coreos/fleet
+    A distributed init system
+    fleet ties together systemd and etcd into a simple distributed init system. Think of it as an extension of systemd that operates at the cluster level instead of the machine level.
+
+Cluster Mgmt:
+    - Kubernetes API: RESTful web API for Kubernetes, running on nginx
+ 
+    - Scheduler: One job: choose minions for pods
+ 
+    - Controller Manager: Monitoring service for deployed pods
+ 
+    - kubectl: CLI for working with a Kubernetes cluster
+
+    - Replication Controllers: declarative
+        You tell controller-manager what you need, and it does the rest.	 	
+        You tell it what you need, it decides which minions to deploy on
+        Constant monitoring; starts and stops pods as necessary to match the count
+        Decoupled from service proxying
+
+kubectl:
+```
+    $ kubectl get node|pods|services|rc|...
+    Create a resource
+
+    $ kubectl create -f some/setup.[json|yaml]
+    Resize a ReplicationController
+
+    $ kubectl resize --replicas=4 tier2
+    Execute a command on a container
+
+    $ kubectl exec -p 8192-9124 -c mysql-container -i -t -- bash -il
+```
+
+kube api:
+    - Minions (docker hosts)
+    - Pods (docker container configurations)
+    - Services (single, stable name for a set of pods, acts as a LB)
+    - Replication Controllers (manages the lifecycle of the pods)
+    - Labels
+        ![https://commons.wikimedia.org/wiki/File:Color_Post_it.svg](images/Labels.svg)
+        ![http://nicubunu.blogspot.fr/2008/04/ambassadors-wall.html](images/Labels_postits.svg)
+
+        Key-value attributes used to charactize items - can be used to select items, e.g. host nodes with SSD
+        e.g. disk=ssd, service=mysql, environment=prod, tier=back
+
+Pods:
+{
+  "id": "redis-master-pod",
+  "kind": "Pod",
+  "apiVersion": "v1beta1",
+  "desiredState": {
+    "manifest": {
+      "version": "v1beta1",
+      "id": "redis-master-pod",
+      "containers": [{
+        "name": "redis-master",
+        "image": "gurpartap/redis",
+        "ports": [{ "name": "redis-server", "containerPort": 6379 }]
+      }]
+    }
+  },
+  "labels": {"name": "redis"}
+}
+
+Services:
+{
+  "id": "redis-master",
+  "kind": "Service",
+  "apiVersion": "v1beta1",
+  "port": 8888,
+  "containerPort": 6379,
+  "selector": {
+    "name": "redis"
+  },
+  "labels": {"name": "redis"}
+}
+
+
 
 ---
 layout: false

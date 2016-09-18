@@ -392,6 +392,16 @@ Containers are lightweight
 Containers can be shared
 
 Containers allow to use the same application binaries on development, test and production systems whether that be on a laptop, server or in the cloud.
+]
+
+???
+SpeakerNotes:
+
+---
+name: section_history
+layout: false
+class: center, middle, inverse
+## Choice is great - when you know what you want ...
 
 ???
 SpeakerNotes:
@@ -399,14 +409,14 @@ SpeakerNotes:
 ---
 layout: false
 .left-column[
-  ## The Big 3
+    ## Orchestration
   <img src=images/docker.png width=100 /><br/>
   <img src=images/mesos-logo.png width=100 /><br/>
   <img src=images/kubernetes.png width=100 /><br/>
 ]
 
 .right-column[
-## Main Orchestration Choices
+  ## The Big 3 - Main Orchestration Choices
 
 - Docker Swarm
   - Docker swarm
@@ -423,8 +433,8 @@ layout: false
   - Mesosphere, DC/OS
   
 - Kubernetes
-  .footnote[.red[] [But lets not forget the alternatives ...]]
-  <!-- .footnote[.red[] [????](https://docker.com)] -->
+
+.footnote[.green[But lets not forget the alternatives ...]]
 ]
 
 ???

@@ -24,7 +24,7 @@ Abstract
 #### .footnote[This presentation on [github](https://github.com/mjbright/LinuxConEU-ContainerOrchestration) on [ContainerCon Schedule](https://linuxconcontainerconeurope2016.sched.org/event/7oHV/container-orchestration-swarm-mesos-kubernetes-which-conductor-mike-bright-hpe)]
 
 
-Oh my, as if we didn’t have enough container choices with LXC, Docker, rkt, LXD, we still have to choose a container orchestrator and there are lots of them !
+Oh my, as if we didn’t have enough container choices with LXC, Docker, rkt, systemd, we still have to choose a container orchestrator and there are lots of them !
 
 Worse - the choice of orchestrator is the new industry battleground.
 Feature sets increase rapidly and industry players are making acquisitions and investments.

@@ -66,7 +66,7 @@ class: center, middle, inverse
 layout: false
 class: center, middle
 
-So let's first look at what's happened in a very short time.
+So let's first look at recent container history ... 
 
 <img width=800 src="images/timeline.svg" />
 

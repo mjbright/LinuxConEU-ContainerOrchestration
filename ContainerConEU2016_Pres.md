@@ -42,6 +42,7 @@ I'm not an expert in this fast moving field, but I hope to give you an overview 
 
 Everything I tell you may be factual today, but will surely be false in a few months as these fast moving projects vie for position.
 
+.footnote[.gray[ @hguemar @mjbright @mariolet ]]
 ???
 SpeakerNotes:
 
@@ -70,6 +71,7 @@ So let's first look at recent container history ...
 
 <img width=800 src="images/timeline.svg" />
 
+.footnote[.gray[ @hguemar @mjbright @mariolet ]]
 ???
 SpeakerNotes:
 
@@ -95,6 +97,8 @@ class: center, middle
 <!--
 <script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/744_RC08/embed_loader.js"></script> <script type="text/javascript"> trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"/m/0wkcjgj","geo":"","time":"today 5-y"},{"keyword":"lxc","geo":"","time":"today 5-y"},{"keyword":"kubernetes","geo":"","time":"today 5-y"},{"keyword":"Mesos","geo":"","time":"today 5-y"},{"keyword":"/m/0db40","geo":"","time":"today 5-y"}],"category":5,"property":""}, {"guestPath":"https://www.google.fr:443/trends/embed/"}); </script> 
 -->
+
+.footnote[.gray[ @hguemar @mjbright @mariolet ]]
 
 ???
 SpeakerNotes:
@@ -145,10 +149,10 @@ These OSes are small, with fast startup, deployment, small attack surface and of
 - RancherOS          (Rancher)
 - Nano Server OS     (Microsoft)
 - Ubuntu Snappy Core (Canonical)
-- Nano Server OS     (Microsoft)
 ]
 
 
+.footnote[.gray[ @hguemar @mjbright @mariolet ]]
 ???
 SpeakerNotes:
 - names sugggestion: lightweight Cloud Servers, Containers OSes
@@ -158,6 +162,7 @@ SpeakerNotes:
 - .bold[.green[...Unikernels (...)]]
 ]
 
+.footnote[.gray[ @hguemar @mjbright @mariolet ]]
 ???
 SpeakerNotes:
 Describe the raison d'etre of micro-OSes
@@ -187,6 +192,7 @@ class: center, middle
     ## &mu;-Services
 ]
 
+.footnote[.gray[ @hguemar @mjbright @mariolet ]]
 ???
 SpeakerNotes:
 
@@ -200,6 +206,7 @@ class: center, middle
     ##From monoliths to &mu;-services
 ]
 
+.footnote[.gray[ @hguemar @mjbright @mariolet ]]
 ???
 SpeakerNotes:
 
@@ -223,6 +230,7 @@ But there's a limit to this ... then you have to **scale out**
 ]
 
 
+.footnote[.gray[ @hguemar @mjbright @mariolet ]]
 ???
 SpeakerNotes:
 
@@ -252,6 +260,7 @@ TODO: schema to demonstrate breaking down of monoliths to N-tier allowing
 <img width=100 height=120 src="images/becher.svg" />
 ]
 
+.footnote[.gray[ @hguemar @mjbright @mariolet ]]
 ???
 SpeakerNotes:
 
@@ -275,6 +284,7 @@ TODO: schema
 Now we can achieve much better hardware utilisation because of the smaller size of components.
 ]
 
+.footnote[.gray[ @hguemar @mjbright @mariolet ]]
 ???
 SpeakerNotes:
 
@@ -299,6 +309,7 @@ that's cloud native !
 
 ]
 
+.footnote[.gray[ @hguemar @mjbright @mariolet ]]
 ???
 SpeakerNotes:
 
@@ -332,6 +343,7 @@ class: center, middle
 These COEs are to varying degrees<br/> **Imperative** or **Declarative**
 ]
 
+.footnote[.gray[ @hguemar @mjbright @mariolet ]]
 ???
 SpeakerNotes:
 
@@ -369,6 +381,7 @@ class: center, middle
 ]
 
 
+.footnote[.gray[ @hguemar @mjbright @mariolet ]]
 ???
 SpeakerNotes:
 
@@ -404,6 +417,7 @@ Containers can be shared
 Containers allow to use the same application binaries on development, test and production systems whether that be on a laptop, server or in the cloud.
 ]
 
+.footnote[.gray[ @hguemar @mjbright @mariolet ]]
 ???
 SpeakerNotes:
 
@@ -413,6 +427,7 @@ layout: false
 class: center, middle, inverse
 ## .cyan[Choice is great] - when you know what you want ...
 
+.footnote[.gray[ @hguemar @mjbright @mariolet ]]
 ???
 SpeakerNotes:
 
@@ -447,6 +462,7 @@ layout: false
 .footnote[.green[But lets not forget the alternatives ...]]
 ]
 
+.footnote[.gray[ @hguemar @mjbright @mariolet ]]
 ???
 SpeakerNotes:
 
@@ -524,6 +540,7 @@ The following are static configuration engines which can be used to automate tas
 - Juju
 ]
 
+.footnote[.gray[ @hguemar @mjbright @mariolet ]]
 ???
 SpeakerNotes:
 
@@ -593,6 +610,7 @@ class: center, middle, inverse
 ## Docker Swarm
   <img src=images/docker.png width=100 /><br/>
 
+.footnote[.gray[ @hguemar @mjbright @mariolet ]]
 ???
 SpeakerNotes:
 
@@ -614,6 +632,7 @@ layout: false
 
 ]
 
+.footnote[.gray[ @hguemar @mjbright @mariolet ]]
 ???
 SpeakerNotes:
 
@@ -631,6 +650,7 @@ layout: false
   <img src=images/docker_swarm_archi.jpg width=600 /><br/>
 ]
 
+.footnote[.gray[ @hguemar @mjbright @mariolet ]]
 ???
 SpeakerNotes:
 
@@ -649,6 +669,7 @@ layout: false
 Refer to Jerome Pettazoni's wshop on github
 ]
 
+.footnote[.gray[ @hguemar @mjbright @mariolet ]]
 ???
 SpeakerNotes:
 
@@ -659,6 +680,7 @@ class: center, middle, inverse
 ## Apache Mesos
   <img src=images/mesos-logo.png width=100 /><br/>
 
+.footnote[.gray[ @hguemar @mjbright @mariolet ]]
 ???
 SpeakerNotes:
 
@@ -678,6 +700,7 @@ Used in production by
 
 - Twitter
 
+.footnote[.gray[ @hguemar @mjbright @mariolet ]]
 - .... ????
 
 Can scale to ~ 10,000 nodes.
@@ -690,6 +713,7 @@ Mesos is used in conjunction with Frameworks such as
 
 ]
 
+.footnote[.gray[ @hguemar @mjbright @mariolet ]]
 ???
 SpeakerNotes:
 
@@ -712,6 +736,7 @@ http://mesos.apache.org/documentation/latest/architecture/
 ]
 
 ???
+.footnote[.gray[ @hguemar @mjbright @mariolet ]]
 SpeakerNotes:
 
 TODO: redo architecture image?
@@ -736,6 +761,7 @@ layout: false
 
 ]
 
+.footnote[.gray[ @hguemar @mjbright @mariolet ]]
 ???
 SpeakerNotes:
 
@@ -750,6 +776,7 @@ class: center, middle, inverse
 <br/> <br/> <br/>
   From the Greek: "Steersman, helmsman, sailing master"
 
+.footnote[.gray[ @hguemar @mjbright @mariolet ]]
 ???
 SpeakerNotes:
 
@@ -773,6 +800,7 @@ https://cncf.io/
 ]
 
 
+.footnote[.gray[ @hguemar @mjbright @mariolet ]]
 ???
 SpeakerNotes:
 
@@ -793,6 +821,7 @@ TODO: replace above image
 
 ]
 
+.footnote[.gray[ @hguemar @mjbright @mariolet ]]
 ???
 SpeakerNotes:
 
@@ -950,6 +979,7 @@ They act as basic load balancers.
 
 ]
 
+.footnote[.gray[ @hguemar @mjbright @mariolet ]]
 ???
 SpeakerNotes:
 
@@ -969,6 +999,7 @@ See "HPE Kubernetes" references +?
 - ...
 ]
 
+.footnote[.gray[ @hguemar @mjbright @mariolet ]]
 ???
 SpeakerNotes:
 
@@ -984,6 +1015,7 @@ layout: false
 class: center, middle, inverse
 ## How is all this being used today?
 
+.footnote[.gray[ @hguemar @mjbright @mariolet ]]
 ???
 SpeakerNotes:
 
@@ -1016,6 +1048,7 @@ layout: false
 ![image](images/????.png)
 
 ]
+.footnote[.gray[ @hguemar @mjbright @mariolet ]]
 ???
 SpeakerNotes:
 
@@ -1047,6 +1080,7 @@ layout: false
 
 ]
 
+.footnote[.gray[ @hguemar @mjbright @mariolet ]]
 ???
 SpeakerNotes:
 
@@ -1071,6 +1105,7 @@ An operator specifies the "desired state" and the orchestrator does the rest.
 
 ]
 
+.footnote[.gray[ @hguemar @mjbright @mariolet ]]
 ???
 SpeakerNotes:
 
@@ -1092,6 +1127,7 @@ Rancher lightweight
 
 ]
 
+.footnote[.gray[ @hguemar @mjbright @mariolet ]]
 ???
 SpeakerNotes:
 
@@ -1102,6 +1138,7 @@ layout: false
 class: center, middle, inverse
 ## Hands on ...
 
+.footnote[.gray[ @hguemar @mjbright @mariolet ]]
 ???
 SpeakerNotes:
 
@@ -1140,6 +1177,7 @@ or just follow along on github
 ]
 
 
+.footnote[.gray[ @hguemar @mjbright @mariolet ]]
 ???
 SpeakerNotes:
 
@@ -1154,6 +1192,7 @@ class: center, middle,
   <p>Server is not running</p>
 </iframe>
 
+.footnote[.gray[ @hguemar @mjbright @mariolet ]]
 ???
 SpeakerNotes:
 
@@ -1170,6 +1209,7 @@ class: center, middle,
   <p>Server is not running</p>
 </iframe>
 
+.footnote[.gray[ @hguemar @mjbright @mariolet ]]
 ???
 SpeakerNotes:
 TODO: replace with links to animated gifs (from tty2gif)
@@ -1185,6 +1225,7 @@ class: center, middle,
   <p>Server is not running</p>
 </iframe>
 
+.footnote[.gray[ @hguemar @mjbright @mariolet ]]
 ???
 SpeakerNotes:
 TODO: replace with links to animated gifs (from tty2gif)
@@ -1194,13 +1235,11 @@ name: last-page
 template: inverse
 class: center, middle, 
 
-## Questions?
+# Questions?
 
-## Thank you
-<h3> <img width=120 src="images/Hewlett_Packard_Enterprise_whiteText_logo.svg" /> &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; Mike Bright, <img src="images/Twitter_Bird.svg" width=24 /> @mjbright </h3>
-<h3> <img width=93 height=30 src="images/RedHat_whiteText_logo.svg" /> &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp; Haikel Guemar, <img src="images/Twitter_Bird.svg" width=24 /> @hguemar </h3>
-<h3> <img width=93 height=30 src="images/RedHat_whiteText_logo.svg" /> &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; Mario Loriedo, <img src="images/Twitter_Bird.svg" width=24 /> @mariolet </h3>
+# Thank you
 
+.footnote[.gray[ @hguemar @mjbright @mariolet ]]
 
 ---
 name: section_resources
@@ -1208,6 +1247,7 @@ layout: false
 class: center, middle, inverse
 ## Resources
 
+.footnote[.gray[ @hguemar @mjbright @mariolet ]]
 ???
 SpeakerNotes:
 
@@ -1233,6 +1273,7 @@ layout: false
 | Manning   | [MEAP] Kubernetes in Action |    |
 
 ]
+.footnote[.gray[ @hguemar @mjbright @mariolet ]]
 ???
 SpeakerNotes:
 
@@ -1256,6 +1297,7 @@ https://cncf.io/
 *"Kubernetes User Guide, Walkthrought"* - http://kubernetes.io/docs/user-guide/walkthrough/
 ]
 
+.footnote[.gray[ @hguemar @mjbright @mariolet ]]
 ???
 SpeakerNotes:
 
@@ -1275,6 +1317,7 @@ class: center, middle,
 ]
 
 
+.footnote[.gray[ @hguemar @mjbright @mariolet ]]
 ???
 SpeakerNotes:
 
@@ -1305,6 +1348,7 @@ o/docs/).*
 
 ]
 
+.footnote[.gray[ @hguemar @mjbright @mariolet ]]
 ???
 SpeakerNotes:
 
@@ -1336,6 +1380,7 @@ layout: false
   - **Contributions from the Kubernetes community**
     - in the [docs/contrib directory](contrib/)
 ]
+.footnote[.gray[ @hguemar @mjbright @mariolet ]]
 ???
 SpeakerNotes:
 
@@ -1373,6 +1418,7 @@ ement/2015/07/new-cloud-native-computing-foundation-drive-alignment-among-contai
 
 
 ]
+.footnote[.gray[ @hguemar @mjbright @mariolet ]]
 ???
 SpeakerNotes:
 

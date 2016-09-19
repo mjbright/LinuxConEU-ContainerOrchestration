@@ -22,7 +22,7 @@ class: center, middle, inverse
 - Kubernetes
 - Apache Mesos
 
-In less than 2 hours you won't become expert but you will get some hands on experience.
+In less than 2 hours you won't become an expert but you will get some hands on experience.
 
 ## Instructions
 https://github.com/mjbright/LinuxConEU-ContainerOrchestration/README.md
@@ -32,7 +32,7 @@ https://github.com/mjbright/LinuxConEU-ContainerOrchestration/README.md#prereqs
 
 Please make sure that you satisfy these requirements before coming to this session:
 - Your own laptop with >= 8GBy RAM, >= 20GBy free disk space
-- Vagrant (and libvirt of virtualbox provider)
+- Vagrant (either libvirt or virtualbox providers)
 - OpenVPN (to be detailed at above link)
 
 ## Setup instructions
@@ -105,6 +105,7 @@ class: center, middle,
 <h3> <img width=93 height=30 src="images/RedHat_whiteText_logo.svg" /> &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp; Haikel Guemar, <img src="images/Twitter_Bird.svg" width=24 /> @hguemar </h3>
 <h3> <img width=120 src="images/Hewlett_Packard_Enterprise_whiteText_logo.svg" /> &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; Mike Bright, <img src="images/Twitter_Bird.svg" width=24 /> @mjbright </h3>
 <h3> <img width=93 height=30 src="images/RedHat_whiteText_logo.svg" /> &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; Mario Loriedo, <img src="images/Twitter_Bird.svg" width=24 /> @mariolet </h3>
+<h3> <img width=120 src="images/Hewlett_Packard_Enterprise_whiteText_logo.svg" /> &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; HPE for lending their infrastructure @hpe </h3>
 
 
 

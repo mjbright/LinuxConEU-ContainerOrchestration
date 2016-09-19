@@ -42,6 +42,12 @@ I'm not an expert in this fast moving field, but I hope to give you an overview 
 
 Everything I tell you may be factual today, but will surely be false in a few months as these fast moving projects vie for position.
 
+???
+SpeakerNotes:
+
+TODO: too long, needs to be shortened
+
+
 ---
 name: section_history
 layout: false
@@ -93,7 +99,7 @@ class: center, middle
 ???
 SpeakerNotes:
 talk about
-- pre-historique containers (Solaris Zones, BSD Jails, HPUX xxx)
+- pre-historique containers (Solaris Zones, BSD Jails, HPUX xxx, OpenVZ)
 - Linux Containers (LXC) in mainline kernel from 2010
 - Then came Docker
   Of course containers existed already, but Docker made them usable
@@ -133,14 +139,19 @@ whether they be bare-metal or virtual **host machines**.
 
 These OSes are small, with fast startup, deployment, small attack surface and often *"atomic"* software updates.
 
-- CoreOS          (CoreOS)
-- Project Atomic  (RedHat)
-- Photon          (VMWare)
-- RancherOS       (Rancher)
-- Nano Server OS  (Microsoft)
-- Ubuntu Snappy Core     (Canonical)
-- Nano Server OS  (Microsoft)
+- CoreOS             (CoreOS)
+- Project Atomic     (RedHat)
+- Photon             (VMWare)
+- RancherOS          (Rancher)
+- Nano Server OS     (Microsoft)
+- Ubuntu Snappy Core (Canonical)
+- Nano Server OS     (Microsoft)
 ]
+
+
+???
+SpeakerNotes:
+- names sugggestion: lightweight Cloud Servers, Containers OSes
 
 --
 .right-column[

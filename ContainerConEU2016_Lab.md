@@ -1,5 +1,3 @@
-
-name: title_inversed_whiteText
 layout: false
 class: center, middle, inverse
 
@@ -12,21 +10,29 @@ class: center, middle, inverse
 
 
 ---
+class: center, middle
 .left-column[
-## Lab contents
+## Lab
+.footnote[.gray[ @hguemar @mjbright @mariolet ]]
 ]
 
 .right-column[
-## we will look at each of
+## Agenda
+We will look at each of
 - Docker Swarm mode
 - Kubernetes
 - Apache Mesos
 
-In less than 2 hours you won't become an expert but you will get some hands on experience.
+In less than 2 hours you won't become an expert but you will get good hands on experience.
+]
 
-## Instructions
-https://github.com/mjbright/LinuxConEU-ContainerOrchestration/README.md
+---
+.left-column[
+## Lab
+.footnote[.gray[ @hguemar @mjbright @mariolet ]]
+]
 
+.right-column[
 ## Pre-requisites for this lab:
 https://github.com/mjbright/LinuxConEU-ContainerOrchestration/README.md#prereqs
 
@@ -34,11 +40,22 @@ Please make sure that you satisfy these requirements before coming to this sessi
 - Your own laptop with >= 8GBy RAM, >= 20GBy free disk space
 - Vagrant (either libvirt or virtualbox providers)
 - OpenVPN (to be detailed at above link)
+]
+
+---
+.left-column[
+## Lab
+.footnote[.gray[ @hguemar @mjbright @mariolet ]]
+]
+
+.right-column[
+## Instructions
+https://github.com/mjbright/LinuxConEU-ContainerOrchestration/README.md
 
 ## Setup instructions
 https://github.com/mjbright/LinuxConEU-ContainerOrchestration/README.md#setup
 
-- Vagrant Box image (to be provided - details at the above link)
+Vagrant Box (to be provided - details at the above link)
 
 ## Lab instructions
 https://github.com/mjbright/LinuxConEU-ContainerOrchestration/README.md#lab
@@ -51,6 +68,7 @@ https://github.com/mjbright/LinuxConEU-ContainerOrchestration/README.md#lab
 layout: false
 .left-column[
   ## Installing the lab
+.footnote[.gray[ @hguemar @mjbright @mariolet ]]
 ]
 
 .right-column[
@@ -65,49 +83,45 @@ layout: false
 ---
 layout: false
 .left-column[
-  ## Vagrant install
+  ## Vagrant
+.footnote[.gray[ @hguemar @mjbright @mariolet ]]
 ]
 
 .right-column[
   ## Vagrant install
 
-![image](images/vagrant.png)
 
 ]
 
 ---
 layout: false
 .left-column[
-  ## Use our infra
+  ## HPE infra
+.footnote[.gray[ @hguemar @mjbright @mariolet ]]
 ]
 
 .right-column[
-  HP infra
+  Connecting to the HPE infrastructure
 
-- ????
-
-- ????
-
-- ????
-
-![image](images/hpe-logo.png)
 
 ]
 
+
 ---
 name: last-page
-template: inverse
-class: center, middle,
+class: center, middle, inverse
 
-## Questions?
+# Questions?
+<br/> <br/>
 
-## Thank you
-<h3> <img width=93 height=30 src="images/RedHat_whiteText_logo.svg" /> &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp; Haikel Guemar, <img src="images/Twitter_Bird.svg" width=24 /> @hguemar </h3>
-<h3> <img width=120 src="images/Hewlett_Packard_Enterprise_whiteText_logo.svg" /> &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; Mike Bright, <img src="images/Twitter_Bird.svg" width=24 /> @mjbright </h3>
-<h3> <img width=93 height=30 src="images/RedHat_whiteText_logo.svg" /> &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; Mario Loriedo, <img src="images/Twitter_Bird.svg" width=24 /> @mariolet </h3>
-<h3> <img width=120 src="images/Hewlett_Packard_Enterprise_whiteText_logo.svg" /> &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; HPE for lending their infrastructure @hpe </h3>
+# Thank you
+<br/> <br/>
+
+<h3> <img width=120 src="images/Hewlett_Packard_Enterprise_whiteText_logo.svg" /> &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; thanks to HPE for lending their infrastructure @hpe </h3>
+<br/> <br/>
 
 
+.gray[ [Slideshow created using [remark](http://github.com/gnab/remark). ]]
 
-Slideshow created using [remark](http://github.com/gnab/remark).
+.footnote[.gray[ @hguemar @mjbright @mariolet ]]
 

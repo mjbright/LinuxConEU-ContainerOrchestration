@@ -1,0 +1,8 @@
+---
+kube_master_pkgs:
+  - kubernetes
+
+kube_master_services:
+  - kube-apiserver
+  - kube-controller-manager
+  - kube-scheduler

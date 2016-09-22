@@ -1,0 +1,10 @@
+---
+utilities:
+  - emacs-nox
+  - git
+  - tmux
+  - zsh
+  - yum-utils
+  - bash-completion
+  - docker
+  - crudini

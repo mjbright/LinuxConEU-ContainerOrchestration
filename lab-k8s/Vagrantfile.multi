@@ -1,0 +1,66 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# All Vagrant configuration is done below. The "2" in Vagrant.configure
+# configures the configuration version (we support older styles for
+# backwards compatibility). Please don't change it unless you know what
+# you're doing.
+Vagrant.configure(2) do |config|
+
+  if Vagrant.has_plugin?("vagrant-hostmanager")
+#    config.hostmanager.enabled = true
+#    config.hostmanager.manage_host = true
+  end
+
+  if Vagrant.has_plugin?("vagrant-cachier")
+#    config.cache.scope = :box
+  end
+
+  config.vm.define "node1" do |node1|
+    node1.vm.box = "centos/7"
+    node1.vm.hostname = "node1.example"
+    node1.vm.network :forwarded_port, guest: 80, host: 8080   # horizon
+    node1.vm.network :forwarded_port, guest: 6080, host: 6080 # vnc
+  end
+
+  config.vm.define "node2" do |node1|
+    node1.vm.box = "centos/7"
+    node1.vm.hostname = "node2.example"
+    node1.vm.network :forwarded_port, guest: 80, host: 8080   # horizon
+    node1.vm.network :forwarded_port, guest: 6080, host: 6080 # vnc
+  end
+  
+  config.vm.provider "libvirt" do |libvirt|
+    libvirt.driver = "kvm"
+    libvirt.memory = 4096
+    libvirt.cpus = 2
+  end
+
+  config.vm.provider "openstack" do |os, override|
+    override.ssh.username = "centos"
+    override.ssh.private_key_path = "~/.ssh/fedora"
+    override.ssh.pty = true
+
+    os.openstack_auth_url = ENV['OS_AUTH_URL']
+    os.username = ENV['OS_USERNAME']
+    os.password = ENV['OS_PASSWORD']
+    os.tenant_name = ENV['OS_TENANT_NAME']
+
+    os.server_name = "vagrant-test"
+    os.flavor = "m1.large"
+    os.image = "centos-7-cloud"
+    os.networks = ["external"]
+    os.floating_ip_pool = "external"
+    os.keypair_name = "fedora"
+  end
+
+  config.vm.provision "ansible" do |ansible|
+    ansible.verbose = true
+    ansible.playbook = "playbook.yml"
+    ansible.groups = {
+      "etcd" => ["node1"],
+      "kubemaster" => ["node1"],
+      "kubeminions" => ["node1", "node2"]
+    }
+  end
+end

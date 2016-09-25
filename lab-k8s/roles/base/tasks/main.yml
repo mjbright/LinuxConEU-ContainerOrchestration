@@ -20,3 +20,26 @@
   become: yes
   service: name=firewalld state=stopped enabled=no
   when: "no_firewalld is defined"
+
+- name: check if /etc/hosts.orig exists
+  stat: path=/etc/hosts.orig
+  register: etc_hosts_orig
+
+- name: backup original /etc/hosts
+  become: yes
+  command: "cp /etc/hosts /etc/hosts.orig"
+  when: etc_hosts_orig.stat.exists == False
+
+- name: generate /etc/hosts
+  become: yes
+  template:
+    src=templates/hosts.j2
+    dest=/etc/hosts
+    owner=root
+    group=root
+    mode=0644
+
+- name: Set IP address variables
+  set_fact:
+    kubemaster_ip_address: "{{ hostvars[groups['kubemaster'][0]].ansible_eth0.ipv4.address }}"
+    etcd_ip_address: "{{ hostvars[groups['etcd'][0]].ansible_eth0.ipv4.address }}"

@@ -5,6 +5,12 @@
   with_items:
     "{{ kube_minion_pkgs }}"
 
+- name: configure base kubernetes
+  become: yes
+  template:
+    src: templates/config.j2
+    dest: /etc/kubernetes/config
+
 - name: configure kubelet
   become: yes
   template:

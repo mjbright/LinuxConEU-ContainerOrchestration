@@ -19,4 +19,4 @@ KUBE_LOG_LEVEL="--v=0"
 KUBE_ALLOW_PRIV="--allow-privileged=false"
 
 # How the controller-manager, scheduler, and proxy find the apiserver
-KUBE_MASTER="--master=http://{{ hostvars[groups['kubemaster'][0]].ansible_eth0.ipv4.address }}:8080"
+KUBE_MASTER="--master=http://{{ kubemaster_ip_address }}:8080"

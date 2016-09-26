@@ -1,5 +1,6 @@
 ---
 - hosts: all
+  serial: 100%
   vars:
     epel: true
     no_selinux: true
@@ -11,6 +12,9 @@
   roles:
     - etcd
 
+- hosts: all
+  roles:
+    - flannel
 
 - hosts: kubemaster
   roles:

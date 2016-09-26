@@ -21,3 +21,11 @@
 
 - name: wait etcd to start
   wait_for: port=2379 delay=10
+
+- name: clean flannel configuration
+  become: yes
+  shell: "etcdctl rm /atomic.io/network/config ||:"
+
+- name: configure flannel network
+  become: yes
+  command: etcdctl mk /atomic.io/network/config '{"Network":"172.17.0.0/16"}'

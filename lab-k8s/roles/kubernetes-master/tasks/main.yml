@@ -16,9 +16,12 @@
   template:
     src: templates/apiserver.j2
     dest: /etc/kubernetes/apiserver
-  
+
 - name: start kubernetes master services
   become: yes
   service: name={{ item }} state=started enabled=yes
   with_items:
     "{{ kube_master_services }}"
+
+- name: wait k8s apiserver to start
+  wait_for: port=8080 delay=10

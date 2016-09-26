@@ -1,6 +1,7 @@
 ---
 kube_master_pkgs:
   - kubernetes
+  - flannel
 
 kube_master_services:
   - kube-apiserver

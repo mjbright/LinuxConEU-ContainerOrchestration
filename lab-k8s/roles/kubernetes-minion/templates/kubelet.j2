@@ -11,7 +11,7 @@ KUBELET_ADDRESS="--address=0.0.0.0"
 KUBELET_HOSTNAME=""
 
 # location of the api-server
-KUBELET_API_SERVER="--api-servers=http://{{ hostvars[groups['kubemaster'][0]].ansible_eth0.ipv4.address }}:8080"
+KUBELET_API_SERVER="--api-servers=http://{{ kubemaster_ip_address }}:8080"
 
 # pod infrastructure container
 KUBELET_POD_INFRA_CONTAINER="--pod-infra-container-image=registry.access.redhat.com/rhel7/pod-infrastructure:latest"

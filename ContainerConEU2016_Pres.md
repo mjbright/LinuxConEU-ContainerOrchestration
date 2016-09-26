@@ -295,6 +295,87 @@ Containers allow to use the same application binaries on development, test and p
 SpeakerNotes:
 
 ---
+layout: false
+class: center, middle
+## What was Container Orchestration again?
+
+... and how does it differ from automation?
+
+Orchestration is
+
+- Architecture
+    - Composition
+    - Stitching
+- Workflows
+- Policies
+
+???
+SpeakerNotes:
+
+From http://www.logicworks.net/blog/2015/05/cloud-automation-vs-cloud-orchestration/
+
+What is the difference between cloud orchestration and cloud automation?
+
+In most situations, cloud automation describes a task or function accomplished without human intervention.
+Cloud orchestration describes the arranging and coordination of automated tasks, ultimately resulting in a consolidated process or workflow.
+
+It is simplest to see this in an example.
+To create a standard process to spin up an environment to host a new application, IT teams need to orchestrate several automated tasks:
+    they can automate the addition of new instances during an auto scaling event with auto scaling groups, elastic load balancers, alarms, etc; the environment might also include a deployment automation tool like Code Deploy; Puppet scripts might automate the configuration of the OS; etc.
+All of these functions are cloud automation processes.
+
+These automation tools must occur in a particular order, under certain security groups/tools, be given roles and granted permissions.
+In other words, engineers must complete hundreds of manual tasks to deliver the new environment, even when the building blocks of that environment are automated.
+This is where cloud orchestration is key.
+
+Orchestration tools, enumerate the resources, instance types, roles, etc.  that are required, as well as the configuration of those resources and the interconnections between them.
+Engineers can create declarative templates that orchestrate these processes into a single workflow, so that the “new environment” workflow described above becomes a single API call.
+
+Orchestration tools both simplify and de-risk complex IT processes.
+
+Automation is a technical task, orchestration is an IT workflow composed of tasks, and DevOps is a philosophy that empowers and is powered by sophisticated, orchestrated processes.
+
+orchestration has the potential to lower overall IT costs, free up engineering time for new projects, improve delivery times, and reduce friction between system and development teams.
+... and enable operations at scale.
+
+Some organizations have only begun the cloud automation process, and smaller organizations may still rely on a single individual or team to be the orchestration “brain” that is coordinating IT processes.
+(One can imagine what happens when this individual or team leaves the organization).
+Organizations that orchestrate automation tasks into standard but flexible IT workflows under a single monitoring and orchestration software interface are true DevOps shops.
+
+
+From http://www.slideshare.net/giganati/software-defined-operator
+Which was the Biggest Revolution in Car Manufacturing?
+- Petrol Engine
+- Sports Car
+- Model T Assembly Line
+
+Orchestration = Software Operations
+    ==> Also need to monitor, and adapt to events
+
+Resources: Compute + Storage + Networking + Configuration
+
+Orchestration is the next big thing: Standardize -> Consolidate -> Virtualize(Containerize) -> Automate -> Orchestrate
+- Standardize: Reduces vendor lockin, lowers costs, increases flexibility, performance, simplifies
+- Consolidate: Release assets, more efficient, easier to manage
+- Virtualize(Containerize): Lower cost, increase utilization, more agile
+- Automate: Lower cost, Improve user experience, lower time to market
+- Orchestrate: Lower operation costs, even better user experience, agility
+
+
+From https://en.wikipedia.org/wiki/Orchestration_(computing)
+
+_Cloud service orchestration consists of these elements:[citation needed]
+
+- Composing of architecture, tools, and processes used by humans to deliver a defined Service.
+- Stitching of software and hardware components together to deliver a defined Service.
+- Connecting and Automating of workflows when applicable to deliver a defined Service.
+- Orchestration is critical in the delivery of cloud services for these reasons:[citation needed]
+
+- Cloud services are intended to scale-up arbitrarily and dynamically, without requiring direct human intervention to do so.
+- Cloud service delivery includes fulfillment assurance and billing.
+- Cloud services delivery entails workflows in various technical and business domains.
+
+---
 name: section_coes
 layout: false
 class: center, middle, inverse

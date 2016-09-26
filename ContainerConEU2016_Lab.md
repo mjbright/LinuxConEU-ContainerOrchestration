@@ -4,8 +4,8 @@ class: center, middle, inverse
 ##Container Orchestration: Which Conductor?
 [.green.bold[The Lab]]
 ###ContainerCon Europe, Berlin, Oct 2016
-<h3> <img width=120 src="images/Hewlett_Packard_Enterprise_whiteText_logo.svg" /> &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; Mike Bright, <img src="images/Twitter_Bird.svg" width=24 /> @mjbright </h3>
 <h3> <img width=93 height=30 src="images/RedHat_whiteText_logo.svg" /> &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp; Haikel Guemar, <img src="images/Twitter_Bird.svg" width=24 /> @hguemar </h3>
+<h3> <img width=120 src="images/Hewlett_Packard_Enterprise_whiteText_logo.svg" /> &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; Mike Bright, <img src="images/Twitter_Bird.svg" width=24 /> @mjbright </h3>
 <h3> <img width=93 height=30 src="images/RedHat_whiteText_logo.svg" /> &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; Mario Loriedo, <img src="images/Twitter_Bird.svg" width=24 /> @mariolet </h3>
 
 
@@ -36,10 +36,9 @@ In less than 2 hours you won't become an expert but you will get good hands on e
 ## Pre-requisites for this lab:
 https://github.com/mjbright/LinuxConEU-ContainerOrchestration/README.md#prereqs
 
-Please make sure that you satisfy these requirements before coming to this session:
-- Your own laptop with >= 8GBy RAM, >= 20GBy free disk space
-- Vagrant (either libvirt or virtualbox providers)
-- OpenVPN (to be detailed at above link)
+This lab may be run either
+- in HPE infrastructure
+- locally on your own laptop
 ]
 
 ---
@@ -49,63 +48,64 @@ Please make sure that you satisfy these requirements before coming to this sessi
 ]
 
 .right-column[
-## Instructions
-https://github.com/mjbright/LinuxConEU-ContainerOrchestration/README.md
+## Pre-requisites to run in the HPE infrastructure (recommended for this lab session)
 
-## Setup instructions
+To run in the HPE infrastructure you will need
+- laptop
+- OpenVPN client installed
+    - https://openvpn.net/index.php/open-source/downloads.html
+
+We will provide connection instructions on the day.
+]
+
+---
+.left-column[
+## Lab
+.footnote[.gray[ @hguemar @mjbright @mariolet ]]
+]
+
+.right-column[
+## Pre-requisites to run on your own laptop
+
+To run on your own laptop you will need
+- 8GBy RAM
+- 20 GBy free disk space
+- Vagrant
+    - The provided Vagrantfile has been tested on CentOS 7 ad the libvirt provider
+- Ansible 2.x
+
+]
+
+---
+.left-column[
+## Lab
+.footnote[.gray[ @hguemar @mjbright @mariolet ]]
+]
+
+.right-column[
+## Setup instructions to use the HPE Infrastructure
+We will provide instructions on how to connect using OpenVPN on the day.
+
+## Setup instructions to use your own laptop
+Intructions are available here
 https://github.com/mjbright/LinuxConEU-ContainerOrchestration/README.md#setup
 
 Vagrant Box (to be provided - details at the above link)
+]
 
+---
+.left-column[
+## Lab
+.footnote[.gray[ @hguemar @mjbright @mariolet ]]
+]
+
+.right-column[
 ## Lab instructions
 https://github.com/mjbright/LinuxConEU-ContainerOrchestration/README.md#lab
 
 - Detailed lab steps will be provided at the above link
 
 ]
-
----
-layout: false
-.left-column[
-  ## Installing the lab
-.footnote[.gray[ @hguemar @mjbright @mariolet ]]
-]
-
-.right-column[
-  You can either
-
-- Install our vagrant box
-
-- Run on our infrastructure
-
-]
-
----
-layout: false
-.left-column[
-  ## Vagrant
-.footnote[.gray[ @hguemar @mjbright @mariolet ]]
-]
-
-.right-column[
-  ## Vagrant install
-
-
-]
-
----
-layout: false
-.left-column[
-  ## HPE infra
-.footnote[.gray[ @hguemar @mjbright @mariolet ]]
-]
-
-.right-column[
-  Connecting to the HPE infrastructure
-
-
-]
-
 
 ---
 name: last-page
@@ -117,7 +117,7 @@ class: center, middle, inverse
 # Thank you
 <br/> <br/>
 
-<h3> <img width=120 src="images/Hewlett_Packard_Enterprise_whiteText_logo.svg" /> &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; thanks to HPE for lending their infrastructure @hpe </h3>
+<h3> <img width=120 src="images/Hewlett_Packard_Enterprise_whiteText_logo.svg" /> &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; thanks to HPE for lending their infrastructure @HPE </h3>
 <br/> <br/>
 
 

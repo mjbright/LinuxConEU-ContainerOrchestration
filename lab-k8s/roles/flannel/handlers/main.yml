@@ -1,0 +1,4 @@
+---
+- name: restart flannel
+  become: yes
+  service: name=flanneld state=restarted

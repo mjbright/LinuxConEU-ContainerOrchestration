@@ -450,6 +450,8 @@ class: center, middle
 SpeakerNotes:
 
 Container Orchestration Engines can be imperative or declarative
+Container Orchestration Engines should be declarative "desired state" not imperative "do this".
+
 
 We'll see that Docker Swarm is mostly imperative for now, this has the advantage of being very flexible an operator can request changes precisely as needed.
 Docker compose brings a declarative element.
@@ -908,6 +910,9 @@ TODO: Recreate Kubernetes architecture image
 
 Kubernetes Features
 - Pods - Sets of Containers which share resources
+    - sidecar containers (one of patterns)
+    - ambassador containers
+    - adapter containers
 - Services
 - Non-localized network access
 - Proxy/Load Balancing
@@ -1180,6 +1185,15 @@ An operator specifies the "desired state" and the orchestrator does the rest.
 SpeakerNotes:
 
 TODO: hmm, to what extent do they trend to declarative (not either or ...)
+
+http://cdn.oreillystatic.com/en/assets/1/event/154/How%20do%20I%20orchestrate%20my%20containers_%20Presentation.pdf
+_X
+Characteristics:
+- Scalable
+- General
+- Flexible
+
+(Mesos) (Kubernetes) (Swarm)
 
 ---
 layout: false

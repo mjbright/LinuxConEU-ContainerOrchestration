@@ -4,6 +4,9 @@
 .blue { color: blue; }
 .pink { color: pink; }
 .yellow { color: yellow; }
+.gray { color: #444; }
+.lightgray { color: #888; }
+.vlightgray { color: #ccc; }
 
 .strike {color:salmon;text-decoration:line-through}
 .cite {font-size: 0.8em; color:#33AA99;font-style: italic}

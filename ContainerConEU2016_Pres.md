@@ -389,43 +389,6 @@ _Cloud service orchestration consists of these elements:[citation needed]
 - Cloud services are intended to scale-up arbitrarily and dynamically, without requiring direct human intervention to do so.
 - Cloud service delivery includes fulfillment assurance and billing.
 - Cloud services delivery entails workflows in various technical and business domains.
----
-layout: false
-class: center, middle
-.left-column[
-    ## Orchestration
-]
-.right-column[
-
-... we already have many choices for<br/>
-**Container Orchestration Engines**
-
-|         | |         |
-|:--------|-|:--------|
-| Docker Swarm | :  | Docker Inc.      |
-| Kubernetes   | :  | Cloud Native Computng Foundation      |
-| Apache Mesos | :  | Apache Software Foundation      |
-| Fleet        | :  | CoreOS      |
-| Rancher | :  | Rancher Labs  |
-| Nomad  | :  | HashiCorp |
-
-]
-
-.footnote[.vlightgray[ @hguemar @mjbright @mariolet ]]
-???
-SpeakerNotes:
-
-TODO: Rancher or Cattle?
-
-- Docker : Swarm + Compose (declarative)
-
-- This is the new battleground  (Container Orchestration Wars)
-  - We can choose amongst Docker Swarm(*), Kubernetes, Apache Mesos(*), Fleet, Rancher, ...
-    - or combinations thereof ...
-  - But
-    - what do they do?
-    - why do we need them
-    - is there a winner - do we need a winner ?
 
 ---
 layout: false
@@ -519,17 +482,39 @@ layout: false
   
 - Kubernetes
 
+
 ]
 
 .footnote[.vlightgray[ @hguemar @mjbright @mariolet ]]
 ???
 SpeakerNotes:
 
+|         | |         |
+|:--------|-|:--------|
+| Docker Swarm | :  | Docker Inc.      |
+| Kubernetes   | :  | Cloud Native Computng Foundation      |
+| Apache Mesos | :  | Apache Software Foundation      |
+| Fleet        | :  | CoreOS      |
+| Rancher | :  | Rancher Labs  |
+| Nomad  | :  | HashiCorp |
+
 Mesos Frameworks:
     http://mesos.apache.org/documentation/latest/frameworks/
 
 Aurora: ASF
 Minimesos?
+
+TODO: Rancher or Cattle?
+
+- Docker : Swarm + Compose (declarative)
+
+- This is the new battleground  (Container Orchestration Wars)
+  - We can choose amongst Docker Swarm(*), Kubernetes, Apache Mesos(*), Fleet, Rancher, ...
+    - or combinations thereof ...
+  - But
+    - what do they do?
+    - why do we need them
+    - is there a winner - do we need a winner ?
 
 TODO: Follow Docker logo guidelines here:
     https://www.docker.com/brand-guidelines
@@ -595,7 +580,7 @@ layout: false
   ## The Big 3 - What does Google Trends say?
   <img src=images/TRENDS_ContainerOrchestrationEngines.png width=500 /><br/>
 <br/>
-Clearly Kubernetes has a lead in *"web searches"*.
+Clearly Kubernetes has a lead in *"search trends"*.
 
 But we can expect *"Docker Swarm"* to make quick progress thanks to the new *"swarm mode"*
 
@@ -736,13 +721,14 @@ Scales out an architecture defined by Docker Compose
 
 **2015** Swarm Toolkit released
 
-**2015 June** Docker engine with Swarm Mode released with Docker 1.12
+**2015 June** Docker 1.12 released with Swarm Mode
 
 **Docker "Swarm Mode"** is quite a revolution in Docker Engine capabilities as it integrates:
 
-Orchestration Capabilities directly within the Docker Engine
+Orchestration Capabilities directly in the Docker Engine
 - Load balancing across a mesh network
 - Service Discovery
+
 The same ease of use we're accustomed to from Docker !
 - easy to use coherent commands
 - the same Docker engine API
@@ -851,6 +837,16 @@ SpeakerNotes:
 name: section_docker
 layout: false
 class: center, middle, inverse
+## Docker Swarm Demo
+  <img src=images/docker.png width=100 /><br/>
+
+???
+SpeakerNotes:
+
+---
+name: section_docker
+layout: false
+class: center, middle
 ## Docker Swarm Demo
   <img src=images/docker.png width=100 /><br/>
 
@@ -1034,6 +1030,8 @@ Note: OpenStack Magnum project integrates any of Swarm, Kubernetes, Mesos
 .footnote[.vlightgray[ @hguemar @mjbright @mariolet ]]
 ???
 SpeakerNotes:
+
+There are **many** embryonic projects around Kubernetes.
 
 - Kolla: https://wiki.openstack.org/wiki/Kolla
    Kubernetes?: https://sreeninet.wordpress.com/2016/05/07/openstack-deployment-using-containers/

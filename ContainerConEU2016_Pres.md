@@ -510,10 +510,11 @@ layout: false
   - Docker **"swarm mode"**
 
 - Apache Mesos
-  - Frameworks
-      - Marathon (Mesosphere), Aurora, Chronos
-  - Plugins
-      - Jenkins
+  - Many Frameworks
+      - Marathon (Mesosphere), Aurora, Singularity
+      - Chronos, Jenkins, ...
+      - Hadoop, Spark, Storm, ...
+      - Cassandra, ElasticSearch, ...
   - Mesosphere, DC/OS
   
 - Kubernetes
@@ -523,6 +524,9 @@ layout: false
 .footnote[.vlightgray[ @hguemar @mjbright @mariolet ]]
 ???
 SpeakerNotes:
+
+Mesos Frameworks:
+    http://mesos.apache.org/documentation/latest/frameworks/
 
 Aurora: ASF
 Minimesos?

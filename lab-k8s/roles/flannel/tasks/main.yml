@@ -1,0 +1,17 @@
+---
+- name: install flannel
+  become: yes
+  yum: pkg={{ item }} state=present
+  with_items:
+    "{{ flannel_pkgs }}"
+
+- name: configure flanneld
+  become: yes
+  template:
+    src: templates/flanneld.j2
+    dest: /etc/sysconfig/flanneld
+
+- name: start flanneld
+  become: yes
+  service: name=flanneld state=started
+

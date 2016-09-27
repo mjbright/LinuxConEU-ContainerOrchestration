@@ -53,6 +53,7 @@ TODO: too long, needs to be shortened
 name: section_history
 layout: false
 class: center, middle, inverse
+background-image: url(images/TRENDS_docker_lxc_kube_mesos_containers.png_
 ## .cyan[First ...]
 <!-- .red[ TEST ]  .blue[TEST]  .green[TEST]  .yellow[TEST]  .magenta[TEST]  .cyan[TEST]  .pink[TEST] -->
 <!-- .footnote[.green[But lets not forget the alternatives ...]] -->
@@ -66,6 +67,7 @@ class: center, middle, inverse
 ---
 layout: false
 class: center, middle
+
 
 So let's first look at recent container history ... 
 
@@ -130,10 +132,9 @@ class: center, middle
 .right-column[
 ## &mu;-OSes
 
-Many vendors are developing &mu;-OSes, small OS (mainly Linux-based) to be the basis for container engine hosts
-whether they be bare-metal or virtual **host machines**.
+Many vendors are developing &mu;-OSes, small OS (mainly Linux-based) to be the basis for container engine hosts whether they be bare-metal or virtual **host machines**.
 
-These OSes are small, with fast startup, deployment, small attack surface and often *"atomic"* software updates.
+They're small, with fast startup, use few resources and have a small attack surface and often *"atomic"* software updates.
 
 OS||Vendor
 -|-|-
@@ -143,11 +144,12 @@ Photon|-|(VMWare)
 RancherOS|-|(Rancher Labs)
 Nano Server OS|-|(Microsoft)
 Ubuntu Snappy Core|-|(Canonical)
+
 ]
 
 ???
 SpeakerNotes:
-- names sugggestion: lightweight Cloud Servers, Containers OSes
+- &mu;-Oses or lightweight Cloud Servers, Container OSes
 
 - CoreOS             (CoreOS)
 - Project Atomic     (RedHat)
@@ -156,30 +158,27 @@ SpeakerNotes:
 - Nano Server OS     (Microsoft)
 - Ubuntu Snappy Core (Canonical)
 
---
-.right-column[
-- .bold[.green[...Unikernels (...)]]
-.footnote[.vlightgray[ @hguemar @mjbright @mariolet ]]
-]
-
-???
-SpeakerNotes:
 Describe the raison d'etre of micro-OSes
-- Ligthweight OSes - small, including only what's needed
+- Lightweight OSes - small, including only what's needed
     - SECURITY: small attack surface
 - Docker native support (at least), often Kubernetes, ...
     - Support deploying containers across a cluster
 - "atomic" updates to OS (CoreOS?): OS is updated as a whole, not package-by-package
-
 
 Mention HPE ContainerOS for The Machine (HPE Linux)
 
 TODO: http://www.lemagit.fr/conseil/Nano-Server-Microsoft-entre-de-plein-pied-dans-le-monde-des-micro-services
 
 Atomic Host not just kernel+docker:
-    Kubernetes, systemd, OpenSSH, Storage: NFS, Gluster, ..., cloud-init, SSSD, Networking (NetworkManager, future: +Open vSwitch), Core dump collection (abrt/systemd-coredump)
+- Kubernetes, systemd, OpenSSH, Storage: NFS, Gluster, ..., cloud-init, SSSD, Networking (NetworkManager, future: +Open vSwitch), Core dump collection (abrt/systemd-coredump)
     Flannel for networking
 RPM+OSTree: Atomic host OS upgrades+rollback
+
+--
+.right-column[
+- .bold[.green[...Unikernels (...)]]
+]
+
 
 ---
 layout: false
@@ -188,6 +187,8 @@ class: center, middle, inverse
 
 ???
 SpeakerNotes:
+
+A quite different concept with the same goals of small OS, with small attack surface.
 
 ---
 layout: false
@@ -200,11 +201,11 @@ class: center, middle
 Remember when **high availability** meant this ...?
 <img width=400 height=250 src="images/Active-Standby.svg" />
 
-Server running **monolithic applications** in **Active-Standby** modes,
+Servers running **monolithic applications** in **Active-Standby** modes,
 as 1+1, N+1, or N+M or split across 3 tiers.
 
 Scaling meant to **"scale up"** by adding CPU, RAM, disk.
-But there's a limit to this ... then you have to **scale out**
+But there's a limit to this ... then you have to **"scale out"**
 ]
 
 
@@ -218,13 +219,6 @@ orchestration, load balancing, monitoring across nodes.
 TODO: schema to demonstrate breaking down of monoliths to N-tier allowing
       flexibility to scale out, possibility of better h/w utilisation
 
-      ==> beakers with different coloured, different size balls ...
-
-<img width=100 height=120 src="images/Beaker (1).svg" />
-<img width=100 height=120 src="images/Beaker.svg" />
-<img width=100 height=120 src="images/Becherglas-leer-simpel.svg" />
-<img width=100 height=120 src="images/Becherglas-leer-Skala.svg" />
-<img width=100 height=120 src="images/becher.svg" />
 
 ---
 layout: false
@@ -237,41 +231,16 @@ class: center, middle
 
 #### Then came &mu;-services ..
 
+As the industry moved to virtualized micro-services this allowed to obtain greater efficiencies (higher utilisation of resources) and the redesign of applications allows to scale out and achieve high availability.
 
-Now we can achieve much better hardware utilisation because of the smaller size of components.
+Containers facilitate this move, allowing faster scaling and even greater efficiencies with less redundancy (no OS to reproduce).
+
 ]
 
 .footnote[.vlightgray[ @hguemar @mjbright @mariolet ]]
 ???
 SpeakerNotes:
 
-TODO: schema ==> more/smaller beakers/balls ...
-<img width=100 height=120 src="images/Bearker_balls.svg" />
-<img width=100 height=120 src="images/Liquid-separted-in-beaker.svg" />
-<img width=100 height=120 src="images/Solution-in-beaker.svg" />
-
----
-layout: false
-class: center, middle
-.left-column[
-    ## &mu;-services
-]
-.right-column[
-    ## From monoliths to &mu;-services
-
-But 1000's of nodes are unmanageable ... aren't they?
-
-|   |   |
-|---|---|
-| We can't take care of our | <img width=100 height=120 src="images/johnny-automatic-sad-dog-with-a-broken-leg.svg" />, |
-| so we have to treat them like | <img width=100 height=120 src="images/Holstein-Cow.svg" /> |
-
-that's cloud native !
-]
-
-.footnote[.vlightgray[ @hguemar @mjbright @mariolet ]]
-???
-SpeakerNotes:
 
 ---
 layout: false
@@ -297,6 +266,42 @@ SpeakerNotes:
 ---
 layout: false
 class: center, middle
+.left-column[
+    ## &mu;-services
+]
+.right-column[
+    ## From monoliths to &mu;-services
+
+But 1000's of nodes are unmanageable ... aren't they?
+
+|   |   |
+|---|---|
+| We can't take care of our | <img width=100 height=120 src="images/johnny-automatic-sad-dog-with-a-broken-leg.svg" />, |
+| so we have to treat them like | <img width=100 height=120 src="images/Holstein-Cow.svg" /> |
+
+that's cloud native !
+]
+
+.footnote[.vlightgray[ @hguemar @mjbright @mariolet ]]
+???
+SpeakerNotes:
+
+
+---
+name: section_coes
+layout: false
+class: center, middle, inverse
+## So we need .cyan[container orchestration]
+
+<img width=600 src="images/Orchestration.jpg" />
+
+---
+layout: false
+class: center, middle
+.left-column[
+    ## Orchestration
+]
+.right-column[
 ## What was Container Orchestration again?
 
 ... and how does it differ from automation?
@@ -308,6 +313,7 @@ Orchestration is
     - Stitching
 - Workflows
 - Policies
+]
 
 ???
 SpeakerNotes:
@@ -374,13 +380,6 @@ _Cloud service orchestration consists of these elements:[citation needed]
 - Cloud services are intended to scale-up arbitrarily and dynamically, without requiring direct human intervention to do so.
 - Cloud service delivery includes fulfillment assurance and billing.
 - Cloud services delivery entails workflows in various technical and business domains.
-
----
-name: section_coes
-layout: false
-class: center, middle, inverse
-## So we need .cyan[container orchestration]
-
 ---
 layout: false
 class: center, middle
@@ -401,8 +400,6 @@ class: center, middle
 | Rancher | :  | Rancher Labs  |
 | Nomad  | :  | HashiCorp |
 
-<br/>
-These COEs are to varying degrees<br/> **Imperative** or **Declarative**
 ]
 
 .footnote[.vlightgray[ @hguemar @mjbright @mariolet ]]
@@ -429,6 +426,9 @@ class: center, middle
 ]
 .right-column[
 ## Imperative or Declarative
+
+To manage 1000's of nodes it becomes necessary to be able to make declarative requests to the
+system.
 
 <br/> <br/>
 
@@ -490,24 +490,25 @@ layout: false
 - Docker Swarm
   - Docker swarm
   - The swarm toolkit
-  - Docker "swarm mode"
+  - Docker **"swarm mode"**
 
 - Apache Mesos
   - Frameworks
-      - Marathon, Chronos
+      - Marathon (Mesosphere), Chronos, Aurora
   - Plugins
       - Jenkins
-  - Minmesos
   - Mesosphere, DC/OS
   
 - Kubernetes
 
-.green[But lets not forget the alternatives ...]
 ]
 
 .footnote[.vlightgray[ @hguemar @mjbright @mariolet ]]
 ???
 SpeakerNotes:
+
+Aurora: ASF
+Minimesos?
 
 TODO: Follow Docker logo guidelines here:
     https://www.docker.com/brand-guidelines
@@ -561,6 +562,24 @@ Mesos+Kubernetes:
         in a large-scale pooled compute and storage environment.
 
 ---
+layout: false
+.left-column[
+    ## Orchestration
+  <img src=images/docker.png width=100 /><br/>
+  <img src=images/mesos-logo.png width=100 /><br/>
+  <img src=images/kubernetes.png width=100 /><br/>
+]
+
+.right-column[
+  ## The Big 3 - What does Google Trends say?
+  <img src=images/Trends2.PNG width=500 /><br/>
+Clearly Kubernetes has a lead, but we can expect *"Docker Swarm"* to quickly make progress thanks to the new *"swarm mode"*
+
+<br/>
+.green[But lets not forget the alternatives ...]
+]
+
+---
 .left-column[
   ## Orchestration
 
@@ -576,22 +595,29 @@ Mesos+Kubernetes:
 - Fleet (CoreOS) A distributed init system (between systemd and etcd)
 - Nomad (HashiCorp)
 
-The following are static configuration engines which can be used to automate tasks but they are not orchestration engines as such:
-- Ansible
-- CloudSlang
-- Vagrant
-- Juju
 ]
 
 .footnote[.vlightgray[ @hguemar @mjbright @mariolet ]]
 ???
 SpeakerNotes:
 
+Rancher - capable of launching other orchestrators such as their own Cattle, ...
+
+Fleet - works with Kubernetes (between systemd and etcd)
+
+Nomad is a newcomer, based on Mesos and Kubernetes (Google Papers)
+
 TODO: Rancher or Cattle?
 
   https://github.com/rancher/cattle
  https://github.com/coreos/fleet,
  https://github.com/hashicorp/nomad
+
+The following are static configuration engines which can be used to automate tasks but they are not orchestration engines as such:
+- Ansible
+- CloudSlang
+- Vagrant
+- Juju
 
 Cattle: https://github.com/rancher/cattle ==>
     Cattle is the orchestration engine that powers Rancher.
@@ -672,11 +698,26 @@ layout: false
 
 .right-column[
 
-- Docker engine with Swarm Mode
+- 2014 Dec: Docker Swarm was announced
+    - Capable of scaling up an architecture defined by Docker Compose
 
-- Swarm Toolkit
+- 2015: Swarm Toolkit released
 
-- Swarm
+- 2015 June: Docker engine with Swarm Mode released with Docker 1.12
+
+
+**Docker "Swarm Mode"** is quite a revolution in Docker Engine capabilities as it integrates
+- Integration of Orchestration Capabilities directly within the Docker Engine
+    - Load balancing across a mesh network
+    - Service Discovery
+- The same ease of use we're accustomed to from Docker !
+
+
+]
+
+.footnote[.vlightgray[ @hguemar @mjbright @mariolet ]]
+???
+SpeakerNotes:
 
 Used in production by:
 
@@ -687,12 +728,6 @@ Used in production by:
 Integrated in:
 
 - OpenStack Magnum Project; one of the supported COEs
-
-]
-
-.footnote[.vlightgray[ @hguemar @mjbright @mariolet ]]
-???
-SpeakerNotes:
 
 ---
 layout: false
@@ -713,6 +748,36 @@ layout: false
 SpeakerNotes:
 
 TODO: replace image ...
+---
+layout: false
+.left-column[
+  <img src=images/docker.png width=100 /><br/>
+  ## Docker Swarm
+  .footnote[.red[] [docker.com](https://docker.com)]
+]
+
+.right-column[
+
+## Using Docker "Swarm Mode"
+
+Create a new swarm by creating the master node:
+```
+    $ docker swarm init
+    xxxx
+```
+
+Join a new node to the swarm swarm:
+
+```
+    $ docker swarm join ....
+
+```
+]
+
+.footnote[.vlightgray[ @hguemar @mjbright @mariolet ]]
+???
+SpeakerNotes:
+
 ---
 layout: false
 .left-column[
@@ -760,20 +825,16 @@ Can scale to ~ 10,000 nodes.
 Used in production by:
 
 - Twitter
-
-- .... ????
-
-Integrated in:
-
-- OpenStack Magnum Project; one of the supported COEs
+- Groupon
+- Netflix
 
 
 .footnote[.vlightgray[ @hguemar @mjbright @mariolet ]]
 
 Mesos is used in conjunction with Frameworks such as
-- Marathon: manages long running tasks
+- **Marathon** or Aurora: manages long running tasks
 - Chronos: designed for job orchestration
-- Hadoop: (YARN?)
+- Hadoop: for big data processing
 - Kubernetes: allowing delcarative use
 
 ]
@@ -781,6 +842,13 @@ Mesos is used in conjunction with Frameworks such as
 .footnote[.vlightgray[ @hguemar @mjbright @mariolet ]]
 ???
 SpeakerNotes:
+
+Integrated in:
+
+- OpenStack Magnum Project; one of the supported COEs
+
+- Hadoop: (YARN?)
+  Also used for Cassandra, ... Spark, ...
 
 ---
 layout: false
@@ -793,7 +861,7 @@ layout: false
 .right-column[
   ## Architecture
 
-  <img src=images/mesos_archi.jpg width=300 /><br/>
+  <img src=images/mesos_archi.jpg width=400 /><br/>
 
 Image courtesy of
 http://mesos.apache.org/documentation/latest/architecture/
@@ -816,11 +884,39 @@ layout: false
 
 .right-column[
 
+## Using Mesos
+
+Step1
+```
+    xxxx
+```
+
+Step2
+
+```
+
+```
+]
+
+.footnote[.vlightgray[ @hguemar @mjbright @mariolet ]]
+???
+SpeakerNotes:
+
+---
+layout: false
+.left-column[
+  <img src=images/mesos-logo.png width=100 /><br/>
+  ## Apache Mesos
+  .footnote[.red[] [mesos.apache.org](http://mesos.apache.org/)]
+]
+
+.right-column[
+
 ## Getting started
 An excellent place to start is with the following tutorials
 
 - Mesos
-    - minimesos?
+    - minimesos
 
 - Mesosphere
 
@@ -863,20 +959,12 @@ Started ~ Oct 2014, reach v1.0 in in July 2015 and currently at v1.4
 It is managed by the Cloud Native Computing Foundation
 https://cncf.io/
 
-Used in production by:
-
-- ???
-
-- .... ????
-
 Integrated in:
 - Stackanetes, Mirantis
-- OpenShift
-- Deis http://deis.io
+- RedHat OpenShift PaaS
+- Deis Paas
 - EBay : Kubernetes + OVS
-- CoreOS: Tectonnic (commercial Kubernetes offering)
-- OpenStack Magnum Project; one of the supported COEs
-
+- CoreOS: Tectonic (commercial Kubernetes offering)
 
 ]
 
@@ -884,6 +972,12 @@ Integrated in:
 .footnote[.vlightgray[ @hguemar @mjbright @mariolet ]]
 ???
 SpeakerNotes:
+
+- (Deis Paas)[http://deis.io]:
+Used in production by:
+- ???
+- .... ????
+- OpenStack Magnum Project; one of the supported COEs
 
 ---
 layout: false
@@ -1090,6 +1184,35 @@ layout: false
 ]
 
 .right-column[
+
+## Using Kubernetes
+
+Step1
+```
+    xxxx
+```
+
+Step2
+
+```
+
+```
+]
+
+.footnote[.vlightgray[ @hguemar @mjbright @mariolet ]]
+
+???
+SpeakerNotes:
+
+---
+layout: false
+.left-column[
+  <img src=images/kubernetes.png width=100 /><br/>
+  ## Kubernetes
+  .footnote[.red[] [kubernetes.io](https://kubernetes.io)]
+]
+
+.right-column[
 ## Getting started
 An excellent place to start is with the following tutorials
 
@@ -1282,53 +1405,14 @@ Lab setup instructions [here](http://bit.ly/2674h5J)
 SpeakerNotes:
 
 ---
-name: demo-page-1
-template: inverse
-class: center, middle, 
+name: section_docker
+layout: false
+class: center, middle, inverse
+## Docker Swarm Demo
+  <img src=images/docker.png width=100 /><br/>
 
-#### Demo - Apache Mesos
-
-<iframe src="https://localhost:9999/" width="800" height="600" >
-  <p>Server is not running</p>
-</iframe>
-
-.footnote[.vlightgray[ @hguemar @mjbright @mariolet ]]
 ???
 SpeakerNotes:
-
-TODO: replace with links to animated gifs (from tty2gif)
-
----
-name: demo-page-2
-template: inverse
-class: center, middle, 
-
-#### Demo - Kubernetes
-
-<iframe src="https://localhost:9999/" width="800" height="600" >
-  <p>Server is not running</p>
-</iframe>
-
-.footnote[.vlightgray[ @hguemar @mjbright @mariolet ]]
-???
-SpeakerNotes:
-TODO: replace with links to animated gifs (from tty2gif)
-
----
-name: demo-page-3
-template: inverse
-class: center, middle, 
-
-#### Demo - Docker Swarm
-
-<iframe src="https://localhost:9999/" width="800" height="600" >
-  <p>Server is not running</p>
-</iframe>
-
-.footnote[.vlightgray[ @hguemar @mjbright @mariolet ]]
-???
-SpeakerNotes:
-TODO: replace with links to animated gifs (from tty2gif)
 
 ---
 name: last-page

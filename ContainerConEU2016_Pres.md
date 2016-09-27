@@ -53,7 +53,6 @@ TODO: too long, needs to be shortened
 name: section_history
 layout: false
 class: center, middle, inverse
-background-image: url(images/TRENDS_docker_lxc_kube_mesos_containers.png_
 ## .cyan[First ...]
 <!-- .red[ TEST ]  .blue[TEST]  .green[TEST]  .yellow[TEST]  .magenta[TEST]  .cyan[TEST]  .pink[TEST] -->
 <!-- .footnote[.green[But lets not forget the alternatives ...]] -->
@@ -62,7 +61,23 @@ background-image: url(images/TRENDS_docker_lxc_kube_mesos_containers.png_
 name: section_history2
 layout: false
 class: center, middle, inverse
-## A little bit of history
+
+## .blue[A little bit of history]
+
+--
+name: section_history2
+layout: false
+class: center, middle, inverse
+background-clip: content-box;
+background-image: url(images/TRENDS_Containers.png)
+
+???
+SpeakerNotes:
+
+No need I'm sure to remind you of Docker's meteoric rise since it's announcement in March 2013.
+
+Although containers existed for quite some time before in various Unices ad Linux (LXC), Docker
+popularized the technology by making containers so easy to use and share.
 
 ---
 layout: false
@@ -77,25 +92,6 @@ So let's first look at recent container history ...
 ???
 SpeakerNotes:
 
----
-layout: false
-class: center, middle
-
-![Google Trends](images/TRENDS_docker_lxc_kube_mesos_containers.png)
-
-
-<!--
-     https://www.google.fr/trends/explore?cat=5&q=%2Fm%2F0wkcjgj,lxc,kubernetes,Mesos,%2Fm%2F0db40
--->
-
-<!--
-<script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/744_RC08/embed_loader.js"></script> <script type="text/javascript"> trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"/m/0wkcjgj","geo":"","time":"today 5-y"},{"keyword":"lxc","geo":"","time":"today 5-y"},{"keyword":"kubernetes","geo":"","time":"today 5-y"},{"keyword":"Mesos","geo":"","time":"today 5-y"},{"keyword":"/m/0db40","geo":"","time":"today 5-y"}],"category":5,"property":""}, {"guestPath":"https://www.google.fr:443/trends/embed/"}); </script> 
--->
-
-.footnote[.vlightgray[ @hguemar @mjbright @mariolet ]]
-
-???
-SpeakerNotes:
 talk about
 - pre-historique containers (Solaris Zones, BSD Jails, HPUX xxx, OpenVZ)
 - Linux Containers (LXC) in mainline kernel from 2010
@@ -121,7 +117,9 @@ talk about
 DONE??: image showing "growth" (?) of containers ...
 - LXC, Docker, rkt, LXD, runC/OCI, Garden
 
-  
+#### LXC:
+http://www.ibm.com/developerworks/library/l-lxc-containers/
+ 
 
 ---
 layout: false
@@ -219,6 +217,13 @@ orchestration, load balancing, monitoring across nodes.
 TODO: schema to demonstrate breaking down of monoliths to N-tier allowing
       flexibility to scale out, possibility of better h/w utilisation
 
+#### What are Microservices?
+
+Microservices are a software architecting pattern that allows software to be developed into relatively small, distinct components.
+Each of the components is abstracted by an API(s) and provides a distinct subset of the functionality of the entire application.
+Each individual distinct component, or microservice, can then be designed, developed, and managed independently.
+This allows for distributed ownership of a large application across a large organization, with each microservice owned by a specific team.
+
 
 ---
 layout: false
@@ -272,7 +277,7 @@ class: center, middle
 .right-column[
     ## From monoliths to &mu;-services
 
-But 1000's of nodes are unmanageable ... aren't they?
+But 1000's of nodes are **unmanageable** ... aren't they?
 
 |   |   |
 |---|---|
@@ -285,6 +290,10 @@ that's cloud native !
 .footnote[.vlightgray[ @hguemar @mjbright @mariolet ]]
 ???
 SpeakerNotes:
+
+Pets - you take care of them when they're ill
+
+Cattle - one dies, you just replace it
 
 
 ---
@@ -427,10 +436,10 @@ class: center, middle
 .right-column[
 ## Imperative or Declarative
 
-To manage 1000's of nodes it becomes necessary to be able to make declarative requests to the
+To manage 100's, 1000's, 10,000's of nodes it's necessary to make declarative requests to the
 system.
 
-<br/> <br/>
+
 
 |                   |         Imperative     |               Declarative      |
 | ----------------- | ---------------------- | ------------------------------ |
@@ -440,6 +449,10 @@ system.
 |                       | ...                    |                                |
 | **Flexibility**       | Best                   | Least                          |
 
+It is not longer feasible for an operator to
+- monitor the state of all systems
+- know the resources available (e.g. SSD/HDD, GPU, ...)
+- react to failure, know when to scale ...
 
 
 ]
@@ -451,6 +464,10 @@ SpeakerNotes:
 
 Container Orchestration Engines can be imperative or declarative
 Container Orchestration Engines should be declarative "desired state" not imperative "do this".
+
+It's no longer feasible for an operator to decide on which node to deploy especially when complex constraints exist
+- making use of specialized hardware, e.g. SSD best for some operations
+- adapting to hardware failures
 
 
 We'll see that Docker Swarm is mostly imperative for now, this has the advantage of being very flexible an operator can request changes precisely as needed.
@@ -494,7 +511,7 @@ layout: false
 
 - Apache Mesos
   - Frameworks
-      - Marathon (Mesosphere), Chronos, Aurora
+      - Marathon (Mesosphere), Aurora, Chronos
   - Plugins
       - Jenkins
   - Mesosphere, DC/OS
@@ -572,8 +589,11 @@ layout: false
 
 .right-column[
   ## The Big 3 - What does Google Trends say?
-  <img src=images/Trends2.PNG width=500 /><br/>
-Clearly Kubernetes has a lead, but we can expect *"Docker Swarm"* to quickly make progress thanks to the new *"swarm mode"*
+  <img src=images/TRENDS_ContainerOrchestrationEngines.png width=500 /><br/>
+<br/>
+Clearly Kubernetes has a lead in *"web searches"*.
+
+But we can expect *"Docker Swarm"* to make quick progress thanks to the new *"swarm mode"*
 
 <br/>
 .green[But lets not forget the alternatives ...]
@@ -590,10 +610,10 @@ Clearly Kubernetes has a lead, but we can expect *"Docker Swarm"* to quickly mak
 ]
 
 .right-column[
-## More Choice ...
-- Rancher (Rancher Labs)
-- Fleet (CoreOS) A distributed init system (between systemd and etcd)
-- Nomad (HashiCorp)
+## More Choices ...
+- Rancher &nbsp; &nbsp; (Rancher Labs)
+- Fleet &nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (CoreOS)
+- Nomad &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (HashiCorp)
 
 ]
 
@@ -604,6 +624,14 @@ SpeakerNotes:
 Rancher - capable of launching other orchestrators such as their own Cattle, ...
 
 Fleet - works with Kubernetes (between systemd and etcd)
+    A distributed init system (between systemd and etcd)
+
+    - Fleet is the cluster management tool from CoreOS.
+      It bills itself as a “low-level cluster engine”, meaning that it is expected to form a “foundation layer” for higher-level solutions such as Kubernetes.
+
+    - The most distinguishing feature of fleet is that it builds on top of systemd.
+      Whereas systemd provides system and service initialization for a single machine, fleet extends this to a cluster of machines.
+      Fleet reads systemd unit files, which are then scheduled on a machine or machines in the cluster.
 
 Nomad is a newcomer, based on Mesos and Kubernetes (Google Papers)
 
@@ -698,20 +726,22 @@ layout: false
 
 .right-column[
 
-- 2014 Dec: Docker Swarm was announced
-    - Capable of scaling up an architecture defined by Docker Compose
+**2014 Dec** Docker Swarm was announced
 
-- 2015: Swarm Toolkit released
+Scales out an architecture defined by Docker Compose
 
-- 2015 June: Docker engine with Swarm Mode released with Docker 1.12
+**2015** Swarm Toolkit released
 
+**2015 June** Docker engine with Swarm Mode released with Docker 1.12
 
-**Docker "Swarm Mode"** is quite a revolution in Docker Engine capabilities as it integrates
-- Integration of Orchestration Capabilities directly within the Docker Engine
-    - Load balancing across a mesh network
-    - Service Discovery
-- The same ease of use we're accustomed to from Docker !
+**Docker "Swarm Mode"** is quite a revolution in Docker Engine capabilities as it integrates:
 
+Orchestration Capabilities directly within the Docker Engine
+- Load balancing across a mesh network
+- Service Discovery
+The same ease of use we're accustomed to from Docker !
+- easy to use coherent commands
+- the same Docker engine API
 
 ]
 
@@ -719,11 +749,11 @@ layout: false
 ???
 SpeakerNotes:
 
+Add something about the Swarm Toolkit.
+
 Used in production by:
+- Docker for bug tracking
 
-- ???
-
-- .... ????
 
 Integrated in:
 
@@ -762,21 +792,36 @@ layout: false
 
 Create a new swarm by creating the master node:
 ```
-    $ docker swarm init
-    xxxx
-```
-
-Join a new node to the swarm swarm:
+    $ docker swarm init --advertise-addr 192.168.2.100
+    Swarm initialized: current node (dxn1zf6l61qsb1josjja83ngz) is now a manager.
 
 ```
-    $ docker swarm join ....
 
+Join a new Worker node to the swarm:
+
+```
+    $ docker swarm join \
+    --token SWMTKN-1-49nj1cmql0jkz5s954yi3oex3nedyz0fb0xx14ie39trti4wxv-8vxv8rssmk743ojnwacrr2e7c \
+    192.168.2.100:2377
+
+```
+
+Join a new Master node to the swarm:
+
+```
+    $ docker swarm join-token manager
 ```
 ]
 
 .footnote[.vlightgray[ @hguemar @mjbright @mariolet ]]
 ???
 SpeakerNotes:
+
+2 simple commands and we already have a 2 node cluster available, and we can perform docker run against this cluster.
+
+Run through https://docs.docker.com/engine/swarm/swarm-tutorial/
+
+Complete above commands !
 
 ---
 layout: false
@@ -795,6 +840,16 @@ An excellent place to start is with Jerome Pettazoni's *"Orchestration Workshop"
 ]
 
 .footnote[.vlightgray[ @hguemar @mjbright @mariolet ]]
+???
+SpeakerNotes:
+
+---
+name: section_docker
+layout: false
+class: center, middle, inverse
+## Docker Swarm Demo
+  <img src=images/docker.png width=100 /><br/>
+
 ???
 SpeakerNotes:
 
@@ -818,7 +873,7 @@ layout: false
 
 .right-column[
 
-Arguably the most production ready orchestration today, exists since 2009.
+The most proven orchestrator today, exists since 2009.
 
 Can scale to ~ 10,000 nodes.
 
@@ -828,8 +883,6 @@ Used in production by:
 - Groupon
 - Netflix
 
-
-.footnote[.vlightgray[ @hguemar @mjbright @mariolet ]]
 
 Mesos is used in conjunction with Frameworks such as
 - **Marathon** or Aurora: manages long running tasks
@@ -960,11 +1013,16 @@ It is managed by the Cloud Native Computing Foundation
 https://cncf.io/
 
 Integrated in:
-- Stackanetes, Mirantis
+- GKE (Google Container Engine)
+- Tectonic (CoreOS commercial Kubernetes offering)
+- Stackanetes (CoreOS, uses Tectonic)
+    - Self healing OpenStack demo
+- Mirantis (OpenStack CI/CD)
 - RedHat OpenShift PaaS
 - Deis Paas
 - EBay : Kubernetes + OVS
-- CoreOS: Tectonic (commercial Kubernetes offering)
+
+Note: OpenStack Magnum project integrates any of Swarm, Kubernetes, Mesos
 
 ]
 
@@ -972,6 +1030,10 @@ Integrated in:
 .footnote[.vlightgray[ @hguemar @mjbright @mariolet ]]
 ???
 SpeakerNotes:
+
+- Kolla: https://wiki.openstack.org/wiki/Kolla
+   Kubernetes?: https://sreeninet.wordpress.com/2016/05/07/openstack-deployment-using-containers/
+       https://sreeninet.wordpress.com/category/kubernetes/
 
 - (Deis Paas)[http://deis.io]:
 Used in production by:
@@ -1295,10 +1357,6 @@ They are converging on many points
 
 They are tending to add 'declarative specification' capabilities.
 
-It's no longer feasible for an operator to decide on which node to deploy especially when complex constraints exist
-- making use of specialized hardware, e.g. SSD best for some operations
-- adapting to hardware failures
-
 An operator specifies the "desired state" and the orchestrator does the rest.
 
 ]
@@ -1405,19 +1463,9 @@ Lab setup instructions [here](http://bit.ly/2674h5J)
 SpeakerNotes:
 
 ---
-name: section_docker
-layout: false
-class: center, middle, inverse
-## Docker Swarm Demo
-  <img src=images/docker.png width=100 /><br/>
-
-???
-SpeakerNotes:
-
----
 name: last-page
 template: inverse
-class: center, middle, 
+class: center, middle, inverse
 
 # Questions?
 

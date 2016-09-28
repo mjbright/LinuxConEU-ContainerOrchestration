@@ -855,9 +855,23 @@ layout: false
 .right-column[
 
 ## Getting started
-An excellent place to start is with Jerome Pettazoni's *"Orchestration Workshop"*
-- being run at this conference
-- Available on github, https://github.com/jpetazzo/orchestration-workshop
+
+**Bruno Cornecs' Docker 101**
+<br/>
+New to Docker?  Come to http://sched.co/7oHf
+<br/>
+- **Docker 101 Lab, 9am - Friday 7th October**
+
+Sources: https://github.com/bcornec/Labs/tree/master/Docker
+
+**Jerome Petazzoni's Orchestration Workshop**
+<br/>
+or more advanced?  Come to http://sched.co/7oHx
+<br/>
+- **Orchestrating Containers in Production at Scale with Docker Swarm, 9am - Friday 7th October**
+
+Sources: https://github.com/jpetazzo/orchestration-workshop
+
 ]
 
 .footnote[.vlightgray[ @hguemar @mjbright @mariolet ]]

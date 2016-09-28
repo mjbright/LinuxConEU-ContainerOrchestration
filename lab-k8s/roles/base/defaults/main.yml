@@ -1,0 +1,5 @@
+---
+epel: true
+no_selinux: true
+no_firewalld: true
+docker_latest: false

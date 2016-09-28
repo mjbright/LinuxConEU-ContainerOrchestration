@@ -163,6 +163,8 @@ Describe the raison d'etre of micro-OSes
     - Support deploying containers across a cluster
 - "atomic" updates to OS (CoreOS?): OS is updated as a whole, not package-by-package
 
+RancherOS: interesting use of system and application containers
+
 Mention HPE ContainerOS for The Machine (HPE Linux)
 
 TODO: http://www.lemagit.fr/conseil/Nano-Server-Microsoft-entre-de-plein-pied-dans-le-monde-des-micro-services

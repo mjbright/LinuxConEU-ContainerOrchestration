@@ -39,6 +39,20 @@
     group=root
     mode=0644
 
+- name: setup docker repository
+  become: yes
+  yum_repository:
+    name: docker
+    description: Docker Repository
+    baseurl: https://yum.dockerproject.org/repo/main/centos/7/
+    gpgkey: https://yum.dockerproject.org/gpg
+    gpgcheck: yes
+    enabled: "{{ docker_latest }}"
+
+- name: install docker engine
+  become: yes
+  yum: pkg="{{ (docker_latest == true) | ternary('docker-engine', 'docker') }}" state=present
+
 - name: Set IP address variables
   set_fact:
     kubemaster_ip_address: "{{ hostvars[groups['kubemaster'][0]].ansible_eth0.ipv4.address }}"

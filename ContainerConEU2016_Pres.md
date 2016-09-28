@@ -489,10 +489,6 @@ layout: false
 
 - Apache Mesos
   - Many Frameworks & Plugins
-      - Marathon (Mesosphere), Aurora, Singularity
-      - Chronos, Jenkins, ...
-      - Hadoop, Spark, Storm, ...
-      - Cassandra, ElasticSearch, ...
   - Mesosphere, DC/OS
   
 - Kubernetes
@@ -617,7 +613,7 @@ layout: false
   ## The Big 3 - What does Google Trends say?
   <img src=images/TRENDS_ContainerOrchestrationEngines.png width=500 /><br/>
 <br/>
-Clearly Kubernetes has a lead in *"search trends"*.
+Clearly Kubernetes has a lead in *"search trends"*, or at least Google search trends.
 
 But we can expect *"Docker Swarm"* to make quick progress thanks to the new *"swarm mode"*
 
@@ -640,6 +636,7 @@ But we can expect *"Docker Swarm"* to make quick progress thanks to the new *"sw
 - Rancher &nbsp; &nbsp; (Rancher Labs)
 - Fleet &nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (CoreOS)
 - Nomad &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (HashiCorp)
+- Kontena &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
 ]
 
@@ -868,7 +865,7 @@ New to Docker?  Come to http://sched.co/7oHf
 <br/>
 - **Docker 101 Lab, 9am - Friday 7th October**
 
-Sources: https://github.com/bcornec/Labs/tree/master/Docker
+https://github.com/bcornec/Labs/tree/master/Docker
 
 **Jerome Petazzoni's Orchestration Workshop**
 <br/>
@@ -876,7 +873,7 @@ or more advanced?  Come to http://sched.co/7oHx
 <br/>
 - **Orchestrating Containers in Production at Scale with Docker Swarm, 9am - Friday 7th October**
 
-Sources: https://github.com/jpetazzo/orchestration-workshop
+https://github.com/jpetazzo/orchestration-workshop
 
 ]
 
@@ -931,15 +928,21 @@ Can scale to ~ 10,000 nodes.
 Used in production by:
 
 - Twitter
+- Airbnb
+- eBay
 - Groupon
 - Netflix
+- Hubspot
 
 
 Mesos is used in conjunction with Frameworks such as
-- **Marathon** or Aurora: manages long running tasks
-- Chronos: designed for job orchestration
-- Hadoop: for big data processing
+- **Marathon** (Mesosphere), Aurora or Singularity: manages long running tasks
+- Chronos "cron", Jenkins: for job orchestration
+- Hadoop, Spark, Storm: for big data processing
+- Cassandra, ElasticSearch, ...
 - Kubernetes: allowing delcarative use
+
+ 
 
 ]
 

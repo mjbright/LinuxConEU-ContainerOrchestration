@@ -1,0 +1,3 @@
+---
+zookeeper_pkg:
+  - mesosphere-zookeeper

@@ -176,7 +176,7 @@ RPM+OSTree: Atomic host OS upgrades+rollback
 
 --
 .right-column[
-- .bold[.green[...Unikernels (...)]]
+.bold[.green[...Unikernels (...)]]
 ]
 
 
@@ -257,13 +257,16 @@ layout: false
 .right-column[
 ## How containers help?
 
-Container solutions such as Docker go beyond the isolation capabilities of LXC by providing simple to use tools to enable packaging of apps with their dependencies allowing portable applications between systems.
+Container solutions such as Docker go beyond the isolation capabilities of LXC by providing simple to use tools to enable packaging of apps with their
+dependencies allowing portable applications between systems.
 
 Containers are lightweight
 
-Containers can be shared
+Versioned images containing all dependancies can be shared
 
 Containers allow to use the same application binaries on development, test and production systems whether that be on a laptop, server or in the cloud.
+
+It's a no brainer for developers, who can build and share their own images
 ]
 
 .footnote[.vlightgray[ @hguemar @mjbright @mariolet ]]

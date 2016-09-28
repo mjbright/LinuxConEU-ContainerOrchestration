@@ -300,6 +300,8 @@ Pets - you take care of them when they're ill
 
 Cattle - one dies, you just replace it
 
+This is not to say that you cannot have system containers also ...
+
 
 ---
 name: section_coes
@@ -325,12 +327,15 @@ Orchestration is
 - Architecture
     - Composition
     - Stitching
-- Workflows
-- Policies
+- Workflows & Policies to
+    - Auto scale in/out (maybe)
+    - Adapt to faults
 ]
 
 ???
 SpeakerNotes:
+
+Manage use of resources: compute, storage, networking
 
 From http://www.logicworks.net/blog/2015/05/cloud-automation-vs-cloud-orchestration/
 
@@ -404,8 +409,7 @@ class: center, middle
 .right-column[
 ## Imperative or Declarative
 
-To manage 100's, 1000's, 10,000's of nodes it's necessary to make declarative requests to the
-system.
+To manage 100's, 1000's, 10,000's of nodes we need to express *"desired state"* rather than *"do this"*.
 
 
 
@@ -473,12 +477,12 @@ layout: false
   ## The Big 3 - Main Orchestration Choices
 
 - Docker Swarm
-  - Docker swarm
-  - The swarm toolkit
-  - Docker **"swarm mode"**
+  - Docker Swarm
+  - The Swarm toolkit
+  - Docker **"Swarm mode"**
 
 - Apache Mesos
-  - Many Frameworks
+  - Many Frameworks & Plugins
       - Marathon (Mesosphere), Aurora, Singularity
       - Chronos, Jenkins, ...
       - Hadoop, Spark, Storm, ...
@@ -493,6 +497,28 @@ layout: false
 .footnote[.vlightgray[ @hguemar @mjbright @mariolet ]]
 ???
 SpeakerNotes:
+
+Docker Swarm was the original orchestrator for the Docker Engine.
+It was used with Docker Compose to orchestrate an application composed of containers.
+Still present for backward compatibility.
+- Need example of "compose up" from yaml + scale
+- Integrated with "machine" and "compose"
+
+Swarm Mode integrates:
+- ("Swarm") cluster wide kv store (no need for etcd, consul, zookeeper, ...)
+- Service model
+    - Scaling
+    - Rolling updates
+    - Service discovery
+    - load balancing
+    - **routing mesh**
+- Secure communications (control+data)
+- Same Docker API, similar CLI commands
+- TO COME: Integration with "machine" and "compose"
+
+Swarm Toolkit
+- Open Source toolkit for building clusters with secure communications
+  Who would use this?
 
 |         | |         |
 |:--------|-|:--------|

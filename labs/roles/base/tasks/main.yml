@@ -3,7 +3,7 @@
   become: yes
   yum:
     name: epel-release
-  when: "epel is defined and epel == true"
+  when: "epel == true"
 
 - name: install utilities
   become: yes
@@ -14,12 +14,12 @@
 - name: disable SELinux
   become: yes
   selinux: policy=targeted state=permissive
-  when: "no_selinux is defined"
+  when: "no_selinux == true"
 
 - name: disable firewalld
   become: yes
   service: name=firewalld state=stopped enabled=no
-  when: "no_firewalld is defined"
+  when: "no_firewalld == true"
 
 - name: check if /etc/hosts.orig exists
   stat: path=/etc/hosts.orig
@@ -38,6 +38,30 @@
     owner=root
     group=root
     mode=0644
+
+- name: setup docker repository
+  become: yes
+  yum_repository:
+    name: docker
+    description: Docker Repository
+    baseurl: https://yum.dockerproject.org/repo/main/centos/7/
+    gpgkey: https://yum.dockerproject.org/gpg
+    gpgcheck: yes
+    enabled: "{{ docker_latest }}"
+
+- name: install docker engine
+  become: yes
+  yum: pkg="{{ (docker_latest == true) | ternary('docker-engine', 'docker') }}" state=present
+
+- include_vars: mesos.yml
+  when: "mesos == true"
+
+- name: install mesos repository
+  become: yes
+  yum:
+    name: "{{ mesos_repo_pkg }}"
+    state: present
+  when: "mesos == true"
 
 - name: Set IP address variables
   set_fact:

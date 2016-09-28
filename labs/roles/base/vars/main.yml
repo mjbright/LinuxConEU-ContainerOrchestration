@@ -6,5 +6,4 @@ utilities:
   - zsh
   - yum-utils
   - bash-completion
-  - docker
   - crudini

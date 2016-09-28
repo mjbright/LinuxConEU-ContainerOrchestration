@@ -13,16 +13,26 @@ class: center, middle, inverse
 ???
 SpeakerNotes:
 
+Introduce ourselves.
+
+Why this presentation?
+
+Container Orchestration is a hot topic with multiple vendors positioning themselves in this space.
+
+It's not easy to make a choice but the great news is that most of these orchestration engines are Open Source !
+In fact all are OpenSource except the hosted versions.
+What licenses?
+
 TODO: Replace (many) images with "hand drawn" images (via Wacom or Inkscape?)
       Use Jupyter/matplotlib->svg/%%svg for images, graphs, animations ...
 
 TODO: Take tips from this presn: http://asmeurer.github.io/python3-presentation/slides.html#1
       How does this guy do his titles? http://kjbekkelund.github.io/js-architecture-backbone/#2
 
+This presentation on [github](https://github.com/mjbright/LinuxConEU-ContainerOrchestration) on [ContainerCon Schedule](https://linuxconcontainerconeurope2016.sched.org/event/7oHV/container-orchestration-swarm-mesos-kubernetes-which-conductor-mike-bright-hpe)
+
 Abstract
 ---------
-#### .footnote[This presentation on [github](https://github.com/mjbright/LinuxConEU-ContainerOrchestration) on [ContainerCon Schedule](https://linuxconcontainerconeurope2016.sched.org/event/7oHV/container-orchestration-swarm-mesos-kubernetes-which-conductor-mike-bright-hpe)]
-
 
 Oh my, as if we didn’t have enough container choices with LXC, Docker, rkt, LXD, we still have to choose a container orchestrator and there are lots of them !
 
@@ -43,10 +53,6 @@ I'm not an expert in this fast moving field, but I hope to give you an overview 
 Everything I tell you may be factual today, but will surely be false in a few months as these fast moving projects vie for position.
 
 .footnote[.vlightgray[ @hguemar @mjbright @mariolet ]]
-???
-SpeakerNotes:
-
-TODO: too long, needs to be shortened
 
 
 ---
@@ -176,7 +182,7 @@ RPM+OSTree: Atomic host OS upgrades+rollback
 
 --
 .right-column[
-.bold[.green[...Unikernels (...)]]
+.bold[.green[...Unikernels]]
 ]
 
 
@@ -199,7 +205,8 @@ class: center, middle
 .right-column[
     ## From monoliths to &mu;-services
 Remember when **high availability** meant this ...?
-<img width=400 height=250 src="images/Active-Standby.svg" />
+
+<img width=600 height=200 src="images/Active-Standby.svg" />
 
 Servers running **monolithic applications** in **Active-Standby** modes,
 as 1+1, N+1, or N+M or split across 3 tiers.
@@ -207,7 +214,6 @@ as 1+1, N+1, or N+M or split across 3 tiers.
 Scaling meant to **"scale up"** by adding CPU, RAM, disk.
 But there's a limit to this ... then you have to **"scale out"**
 ]
-
 
 .footnote[.vlightgray[ @hguemar @mjbright @mariolet ]]
 ???

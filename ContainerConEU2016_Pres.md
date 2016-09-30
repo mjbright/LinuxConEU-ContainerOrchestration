@@ -710,14 +710,17 @@ layout: false
 ]
 
 .right-column[
+
 ## The Big 3 - What does Google Trends say?
-  <img src=images/TRENDS_ContainerOrchestrationEngines.png width=500 /><br/>
+
+<img src=images/TRENDS_ContainerOrchestrationEngines.png width=500 /><br/>
 <br/>
 Clearly Kubernetes has a lead in *Google "search trends"*
 
 But we can expect *"Docker Swarm"* to make quick progress thanks to the new *"swarm mode"*
 
 <br/>
+]
 
 ???
 SpeakerNotes:

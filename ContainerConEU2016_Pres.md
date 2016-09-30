@@ -749,13 +749,13 @@ layout: false
 
 .right-column[
 
-**2014 Dec** Docker Swarm was announced
+#### > 2014 Dec Docker Swarm was announced
 
 Scales out an architecture defined by Docker Compose
 
-**2015** Swarm Toolkit released
+#### > 2016 Swarm Toolkit released
 
-**2015 June** Docker 1.12 released with Swarm Mode
+#### > 2016 June Docker 1.12 released with Swarm Mode
 
 **Docker "Swarm Mode"** is quite a revolution in Docker Engine capabilities as it integrates:
 
@@ -859,6 +859,7 @@ layout: false
 
 ## Getting started
 
+<br/>
 **Bruno Cornecs' Docker 101**
 <br/>
 New to Docker?  Come to http://sched.co/7oHf
@@ -867,6 +868,8 @@ New to Docker?  Come to http://sched.co/7oHf
 
 https://github.com/bcornec/Labs/tree/master/Docker
 
+<br/>
+<br/>
 **Jerome Petazzoni's Orchestration Workshop**
 <br/>
 or more advanced?  Come to http://sched.co/7oHx
@@ -923,23 +926,44 @@ layout: false
 
 The most proven orchestrator today, exists since 2009.
 
+<br/> <br/>
 Can scale to ~ 10,000 nodes.
 
+<br/> <br/>
 Used in production by:
 
-- Twitter
-- Airbnb
-- eBay
-- Groupon
-- Netflix
+- Twitter,
+Airbnb,
+- eBay,
+- Groupon,
+- Netflix,
 - Hubspot
+]
 
+---
+layout: false
+.left-column[
+  <img src=images/mesos-logo.png width=100 /><br/>
+  ## Apache Mesos
+  .footnote[.red[] [mesos.apache.org](http://mesos.apache.org/)]
+]
 
+.right-column[
+
+<br/>
 Mesos is used in conjunction with Frameworks such as
-- **Marathon** (Mesosphere), Aurora or Singularity: manages long running tasks
-- Chronos "cron", Jenkins: for job orchestration
-- Hadoop, Spark, Storm: for big data processing
-- Cassandra, ElasticSearch, ...
+
+<br/>
+- For long running tasks:
+    - **Marathon** (Mesosphere), Aurora or Singularity
+
+- For job orchestration:
+    - Chronos "cron", Jenkins
+
+- For Big Data Processing:
+  - Hadoop, Spark, Storm
+  - Cassandra, ElasticSearch, ...
+
 - Kubernetes: allowing delcarative use
 
  
@@ -1059,12 +1083,14 @@ layout: false
 ]
 
 .right-column[
-Kubernetes is an open source project created by Google based on it's extensive experience running containers
-(millions of containers over a decade or so) from it's Borg and Omega projects.
+An open source project created by Google based on extensive experience running containers
+- ~ billions of containers a year
 
-Started ~ Oct 2014, reach v1.0 in in July 2015 and currently at v1.4
-It is managed by the Cloud Native Computing Foundation
-https://cncf.io/
+from it's Borg and Omega projects.
+
+Started ~ Oct 2014, reached v1.0 in July 2015, now at v1.4
+
+Managed by the Cloud Native Computing Foundation https://cncf.io/
 
 Integrated in:
 - GKE (Google Container Engine)
@@ -1108,7 +1134,7 @@ layout: false
 .right-column[
 ## Architecture
 
-  <img src=images/kubernetes_archi.png width=600 /><br/>
+  <img src=images/MyKube.svg width=600 /><br/>
 
 ]
 
@@ -1250,15 +1276,21 @@ layout: false
 ## Concepts
 - Cluster
 
-- Node
+- Master Node: Sends requests to the Worker node
 
-- Pod
+- Worker Node: Contains 1 or more Pods
 
-- Replication controller
+- Pod: The unit of execution, which contains 1+ containers
+    - Pods share a flat network of a node
+    - Containers in a pod share the same ip
+    - Usually only 1 container, but optionally sidecars
+        - A sidecar container performs background services such as logging
+
+- Replication controller (or ReplicaSet)
 
 - Service
 
-- Label
+- Label: Any element in Kubernetes can be labelled 
 ]
 
 .footnote[.vlightgray[ @hguemar @mjbright @mariolet ]]

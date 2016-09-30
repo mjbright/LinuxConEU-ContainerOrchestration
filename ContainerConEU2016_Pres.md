@@ -9,7 +9,6 @@ class: center, middle, inverse
 <h3> <img width=93 height=30 src="images/RedHat_whiteText_logo.svg" /> &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp; Haikel Guemar, <img src="images/Twitter_Bird.svg" width=24 /> @hguemar </h3>
 <h3> <img width=93 height=30 src="images/RedHat_whiteText_logo.svg" /> &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; Mario Loriedo, <img src="images/Twitter_Bird.svg" width=24 /> @mariolet </h3>
 
-
 ???
 SpeakerNotes:
 
@@ -63,19 +62,9 @@ class: center, middle, inverse
 <!-- .red[ TEST ]  .blue[TEST]  .green[TEST]  .yellow[TEST]  .magenta[TEST]  .cyan[TEST]  .pink[TEST] -->
 <!-- .footnote[.green[But lets not forget the alternatives ...]] -->
 
---
-name: section_history2
-layout: false
-class: center, middle, inverse
-
 ## .blue[A little bit of history]
 
---
-name: section_history2
-layout: false
-class: center, middle, inverse
-background-clip: content-box;
-background-image: url(images/TRENDS_Containers.png)
+<img src="images/TRENDS_Containers_Cropped.png" />
 
 ???
 SpeakerNotes:
@@ -99,7 +88,8 @@ So let's first look at recent container history ...
 SpeakerNotes:
 
 talk about
-- pre-historique containers (Solaris Zones, BSD Jails, HPUX xxx, OpenVZ)
+- pre-historique containers (Solaris Zones, BSD Jails, HPUX xxx, OpenVZ) starting from ~ 1979 on System 7
+- The first Unikernel systems were Exokernel and Nemesis in the late 1990s.
 - Linux Containers (LXC) in mainline kernel from 2010
 - Then came Docker
   Of course containers existed already, but Docker made them usable
@@ -110,6 +100,8 @@ talk about
   their software simple to use.
 
   Nevertheless other players wanted more influence and pushed for an open standard.
+
+- PaaS adoption OpenShift v3, Stackato v4, Deis (from outset)
 
 - OCI was formed in June 2015.
    https://www.opencontainers.org/
@@ -144,11 +136,12 @@ OS||Vendor
 -|-|-
 CoreOS|-|(CoreOS)
 Project Atomic|-|(RedHat)
-Photon|-|(VMWare)
 RancherOS|-|(Rancher Labs)
+Photon|-|(VMWare)
 Nano Server OS|-|(Microsoft)
 Ubuntu Snappy Core|-|(Canonical)
 
+.bold[.green[...Unikernels]]
 ]
 
 ???
@@ -180,10 +173,6 @@ Atomic Host not just kernel+docker:
     Flannel for networking
 RPM+OSTree: Atomic host OS upgrades+rollback
 
---
-.right-column[
-.bold[.green[...Unikernels]]
-]
 
 
 ---
@@ -331,10 +320,13 @@ class: center, middle
 Orchestration is
 
 - Architecture
-    - Composition
-    - Stitching
+    - Composition & Stitching
 - Workflows & Policies to
-    - Auto scale in/out (maybe)
+    - Scale in/out (maybe automatically)
+    - Place workloads for
+        - load balancing
+        - fault tolerance
+        - resource optimization
     - Adapt to faults
 ]
 
@@ -418,17 +410,19 @@ class: center, middle
 To manage 100's, 1000's, 10,000's of nodes we need to express *"desired state"* rather than *"do this"*.
 
 
-
-|                   |         Imperative     |               Declarative      |
-| ----------------- | ---------------------- | ------------------------------ |
-| **Tell the system**   | what to do             | desired state                  |
-|                   | *"start a new node"* | *"3 mysql nodes"* |
-| **Intelligence**      | Operator               | Orchestration Engine           |
-|                       | ...                    |                                |
-| **Flexibility**       | Best                   | Least                          |
+|                 |         Imperative     |    Declarative      |
+|-----------------|:----------------------:|:-------------------:|
+|                 |                        |                     |
+| **Tell system** |       Do this          | desired state       |
+|                 | *"start a new node"*   | *"3 mysql nodes"* |
+|                 | .                      |                     |
+| **Intelligence**| Operator               | Orchestration Engine|
+|                 | .                      |                     |
+|                 |                        |                     |
+| **Flexibility** | Best                   | Least               |
+|                 | .                      |                     |
 
 It is not longer feasible for an operator to
-- monitor the state of all systems
 - know the resources available (e.g. SSD/HDD, GPU, ...)
 - react to failure, know when to scale ...
 
@@ -439,6 +433,8 @@ It is not longer feasible for an operator to
 .footnote[.vlightgray[ @hguemar @mjbright @mariolet ]]
 ???
 SpeakerNotes:
+
+REMOVED "monitor the state of all systems" as we're not talking about infrastructure management.
 
 Container Orchestration Engines can be imperative or declarative
 Container Orchestration Engines should be declarative "desired state" not imperative "do this".
@@ -477,28 +473,46 @@ layout: false
   <img src=images/docker.png width=100 /><br/>
   <img src=images/mesos-logo.png width=100 /><br/>
   <img src=images/kubernetes.png width=100 /><br/>
+  <img width=120 src="images/Rancher-Logo-Final-300x180.png" /> <br/>
+  <img width=120 src="images/CoreOS.svg" /> <br/>
+  <!-- <img width=120 src="images/nomad-b706442f.svg" /> blank on white bg -->
+  <img width=90 src="images/Nomad_logo.png" />
 ]
 
 .right-column[
   ## The Big 3 - Main Orchestration Choices
 
-- Docker Swarm
-  - Docker Swarm
-  - The Swarm toolkit
-  - Docker **"Swarm mode"**
+- Docker Swarm ("Swarm Mode")
 
 - Apache Mesos
-  - Many Frameworks & Plugins
-  - Mesosphere, DC/OS
   
 - Kubernetes
+]
+--
+.right-column[
+#### ... more Choices ...
+- Rancher &nbsp; &nbsp; (Rancher Labs)
 
+- Fleet &nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (CoreOS)
 
+- Nomad &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (HashiCorp)
+
+- Kontena &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+- OpenStack Magnum
 ]
 
 .footnote[.vlightgray[ @hguemar @mjbright @mariolet ]]
 ???
 SpeakerNotes:
+
+## All open source
+
+
+  - Many Frameworks & Plugins
+  - Mesosphere, DC/OS
+
+Note: OpenStack Magnum project integrates any of Swarm, Kubernetes, Mesos
 
 Docker Swarm was the original orchestrator for the Docker Engine.
 It was used with Docker Compose to orchestrate an application composed of containers.
@@ -600,50 +614,6 @@ Mesos+Kubernetes:
         the means for creating Mesosphere pods around applications, and then launching those applications
         in a large-scale pooled compute and storage environment.
 
----
-layout: false
-.left-column[
-    ## Orchestration
-  <img src=images/docker.png width=100 /><br/>
-  <img src=images/mesos-logo.png width=100 /><br/>
-  <img src=images/kubernetes.png width=100 /><br/>
-]
-
-.right-column[
-  ## The Big 3 - What does Google Trends say?
-  <img src=images/TRENDS_ContainerOrchestrationEngines.png width=500 /><br/>
-<br/>
-Clearly Kubernetes has a lead in *"search trends"*, or at least Google search trends.
-
-But we can expect *"Docker Swarm"* to make quick progress thanks to the new *"swarm mode"*
-
-<br/>
-.green[But lets not forget the alternatives ...]
-]
-
----
-.left-column[
-  ## Orchestration
-
-<img width=120 src="images/Rancher-Logo-Final-300x180.png" /> <br/>
-<img width=120 src="images/CoreOS.svg" /> <br/>
-<!-- <img width=120 src="images/nomad-b706442f.svg" /> blank on white bg -->
-<img width=120 src="images/Nomad_logo.png" />
-]
-
-.right-column[
-## More Choices ...
-- Rancher &nbsp; &nbsp; (Rancher Labs)
-- Fleet &nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (CoreOS)
-- Nomad &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (HashiCorp)
-- Kontena &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-]
-
-.footnote[.vlightgray[ @hguemar @mjbright @mariolet ]]
-???
-SpeakerNotes:
-
 Rancher - capable of launching other orchestrators such as their own Cattle, ...
 
 Fleet - works with Kubernetes (between systemd and etcd)
@@ -727,7 +697,31 @@ Nomad: Nomad is a cluster manager, designed for both long lived services and sho
   - Fleet
   - Nomad
 
+
 - Juju: https://jujucharms.com/
+
+---
+layout: false
+.left-column[
+    ## Orchestration
+  <img src=images/docker.png width=100 /><br/>
+  <img src=images/mesos-logo.png width=100 /><br/>
+  <img src=images/kubernetes.png width=100 /><br/>
+]
+
+.right-column[
+## The Big 3 - What does Google Trends say?
+  <img src=images/TRENDS_ContainerOrchestrationEngines.png width=500 /><br/>
+<br/>
+Clearly Kubernetes has a lead in *Google "search trends"*
+
+But we can expect *"Docker Swarm"* to make quick progress thanks to the new *"swarm mode"*
+
+<br/>
+
+???
+SpeakerNotes:
+
 
 ---
 name: section_docker
@@ -749,23 +743,27 @@ layout: false
 
 .right-column[
 
-#### > 2014 Dec Docker Swarm was announced
+<br/>
 
-Scales out an architecture defined by Docker Compose
+|    |    | |
+|:---:|:---:|:---|
+|Dec 2014 |   ...    | **Docker Swarm** is announced <br/>  |
+|         |        | Orchestration using Docker Compose <br><br> |
+|Jun 2016 |   ...    | **Swarm Toolkit** released |
+|         |        | OpenSource Orchestration Toolkit <br><br> |
+|Jun 2016 |   ...    | **<u><font color=#3377CC>Swarm Mode</font></u>** announced |
+|         |        | Orchestration integrated into Docker Engine |
 
-#### > 2016 Swarm Toolkit released
+*Docker 1.12*  is the first release to integrate **"Swarm Mode"**
+The original *Docker Swarm* is maintained for legacy use.
 
-#### > 2016 June Docker 1.12 released with Swarm Mode
-
-**Docker "Swarm Mode"** is quite a revolution in Docker Engine capabilities as it integrates:
-
-Orchestration Capabilities directly in the Docker Engine
-- Load balancing across a mesh network
+*"Swarm Mode"* is a revolution bringing:
+- Orchestration directly in the Docker Engine
+- Advanced networking features
+    - mesh network, vxlan
+- Load balancing
 - Service Discovery
-
-The same ease of use we're accustomed to from Docker !
-- easy to use coherent commands
-- the same Docker engine API
+- *Docker* traditional ease of use
 
 ]
 
@@ -778,8 +776,13 @@ Add something about the Swarm Toolkit.
 Used in production by:
 - Docker for bug tracking
 
+The same ease of use we're accustomed to from Docker !
+- easy to use coherent commands
+- the same Docker engine API
+- making complex things simple to use !!
 
-Integrated in:
+
+"Docker Swarm" integrated in:
 
 - OpenStack Magnum Project; one of the supported COEs
 
@@ -794,7 +797,7 @@ layout: false
 .right-column[
   ## Architecture
 
-  <img src=images/docker_swarm_archi.jpg width=600 /><br/>
+  <img src=images/docker_swarm_archi.png width=600 /><br/>
 ]
 
 .footnote[.vlightgray[ @hguemar @mjbright @mariolet ]]
@@ -804,6 +807,7 @@ SpeakerNotes:
 TODO: replace image ...
 ---
 layout: false
+
 .left-column[
   <img src=images/docker.png width=100 /><br/>
   ## Docker Swarm
@@ -815,24 +819,22 @@ layout: false
 ## Using Docker "Swarm Mode"
 
 Create a new swarm by creating the master node:
-```
+
+```bash
     $ docker swarm init --advertise-addr 192.168.2.100
     Swarm initialized: current node (dxn1zf6l61qsb1josjja83ngz) is now a manager.
-
 ```
 
 Join a new Worker node to the swarm:
 
-```
-    $ docker swarm join \
-    --token SWMTKN-1-49nj1cmql0jkz5s954yi3oex3nedyz0fb0xx14ie39trti4wxv-8vxv8rssmk743ojnwacrr2e7c \
-    192.168.2.100:2377
+```bash
+    $ docker swarm join --token TOKEN 192.168.2.100:2377
 
 ```
 
 Join a new Master node to the swarm:
 
-```
+```bash
     $ docker swarm join-token manager
 ```
 ]
@@ -860,7 +862,7 @@ layout: false
 ## Getting started
 
 <br/>
-**Bruno Cornecs' Docker 101**
+**<u>Bruno Cornecs' Docker 101 Lab </u>**
 <br/>
 New to Docker?  Come to http://sched.co/7oHf
 <br/>
@@ -869,12 +871,14 @@ New to Docker?  Come to http://sched.co/7oHf
 https://github.com/bcornec/Labs/tree/master/Docker
 
 <br/>
+Followed by ..
 <br/>
-**Jerome Petazzoni's Orchestration Workshop**
+<br/>
+**<u>Jerome Petazzoni's Orchestration Workshop</u>**
 <br/>
 or more advanced?  Come to http://sched.co/7oHx
 <br/>
-- **Orchestrating Containers in Production at Scale with Docker Swarm, 9am - Friday 7th October**
+- **Orchestrating Containers in Production at Scale with Docker Swarm, Friday 7th October**
 
 https://github.com/jpetazzo/orchestration-workshop
 
@@ -905,162 +909,6 @@ class: center, middle
 SpeakerNotes:
 
 ---
-name: section_mesos
-layout: false
-class: center, middle, inverse
-## Apache Mesos
-  <img src=images/mesos-logo.png width=100 /><br/>
-
-???
-SpeakerNotes:
-
----
-layout: false
-.left-column[
-  <img src=images/mesos-logo.png width=100 /><br/>
-  ## Apache Mesos
-  .footnote[.red[] [mesos.apache.org](http://mesos.apache.org/)]
-]
-
-.right-column[
-
-The most proven orchestrator today, exists since 2009.
-
-<br/> <br/>
-Can scale to ~ 10,000 nodes.
-
-<br/> <br/>
-Used in production by:
-
-- Twitter,
-Airbnb,
-- eBay,
-- Groupon,
-- Netflix,
-- Hubspot
-]
-
----
-layout: false
-.left-column[
-  <img src=images/mesos-logo.png width=100 /><br/>
-  ## Apache Mesos
-  .footnote[.red[] [mesos.apache.org](http://mesos.apache.org/)]
-]
-
-.right-column[
-
-<br/>
-Mesos is used in conjunction with Frameworks such as
-
-<br/>
-- For long running tasks:
-    - **Marathon** (Mesosphere), Aurora or Singularity
-
-- For job orchestration:
-    - Chronos "cron", Jenkins
-
-- For Big Data Processing:
-  - Hadoop, Spark, Storm
-  - Cassandra, ElasticSearch, ...
-
-- Kubernetes: allowing delcarative use
-
- 
-
-]
-
-.footnote[.vlightgray[ @hguemar @mjbright @mariolet ]]
-???
-SpeakerNotes:
-
-Integrated in:
-
-- OpenStack Magnum Project; one of the supported COEs
-
-- Hadoop: (YARN?)
-  Also used for Cassandra, ... Spark, ...
-
----
-layout: false
-.left-column[
-  <img src=images/mesos-logo.png width=100 /><br/>
-  ## Apache Mesos
-  .footnote[.red[] [mesos.apache.org](http://mesos.apache.org/)]
-]
-
-.right-column[
-  ## Architecture
-
-  <img src=images/mesos_archi.jpg width=400 /><br/>
-
-Image courtesy of
-http://mesos.apache.org/documentation/latest/architecture/
-
-]
-
-???
-.footnote[.vlightgray[ @hguemar @mjbright @mariolet ]]
-SpeakerNotes:
-
-TODO: redo architecture image?
-
----
-layout: false
-.left-column[
-  <img src=images/mesos-logo.png width=100 /><br/>
-  ## Apache Mesos
-  .footnote[.red[] [mesos.apache.org](http://mesos.apache.org/)]
-]
-
-.right-column[
-
-## Using Mesos
-
-Step1
-```
-    xxxx
-```
-
-Step2
-
-```
-
-```
-]
-
-.footnote[.vlightgray[ @hguemar @mjbright @mariolet ]]
-???
-SpeakerNotes:
-
----
-layout: false
-.left-column[
-  <img src=images/mesos-logo.png width=100 /><br/>
-  ## Apache Mesos
-  .footnote[.red[] [mesos.apache.org](http://mesos.apache.org/)]
-]
-
-.right-column[
-
-## Getting started
-An excellent place to start is with the following tutorials
-
-- Mesos
-    - minimesos
-
-- Mesosphere
-
-
-]
-
-.footnote[.vlightgray[ @hguemar @mjbright @mariolet ]]
-???
-SpeakerNotes:
-
-TODO: Add links to more Mesos tutorials, startup systems ...
-
----
 name: section_kubernetes
 layout: false
 class: center, middle, inverse
@@ -1083,33 +931,38 @@ layout: false
 ]
 
 .right-column[
-An open source project created by Google based on extensive experience running containers
-- ~ billions of containers a year
+Google created based on extensive experience running containers internally
+~ billions of containers a year
 
-from it's Borg and Omega projects.
 
-Started ~ Oct 2014, reached v1.0 in July 2015, now at v1.4
+Started Oct 2014, reached v1.0 in July 2015, now at v1.4
 
 Managed by the Cloud Native Computing Foundation https://cncf.io/
 
+Commercial offerings from CoreOS (Tectonic) and Canonical
+
 Integrated in:
 - GKE (Google Container Engine)
-- Tectonic (CoreOS commercial Kubernetes offering)
-- Stackanetes (CoreOS, uses Tectonic)
-    - Self healing OpenStack demo
-- Mirantis (OpenStack CI/CD)
-- RedHat OpenShift PaaS
-- Deis Paas
-- EBay : Kubernetes + OVS
-
-Note: OpenStack Magnum project integrates any of Swarm, Kubernetes, Mesos
-
+- OpenStack above Kubernetes
+    - Stackanetes (CoreOS, uses Tectonic)
+        - Self healing OpenStack demo
+    - Mirantis (OpenStack CI/CD based on Kolla)
+- Various PaaS:
+    - RedHat OpenShift
+    - Deis
+    - HPE Stackato v.40
 ]
-
 
 .footnote[.vlightgray[ @hguemar @mjbright @mariolet ]]
 ???
 SpeakerNotes:
+
+From it's Borg and Omega projects.
+
+Production:
+- Illuminis ??
+- EBay : Kubernetes + OVS ??
+- EBay : Kubernetes + OpenStack (Magnum?)
 
 There are **many** embryonic projects around Kubernetes.
 
@@ -1142,10 +995,23 @@ layout: false
 ???
 SpeakerNotes:
 
-TODO: replace above image
+- Cluster
 
-TODO: Recreate Kubernetes architecture image
+- Master Node: Sends requests to the Worker node
 
+- Worker Node: Contains 1 or more Pods
+
+- Pod: The unit of execution, which contains 1+ containers
+    - Pods share a flat network of a node
+    - Containers in a pod share the same ip
+    - Usually only 1 container, but optionally sidecars
+        - A sidecar container performs background services such as logging
+
+- Replication controller (or ReplicaSet)
+
+- Service
+
+- Label: Any element in Kubernetes can be labelled 
 Kubernetes Features
 - Pods - Sets of Containers which share resources
     - sidecar containers (one of patterns)
@@ -1161,7 +1027,6 @@ Architecture:
 - App-Server - service portal
 - Etcd - Clustering, State, Communications
 - Kubectl - Client
-
 
 - Minion (became "Kubernetes Node"): A Docker host running the kubelet and the proxy service.
   Minion Daemon:
@@ -1266,6 +1131,8 @@ Services:
 
 ---
 layout: false
+exclude: true
+
 .left-column[
   <img src=images/kubernetes.png width=100 /><br/>
   ## Kubernetes
@@ -1274,23 +1141,6 @@ layout: false
 
 .right-column[
 ## Concepts
-- Cluster
-
-- Master Node: Sends requests to the Worker node
-
-- Worker Node: Contains 1 or more Pods
-
-- Pod: The unit of execution, which contains 1+ containers
-    - Pods share a flat network of a node
-    - Containers in a pod share the same ip
-    - Usually only 1 container, but optionally sidecars
-        - A sidecar container performs background services such as logging
-
-- Replication controller (or ReplicaSet)
-
-- Service
-
-- Label: Any element in Kubernetes can be labelled 
 ]
 
 .footnote[.vlightgray[ @hguemar @mjbright @mariolet ]]
@@ -1327,6 +1177,8 @@ They act as basic load balancers.
 
 ---
 layout: false
+exclude: true
+
 .left-column[
   <img src=images/kubernetes.png width=100 /><br/>
   ## Kubernetes
@@ -1356,6 +1208,8 @@ SpeakerNotes:
 
 ---
 layout: false
+exclude: true
+
 .left-column[
   <img src=images/kubernetes.png width=100 /><br/>
   ## Kubernetes
@@ -1384,13 +1238,209 @@ Micro-OSes: CoreOS or Atomic
 
 
 ---
+name: section_mesos
+layout: false
+class: center, middle, inverse
+## Apache Mesos
+  <img src=images/mesos-logo.png width=100 /><br/>
+
+???
+SpeakerNotes:
+
+---
+layout: false
+.left-column[
+  <img src=images/mesos-logo.png width=100 /><br/>
+  ## Apache Mesos
+  .footnote[.red[] [mesos.apache.org](http://mesos.apache.org/)]
+]
+
+.right-column[
+
+The most proven orchestrator today, exists since 2009.
+
+<br/> <br/>
+Can scale to ~ 10,000 nodes.
+
+<br/> <br/>
+Used in production by:
+
+- Uber
+- Twitter
+- Paypal
+- Hubspot
+- Airbnb
+- eBay
+- Groupon
+- Netflix
+
+Supports Containerizers to isolate tasks
+]
+
+???
+Speaker Notes:
+
+https://www.linux.com/news/4-unique-ways-uber-twitter-paypal-and-hubspot-use-apache-mesos
+- Uber uses it to run a cluster of geographically-diverse datacenters.
+    - Running Cassandra on Apache Mesos Across Multiple Datacenters
+- Twitter built a system to precisely track and cost resource usage.
+    - 1000's of nodes
+- PayPal is building a self-sustaining dynamically-sized cluster, in effect using Mesos to run itself.
+    - 10x improvements over VM-based solution
+- HubSpot uses Mesos to dynamically manage 200 Nginx load balancers.
+    - Mesos + Zookeeper + Docker
+
+https://books.google.fr/books?id=fPwKCgAAQBAJ&pg=PA5&lpg=PA5&dq=mesos+airbnb+-+eBay+-+Groupon+-+Netflix&source=bl&ots=lb25AacoE3&sig=ZmMR5NfayYhGOIXzsQtdVycn7dQ&hl=fr&sa=X&ved=0ahUKEwjPpLWu1bfPAhXD1RQKHVrbAB4Q6AEIITAA#v=onepage&q=mesos%20airbnb%20-%20eBay%20-%20Groupon%20-%20Netflix&f=false
+
+Containerizers:
+http://mesos.apache.org/documentation/latest/containerizer/
+
+Mesos implements the following containerizers:
+- Composing
+- Docker
+- Mesos (default)
+- External (deprecated)
+
+
+---
+layout: false
+.left-column[
+  <img src=images/mesos-logo.png width=100 /><br/>
+  ## Apache Mesos
+  .footnote[.red[] [mesos.apache.org](http://mesos.apache.org/)]
+]
+
+.right-column[
+  ## Architecture
+
+  <img src=images/mesos_archi.jpg width=400 /><br/>
+
+Image courtesy of
+http://mesos.apache.org/documentation/latest/architecture/
+
+]
+
+???
+.footnote[.vlightgray[ @hguemar @mjbright @mariolet ]]
+SpeakerNotes:
+
+TODO: redo architecture image?
+
+
+
+---
+layout: false
+.left-column[
+  <img src=images/mesos-logo.png width=100 /><br/>
+  ## Apache Mesos
+  .footnote[.red[] [mesos.apache.org](http://mesos.apache.org/)]
+]
+
+.right-column[
+
+<br/>
+Mesos is used in conjunction with Frameworks such as
+
+<br/>
+- For long running tasks:
+    - **Marathon** (Mesosphere), Aurora or Singularity
+
+- For job orchestration:
+    - Chronos "cron", Jenkins
+
+- For Big Data Processing:
+  - Hadoop, Spark, Storm
+  - Cassandra, ElasticSearch, ...
+
+ 
+
+]
+
+.footnote[.vlightgray[ @hguemar @mjbright @mariolet ]]
+???
+SpeakerNotes:
+
+- Kubernetes: allowing delcarative use
+
+- Cassandra: not so interesting to use with Mesos,
+    - but interesting to use so as to colacte with other frameworks such as Hadoop/Spark
+
+Integrated in:
+
+- OpenStack Magnum Project; one of the supported COEs
+
+- Hadoop: (YARN?)
+  Also used for Cassandra, ... Spark, ...
+
+---
+layout: false
+exclude: true
+
+.left-column[
+  <img src=images/mesos-logo.png width=100 /><br/>
+  ## Apache Mesos
+  .footnote[.red[] [mesos.apache.org](http://mesos.apache.org/)]
+]
+
+.right-column[
+
+## Using Mesos
+
+Step1
+```
+    xxxx
+```
+
+Step2
+
+```
+
+```
+]
+
+.footnote[.vlightgray[ @hguemar @mjbright @mariolet ]]
+???
+SpeakerNotes:
+
+---
+layout: false
+exclude: true
+
+.left-column[
+  <img src=images/mesos-logo.png width=100 /><br/>
+  ## Apache Mesos
+  .footnote[.red[] [mesos.apache.org](http://mesos.apache.org/)]
+]
+
+.right-column[
+
+## Getting started
+An excellent place to start is with the following tutorials
+
+- Mesos
+    - minimesos
+
+- Mesosphere
+
+
+]
+
+.footnote[.vlightgray[ @hguemar @mjbright @mariolet ]]
+???
+SpeakerNotes:
+
+TODO: Add links to more Mesos tutorials, startup systems ...
+
+---
 name: section_players
 layout: false
 class: center, middle, inverse
+exclude: true
 ## Industry Players
 
 ---
 layout: false
+exclude: true
 .left-column[
   ## Players
 ]
@@ -1428,11 +1478,7 @@ layout: false
 class: center, middle, inverse
 ## So isn't it time we told you what to .cyan[choose]?
 
---
-name: section_players
-layout: false
-class: center, middle, inverse
-## .cyan[... well we'll provide some guidelines at least ...]
+## .cyan[... let's just compare them ...]
 
 ---
 layout: false
@@ -1441,11 +1487,13 @@ layout: false
 ]
 
 .right-column[
-They are converging on many points
+Docker Swarm and Kubernetes are creating rich Orchestration stacks with integrated runtimes.
 
-They are tending to add 'declarative specification' capabilities.
+They're moving incredibly quicky ...
 
-An operator specifies the "desired state" and the orchestrator does the rest.
+They are adding features such as networking capabilities, load balancing, services, labels.
+
+They have a more 'declarative' approach
 
 ]
 
@@ -1454,6 +1502,8 @@ An operator specifies the "desired state" and the orchestrator does the rest.
 SpeakerNotes:
 
 TODO: hmm, to what extent do they trend to declarative (not either or ...)
+
+An operator specifies the "desired state" and the orchestrator does the rest.
 
 http://cdn.oreillystatic.com/en/assets/1/event/154/How%20do%20I%20orchestrate%20my%20containers_%20Presentation.pdf
 _X
@@ -1467,37 +1517,54 @@ Characteristics:
 ---
 layout: false
 .left-column[
-  ## What's different
+  ## What advantages?
 ]
 
 .right-column[
 
+# Docker "Swarm Mode"
 
-Rancher lightweight
+Simple to use (despite underlying complexity)
 
+All-in-one container engine plus orchestration
 
+Uses Docker API and familiar docker commands
+
+Advanced networking
+    - mesh networking
+    - Load Balancing and Service Discovery
+
+Replication
 ]
 
 .footnote[.vlightgray[ @hguemar @mjbright @mariolet ]]
 ???
 SpeakerNotes:
+
+Rancher lightweight
 
 ---
 layout: false
 .left-column[
-  ## Comparison
+  ## What advantages?
 ]
 
 .right-column[
 
-|Feature|Swarm|Kubernetes|Mesos|
-|:-:|:-:|:-:|:-:|
-| Declarative| |Yes| |
+# Kubernetes
 
+Rich conceptual model
 
-<br/>
-Rancher lightweight
+Pods as groupings of containers
 
+Labels and Selectors (for all components)
+
+Large ecosystem
+
+Networking
+    - Load Balancing and Service Discovery
+
+Replication
 
 ]
 
@@ -1505,6 +1572,39 @@ Rancher lightweight
 ???
 SpeakerNotes:
 
+Rancher lightweight
+
+---
+layout: false
+.left-column[
+  ## What advantages?
+]
+
+.right-column[
+
+# Apache Mesos
+
+Most mature
+
+Battle tested by many service providers
+
+Scales to 10,000 nodes
+
+DataCenter OS - appears as 1 resource
+
+Not just containers
+
+Many frameworks available
+
+Difficult ramp-up
+
+]
+
+.footnote[.vlightgray[ @hguemar @mjbright @mariolet ]]
+???
+SpeakerNotes:
+
+Rancher lightweight
 
 ---
 name: section_handson
@@ -1558,6 +1658,10 @@ class: center, middle, inverse
 # Questions?
 
 # Thank you
+
+<br/>
+<br/>
+<image width=100 src="images/Orchestration_Chaos.svg" />
 
 .footnote[.vlightgray[ @hguemar @mjbright @mariolet ]]
 
@@ -1615,6 +1719,7 @@ Cloud Native Computing Foundation - Kubernetes, Prometheus
 https://cncf.io/
 
 *"Kubernetes the Hard Way, Kelsey Hightower"* - https://github.com/kelseyhightower/kubernetes-the-hard-way
+
 *"Kubernetes User Guide, Walkthrought"* - http://kubernetes.io/docs/user-guide/walkthrough/
 ]
 

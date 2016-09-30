@@ -55,7 +55,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.68833333"
-     inkscape:cx="797.09443"
+     inkscape:cx="739.80871"
      inkscape:cy="602.25476"
      inkscape:current-layer="layer1"
      inkscape:document-units="px"
@@ -73,7 +73,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -98,23 +98,26 @@
        inkscape:connector-curvature="0" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 276.68705,925.0 c 0,-79.90311 -1.45279,-79.90311 -1.45279,-79.90311"
+       d="m 1268.9389,926.45278 c 0,-79.90311 -1.4528,-79.90311 -1.4528,-79.90311"
        id="path4535-4-0"
        inkscape:connector-curvature="0" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="-775.0" y="284.0"
+       x="-775.0"
+       y="284.0"
        id="text4567"
        sodipodi:linespacing="125%"
        transform="matrix(0.25881905,-0.96592583,0.96592583,0.25881905,0,0)"><tspan
          sodipodi:role="line"
-         x="-775.0" y="284.0"
-         id="tspan4575">Pre-history Unix containers</tspan></text>
+         x="-775.0"
+         y="284.0"
+         id="tspan4575">Unix containers, Unikernels</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:'Android Emoji';-inkscape-font-specification:'Android Emoji, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         x="-750.0" y="384.0"
+       x="-750.0"
+       y="384.0"
        id="text4567-9"
        sodipodi:linespacing="125%"
        transform="matrix(0.25881905,-0.96592583,0.96592583,0.25881905,0,0)"
@@ -122,19 +125,22 @@
        inkscape:transform-center-y="-110.41162"><tspan
          sodipodi:role="line"
          id="tspan4597"
-         x="-750.0" y="384.0"
-         >Linux containers (LXC)</tspan></text>
+         x="-750.0"
+         y="384.0">Linux containers (LXC), Mesos</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:'Android Emoji';-inkscape-font-specification:'Android Emoji, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
-       x="-700.0" y="605.0"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:'Android Emoji';-inkscape-font-specification:'Android Emoji, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="-695.44116"
+       y="582.72198"
        id="text4567-9-5"
        sodipodi:linespacing="125%"
        transform="matrix(0.25881905,-0.96592583,0.96592583,0.25881905,0,0)"
        inkscape:transform-center-x="-37.772397"
        inkscape:transform-center-y="-110.41162"><tspan
          sodipodi:role="line"
-         id="tspan5113">LXC (CloudFoundry, DotCloud, ...)</tspan></text>
+         id="tspan5113"
+         x="-695.44116"
+         y="582.72198">LXC ( CloudFoundry, DotCloud PaaS )</tspan></text>
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 488.79358,925.0 c 0,-79.90311 -1.45279,-79.90311 -1.45279,-79.90311"
@@ -142,9 +148,9 @@
        inkscape:connector-curvature="0" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:'Android Emoji';-inkscape-font-specification:'Android Emoji, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="-675.0"
-       y="716.16882"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:50px;line-height:125%;font-family:'Android Emoji';-inkscape-font-specification:'Android Emoji, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#c83737;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
+       x="-666.13055"
+       y="698.75195"
        id="text4567-9-5-9"
        sodipodi:linespacing="125%"
        transform="matrix(0.25881905,-0.96592583,0.96592583,0.25881905,0,0)"
@@ -152,12 +158,12 @@
        inkscape:transform-center-y="-110.41162"><tspan
          sodipodi:role="line"
          id="tspan4657"
-         x="-675.0"
-         y="716.16882">Docker</tspan><tspan
+         x="-666.13055"
+         y="698.75195">Docker</tspan><tspan
          sodipodi:role="line"
          id="tspan4659"
-         x="-657.07465"
-         y="766.16882"></tspan></text>
+         x="-666.13055"
+         y="748.75195" /></text>
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 690.73062,925.0 c 0,-79.90311 -1.45279,-79.90311 -1.45279,-79.90311"
@@ -186,7 +192,7 @@
          sodipodi:role="line"
          id="tspan4657-2"
          x="-615.03461"
-         y="909.0885">Kubernetes, Swarm, Mesos</tspan><tspan
+         y="909.0885">Container Orchestration Options</tspan><tspan
          sodipodi:role="line"
          id="tspan4659-9"
          x="-615.03461"
@@ -202,9 +208,9 @@
        inkscape:transform-center-x="-37.772397"
        inkscape:transform-center-y="-110.41162"><tspan
          sodipodi:role="line"
-         id="tspan5311">PaaS adoption</tspan><tspan
+         id="tspan5311">PaaS adoptions of Docker</tspan><tspan
          sodipodi:role="line"
-         id="tspan5313"></tspan></text>
+         id="tspan5313" /></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:'Android Emoji';-inkscape-font-specification:'Android Emoji, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -218,38 +224,15 @@
          sodipodi:role="line"
          id="tspan4946"
          x="-475.26685"
-         y="1440.7842">&quot;Swarm mode&quot;, Kubernetes 1.4, Mesos ...</tspan><tspan
+         y="1440.7842">Docker &quot;Swarm mode&quot;, OCID ...</tspan><tspan
          sodipodi:role="line"
          id="tspan4948"
          x="-475.26685"
-         y="1490.7842"></tspan><tspan
+         y="1490.7842" /><tspan
          sodipodi:role="line"
          id="tspan4950"
          x="-475.26685"
-         y="1540.7842"></tspan></text>
-    <path
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 1270.3917,925.0 c 0,-79.90311 -1.4528,-79.90311 -1.4528,-79.90311"
-       id="path4535-4-0-4-6-5-7"
-       inkscape:connector-curvature="0" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:'Android Emoji';-inkscape-font-specification:'Android Emoji, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="-724.72864"
-       y="495.1449"
-       id="text4567-9-5-7"
-       sodipodi:linespacing="125%"
-       transform="matrix(0.25881905,-0.96592583,0.96592583,0.25881905,0,0)"
-       inkscape:transform-center-x="-37.772397"
-       inkscape:transform-center-y="-110.41162"><tspan
-         sodipodi:role="line"
-         id="tspan4992"
-         x="-725.0"
-         y="484.0">CoreOS</tspan><tspan
-         sodipodi:role="line"
-         id="tspan4994"
-         x="-725.0"
-         y="484.0"></tspan></text>
+         y="1540.7842" /></text>
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 368.21246,925.0 c 0,-79.90311 -1.45279,-79.90311 -1.45279,-79.90311"
@@ -285,11 +268,11 @@
        inkscape:transform-center-x="-37.772397"
        inkscape:transform-center-y="-110.41162"><tspan
          sodipodi:role="line"
-         id="tspan5336">Unikernels</tspan><tspan
+         id="tspan5336">Docker buys Unikernel Systems</tspan><tspan
          sodipodi:role="line"
-         id="tspan5338"></tspan><tspan
+         id="tspan5338" /><tspan
          sodipodi:role="line"
-         id="tspan5340"></tspan></text>
+         id="tspan5340" /></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:'Android Emoji';-inkscape-font-specification:'Android Emoji, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -300,7 +283,7 @@
          sodipodi:role="line"
          id="tspan5964"
          x="94.431"
-         y="978.0">... 2010</tspan></text>
+         y="978.0">... 2009</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:'Android Emoji';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;-inkscape-font-specification:'Android Emoji, Normal';font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;"

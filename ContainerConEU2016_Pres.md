@@ -797,7 +797,7 @@ layout: false
 .right-column[
   ## Architecture
 
-  <img src=images/docker_swarm_archi.png width=600 /><br/>
+  <img src=images/docker_swarm_archi.jpg width=600 /><br/>
 ]
 
 .footnote[.vlightgray[ @hguemar @mjbright @mariolet ]]

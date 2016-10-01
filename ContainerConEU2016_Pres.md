@@ -314,20 +314,15 @@ class: center, middle
 ]
 .right-column[
 ## What was Container Orchestration again?
-
 ... and how does it differ from automation?
-
-Orchestration is
-
-- Architecture
-    - Composition & Stitching
+- Architecture - Composition & Stitching
 - Workflows & Policies to
     - Scale in/out (maybe automatically)
     - Place workloads for
-        - load balancing
-        - fault tolerance
-        - resource optimization
+        - load balancing, fault tolerance, resource optimization
     - Adapt to faults
+
+<img src=images/OrchestrationGenericArchi.svg width=500 />
 ]
 
 ???

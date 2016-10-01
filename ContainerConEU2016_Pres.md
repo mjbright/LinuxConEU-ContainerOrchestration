@@ -1493,13 +1493,18 @@ They are adding features such as networking capabilities, load balancing, servic
 
 They have a more 'declarative' approach
 
+They support or are looking to support different runtime engines ( * )
+
 ]
 
 .footnote[.vlightgray[ @hguemar @mjbright @mariolet ]]
 ???
 SpeakerNotes:
 
-TODO: hmm, to what extent do they trend to declarative (not either or ...)
+Note: different runtime engines
+- Docker speak of VM, containers, Unikernels
+- Kubernetes looking to OCID for native container engine as well as Docker, rkt, ..
+- Mesos can isolate non-container tasks, or Docker containers, is also developing a universal containerizer
 
 An operator specifies the "desired state" and the orchestrator does the rest.
 

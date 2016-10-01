@@ -49,6 +49,11 @@
     gpgcheck: yes
     enabled: "{{ docker_latest }}"
 
+- name: remove docker packages from CentOS
+  become: yes
+  yum: pkg=docker* state=absent
+  when: "docker_latest == true"
+
 - name: install docker engine
   become: yes
   yum: pkg="{{ (docker_latest == true) | ternary('docker-engine', 'docker') }}" state=present

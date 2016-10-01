@@ -101,7 +101,7 @@ talk about
 
   Nevertheless other players wanted more influence and pushed for an open standard.
 
-- PaaS adoption OpenShift v3, Stackato v4, Deis (from outset)
+- PaaS adoption OpenShift CP v3, Stackato v4, Deis (from outset)
 
 - OCI was formed in June 2015.
    https://www.opencontainers.org/
@@ -951,7 +951,7 @@ Integrated in:
         - Self healing OpenStack demo
     - Mirantis (OpenStack CI/CD based on Kolla)
 - Various PaaS:
-    - RedHat OpenShift
+    - RedHat OpenShift CP
     - Deis
     - HPE Stackato v.40
 ]
@@ -1234,7 +1234,7 @@ SpeakerNotes:
 TODO: See "HPE Kubernetes" references for labs/tutorials
 
 IaaS: on GCE ($$$), GKE, AWS, OpenStack, Azure
-PaaS: OpenShift
+PaaS: OpenShift ContainerPlatform
 Local: Vagrant, Ansible,
 Kubernetes The Hard Way !
 Micro-OSes: CoreOS or Atomic
@@ -1451,7 +1451,7 @@ exclude: true
 .right-column[
 ## Choices made by Industry Players
 
-- RedHat: Completely redesigned their OpenShift PaaS to use Docker Containers and Kubernetes, and created Project Atomic
+- RedHat: Completely redesigned their OpenShift CP PaaS to use Docker Containers and Kubernetes, and created Project Atomic
 
 - CoreOS: CoreOS, created the company 6 months after Docker was announced with a goal of providing **GIFFE**
 

@@ -79,7 +79,7 @@ layout: false
 class: center, middle
 
 
-So let's first look at recent container history ... 
+So let's first look at recent container history ...
 
 <img width=800 src="images/timeline.svg" />
 
@@ -109,7 +109,7 @@ talk about
                   base format (+rkt appc?) ==> OCF
 
 - Alternatives: rkt, LXD, Garden/Guardian(?)
-      but Docker has the mindshare and continues to make great progress. 
+      but Docker has the mindshare and continues to make great progress.
        So although I'm pleased to see alternatives - Open Source alternatives - when I talk about container (engines) I generally consider Docker as a given.
 
 DONE??: image showing "growth" (?) of containers ...
@@ -117,7 +117,7 @@ DONE??: image showing "growth" (?) of containers ...
 
 #### LXC:
 http://www.ibm.com/developerworks/library/l-lxc-containers/
- 
+
 
 ---
 layout: false
@@ -480,7 +480,7 @@ layout: false
 - Docker Swarm ("Swarm Mode")
 
 - Apache Mesos
-  
+
 - Kubernetes
 ]
 --
@@ -573,12 +573,12 @@ Mesosphere (https://mesosphere.com/) produces Mesosphere Enterprise DC/OS
 
 Mesos Frameworks:
     http://container-solutions.com/reasons-use-apache-mesos-frameworks/
-    http://mesosframeworks.com/: 
-        - KAFKA: High throughput publish-subscribe messaging on Mesos 
-        - ELK: A fault tolerant, scalable and resilient ELK stack 
-        - KIBANA: Explore and visualize your data on Mesos 
-        - LOGSTASH: Flexible log aggregation for Mesos 
-        - FLOCKER: Seamless software defined storage for Mesos 
+    http://mesosframeworks.com/:
+        - KAFKA: High throughput publish-subscribe messaging on Mesos
+        - ELK: A fault tolerant, scalable and resilient ELK stack
+        - KIBANA: Explore and visualize your data on Mesos
+        - LOGSTASH: Flexible log aggregation for Mesos
+        - FLOCKER: Seamless software defined storage for Mesos
 
     [Rendering Web Crawler for Mesos] http://mesosphere.github.io/presentations/hack-week-2014/#/
 
@@ -688,7 +688,7 @@ Nomad: Nomad is a cluster manager, designed for both long lived services and sho
   - Cattle (http://rancher.com/tag/kubernetes/,
           http://rancher.com/tag/cattle/,
           http://rancher.com/5-keys-running-workloads-resiliently-rancher-docker-part-1/,
-          http://rancher.com/5-keys-running-workloads-resiliently-rancher-docker-part-2/, 
+          http://rancher.com/5-keys-running-workloads-resiliently-rancher-docker-part-2/,
   - Fleet
   - Nomad
 
@@ -897,11 +897,25 @@ class: center, middle, inverse
 SpeakerNotes:
 
 ---
-name: section_docker
 layout: false
-class: center, middle
-## Docker Swarm Demo
+.left-column[
   <img src=images/docker.png width=100 /><br/>
+  ## Docker Swarm
+  .footnote[.red[] [docker.com](https://docker.com)]
+]
+
+.right-column[
+## Docker Swarm Demo
+  - Create of a 3 nodes cluster
+
+  - Run a service on the cluster and scale it to 3 replicas
+
+  - Make a rolling update of the service
+
+  - Drain a node of the cluster
+]
+
+.footnote[.vlightgray[ @hguemar @mjbright @mariolet ]]
 
 ???
 SpeakerNotes:
@@ -1009,7 +1023,7 @@ SpeakerNotes:
 
 - Service
 
-- Label: Any element in Kubernetes can be labelled 
+- Label: Any element in Kubernetes can be labelled
 Kubernetes Features
 - Pods - Sets of Containers which share resources
     - sidecar containers (one of patterns)
@@ -1033,13 +1047,13 @@ Architecture:
         Maintain a record of pod state
         Take instructions from the cluster master
   - KUBERNETES-PROXY: maps port on minion to relevant pods
- 
+
     Forward requests to the right container
     Load-balance requests
     Ensure minion subnet isolation
 
 - Pod: One or more inter-related (linked) Docker containers: Master + sidecar
- 
+
 - Cluster: A collection of one or more Minions.
 
 etcd: https://github.com/coreos/etcd
@@ -1055,11 +1069,11 @@ fleet: https://github.com/coreos/fleet
 
 Cluster Mgmt:
     - Kubernetes API: RESTful web API for Kubernetes, running on nginx
- 
+
     - Scheduler: One job: choose minions for pods
- 
+
     - Controller Manager: Monitoring service for deployed pods
- 
+
     - kubectl: CLI for working with a Kubernetes cluster
 
     - Replication Controllers: declarative
@@ -1350,7 +1364,7 @@ Mesos is used in conjunction with Frameworks such as
   - Hadoop, Spark, Storm
   - Cassandra, ElasticSearch, ...
 
- 
+
 
 ]
 
@@ -1676,7 +1690,7 @@ SpeakerNotes:
 ---
 name: resources-page-1
 template: inverse
-class: center, middle, 
+class: center, middle,
 layout: false
 .left-column[
   ## Resources
@@ -1703,7 +1717,7 @@ SpeakerNotes:
 ---
 name: resources-page-2
 template: inverse
-class: center, middle, 
+class: center, middle,
 .left-column[
   ## Resources
 ]
@@ -1728,7 +1742,7 @@ SpeakerNotes:
 ---
 name: resources-page-3
 template: inverse
-class: center, middle, 
+class: center, middle,
 .left-column[
   ## Resources
 ]
@@ -1840,5 +1854,3 @@ ement/2015/07/new-cloud-native-computing-foundation-drive-alignment-among-contai
 .footnote[.vlightgray[ @hguemar @mjbright @mariolet ]]
 ???
 SpeakerNotes:
-
-

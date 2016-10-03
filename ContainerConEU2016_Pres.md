@@ -400,7 +400,7 @@ class: center, middle
     ## Orchestration
 ]
 .right-column[
-## Imperative or Declarative
+## Getting to *"Desired State"*
 
 To manage 100's, 1000's, 10,000's of nodes we need to express *"desired state"* rather than *"do this"*.
 

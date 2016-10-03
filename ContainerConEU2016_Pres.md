@@ -906,7 +906,7 @@ layout: false
 
 .right-column[
 ## Docker Swarm Demo
-  - Create of a 3 nodes cluster
+  - Creation of a 3 node cluster
 
   - Run a service on the cluster and scale it to 3 replicas
 

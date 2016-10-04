@@ -849,6 +849,40 @@ Run through https://docs.docker.com/engine/swarm/swarm-tutorial/
 Complete above commands !
 
 ---
+name: section_docker
+layout: false
+class: center, middle, inverse
+## Docker Swarm Demo
+  <img src=images/docker.png width=100 /><br/>
+
+???
+SpeakerNotes:
+
+---
+layout: false
+.left-column[
+  <img src=images/docker.png width=100 /><br/>
+  ## Docker Swarm
+  .footnote[.red[] [docker.com](https://docker.com)]
+]
+
+.right-column[
+## Docker Swarm Demo
+  - Creation of a 3 node cluster
+
+  - Run a service on the cluster and scale it to 3 replicas
+
+  - Make a rolling update of the service
+
+  - Drain a node of the cluster
+]
+
+.footnote[.vlightgray[ @hguemar @mjbright @mariolet ]]
+
+???
+SpeakerNotes:
+
+---
 layout: false
 .left-column[
   <img src=images/docker.png width=100 /><br/>
@@ -884,40 +918,6 @@ https://github.com/jpetazzo/orchestration-workshop
 ]
 
 .footnote[.vlightgray[ @hguemar @mjbright @mariolet ]]
-???
-SpeakerNotes:
-
----
-name: section_docker
-layout: false
-class: center, middle, inverse
-## Docker Swarm Demo
-  <img src=images/docker.png width=100 /><br/>
-
-???
-SpeakerNotes:
-
----
-layout: false
-.left-column[
-  <img src=images/docker.png width=100 /><br/>
-  ## Docker Swarm
-  .footnote[.red[] [docker.com](https://docker.com)]
-]
-
-.right-column[
-## Docker Swarm Demo
-  - Creation of a 3 node cluster
-
-  - Run a service on the cluster and scale it to 3 replicas
-
-  - Make a rolling update of the service
-
-  - Drain a node of the cluster
-]
-
-.footnote[.vlightgray[ @hguemar @mjbright @mariolet ]]
-
 ???
 SpeakerNotes:
 

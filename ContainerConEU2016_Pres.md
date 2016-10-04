@@ -1000,7 +1000,8 @@ layout: false
 .right-column[
 ## Architecture
 
-  <img src=images/MyKube.svg width=600 /><br/>
+  <img src=images/KubernetesArchi.svg width=300 /><br/>
+  <img src=images/MyKube.svg width=300 /><br/>
 
 ]
 

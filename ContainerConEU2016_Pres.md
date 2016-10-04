@@ -314,7 +314,7 @@ class: center, middle
 ]
 .right-column[
 ## What was Container Orchestration again?
-... and how does it differ from automation?
+
 - Architecture - Composition & Stitching
 - Workflows & Policies to
     - Scale in/out (maybe automatically)
@@ -795,7 +795,8 @@ layout: false
 .right-column[
   ## Architecture
 
-  <img src=images/docker_swarm_archi.png width=600 /><br/>
+  <!-- <img src=images/docker_swarm_archi.png width=600 /><br/> -->
+  <img src=images/DockerSwarmArchi.svg width=600 /><br/>
 ]
 
 .footnote[.vlightgray[ @hguemar @mjbright @mariolet ]]

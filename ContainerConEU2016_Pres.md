@@ -1326,10 +1326,11 @@ layout: false
 .right-column[
   ## Architecture
 
-  <img src=images/mesos_archi.jpg width=400 /><br/>
+  <!-- <img src=images/mesos_archi.jpg width=400 /><br/> -->
+  <img src=images/MesosArchi.svg width=600 /><br/>
 
-Image courtesy of
-http://mesos.apache.org/documentation/latest/architecture/
+<!-- Image courtesy of
+http://mesos.apache.org/documentation/latest/architecture/ -->
 
 ]
 

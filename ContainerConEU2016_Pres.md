@@ -962,8 +962,8 @@ Integrated in:
     - Mirantis (OpenStack CI/CD based on Kolla)
 - Various PaaS:
     - RedHat OpenShift CP
-    - Deis
     - HPE Stackato v.40
+    - Deis
 ]
 
 .footnote[.vlightgray[ @hguemar @mjbright @mariolet ]]
@@ -1000,8 +1000,8 @@ layout: false
 .right-column[
 ## Architecture
 
-  <img src=images/KubernetesArchi.svg width=300 /><br/>
-  <img src=images/MyKube.svg width=300 /><br/>
+  <img src=images/KubernetesArchi.svg width=600 />
+  <!-- <img src=images/MyKube.svg width=300 /><br/> -->
 
 ]
 
@@ -1155,6 +1155,32 @@ exclude: true
 
 .right-column[
 ## Concepts
+
+[**Cluster**]
+: A cluster is a set of physical or virtual machines and other infrastructure resources used by Kubernetes
+ to run your applications. Kubernetes can run anywhere! See the [Getting Started Guides](docs/getting-star
+ted-guides/) for instructions for a variety of services.
+
+[**Node**](docs/admin/node.md)
+: A node is a physical or virtual machine running Kubernetes, onto which pods can be scheduled.
+
+[**Pod**](docs/user-guide/pods.md)
+: Pods are a colocated group of application containers with shared volumes. They're the smallest deployabl
+e units that can be created, scheduled, and managed with Kubernetes. Pods can be created individually, but
+ it's recommended that you use a replication controller even if creating a single pod.
+
+[**Replication controller**](docs/user-guide/replication-controller.md)
+: Replication controllers manage the lifecycle of pods. They ensure that a specified number of pods are ru
+nning
+at any given time, by creating or killing pods as required.
+
+[**Service**](docs/user-guide/services.md)
+: Services provide a single, stable name and address for a set of pods.
+They act as basic load balancers.
+
+[**Label**](docs/user-guide/labels.md)
+: Labels are used to organize and select groups of objects based on key:value pairs.
+
 ]
 
 .footnote[.vlightgray[ @hguemar @mjbright @mariolet ]]

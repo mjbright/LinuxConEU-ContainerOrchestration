@@ -2,7 +2,7 @@
 - hosts: all
   serial: 100%
   vars:
-    docker_latest: true
+    docker_latest: false
   roles:
     - base
 

@@ -449,10 +449,14 @@ docker $(docker-machine config swmaster) service ps docker-demo
     6i0mhypkwtjxcva2149ae0vw3   \_ docker-demo.3  mariolet/docker-demo:20  swnode1   Shutdown       Shutdown 38 seconds ago  
 
 
+### Verifying the service has been updated
+
+Then open your web browser at the page http://localhost:8080 and you should see a lovely blue whale.
+
+
 # drain a node
 
 We can drain a node effectively placing it in 'maintenance mode'.
-
 
 
 ```bash

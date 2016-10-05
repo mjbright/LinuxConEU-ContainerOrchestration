@@ -1,0 +1,14 @@
+---
+- hosts: all
+  serial: 100%
+  vars:
+    docker_latest: true
+    mesos: true
+  roles:
+    - base
+
+- hosts: zookeeper
+  roles:
+    - zookeeper
+    - mesos-master
+

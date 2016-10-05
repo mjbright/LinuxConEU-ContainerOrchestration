@@ -1,0 +1,16 @@
+---
+- name: install zookeeper
+  become: yes
+  yum: pkg="{{ zookeeper_pkg }}" state=present
+
+- name: set zookeeper myid
+  become: yes
+  template: src=myid.j2 dest=/var/lib/zookeeper/myid
+
+- name: add nodes
+  become: yes
+  template: src=zoo.cfg.j2 dest=/etc/zookeeper/conf/zoo.cfg
+
+- name: start zookeeper
+  become: yes
+  service: name=zookeeper state=started

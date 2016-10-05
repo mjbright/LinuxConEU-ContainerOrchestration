@@ -2,9 +2,7 @@
 - hosts: all
   serial: 100%
   vars:
-    epel: true
-    no_selinux: true
-    no_firewalld: true
+    docker_latest: false
   roles:
     - base
 

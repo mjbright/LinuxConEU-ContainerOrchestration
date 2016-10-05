@@ -1,0 +1,8 @@
+---
+mesos_pkgs:
+  - mesos
+  - marathon
+
+mesos_master_services:
+  - mesos-master
+  - marathon

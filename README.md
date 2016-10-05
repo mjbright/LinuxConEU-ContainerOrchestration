@@ -30,6 +30,12 @@ Startup openvpn as root user using the appropriate configuration file.
 
 - Please see the notes in cell F2 of the above Spreadsheet.
 
+###### Connect to your chosen server as your chosen user
+
+For example if you chose 10.3.222.31 and group7:
+
+    ssh group7@10.3.222.3
+
 #### Following the lab
 
 Please then follow the lab instructor as he runs through the lab steps.

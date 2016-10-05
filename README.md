@@ -4,21 +4,41 @@ Repository to contain my "Container Orchestration" lab proposed for LinuxCon Eur
 
 <a name="prereq" />
 ## Pre-requisites
-This lab may be run either
-- locally on your own laptop
-- in HPE infrastructure
+For this lab will be using HPE infrastructure.
 
-Please read the pre-requisites information below, before attending this workshop.
-
-<a name="prereq_local" />
-## Pre-requisites to run in the HPE infrastructure (recommended for this lab session)
-
-To run in the HPE infrastructure you will need
-- laptop
-- OpenVPN client installed
+#### Install and configure OpenVPN
+You will need to install an OpenVPN client on your laptop and connect to the provided
+infrastructure.
+You can download OpenVPN from here:
     - https://openvpn.net/index.php/open-source/downloads.html
 
-We will provide connection instructions on the day.
+3 servers are available each with 20 logins, group1 ... group 20
+
+Please choose 1 group login (for yourself or for a pair of people) on 1 server.
+
+Please update [this spreadsheet http://bit.ly/2dw5XBt](http://bit.ly/2dw5XBt) with your name to reserve a server/login group.
+
+###### Download configuration files to use
+
+You need to download the openvpn certificates to be able to access the lab.
+
+- Please see the notes in cell F2 of the above Spreadsheet.
+
+###### Startup OpenVPN
+
+Startup openvpn as root user using the appropriate configuration file.
+
+- Please see the notes in cell F2 of the above Spreadsheet.
+
+#### Following the lab
+
+Please then follow the lab instructor as he runs through the lab steps.
+
+or follow the respective README files here
+
+[DockerSwarm.md](DockerSwarm.md)
+[Kubernetes.md](Kubernetes.md)
+[Mesos.md](Mesos.md)
 
 <a name="prereq_remote" />
 ## Pre-requisites to run on your own laptop
@@ -31,24 +51,4 @@ To run on your own laptop you will need
 - Ansible 2.x
 
 
-<a name="setup" />
-## Installation
-Please follow the appropriate installation instructions below, before attending this workshop.
-
-#### Docker installation
-You will need to have Docker already installed
-Please follow instructions for your platform here [TODO]
-
-#### Docker swarm installation
-TODO
-
-#### Kubernetes installation
-TODO
-
-#### Mesos installation
-TODO
-
-<a name="lab" />
-#### Lab execution instructions
-TODO
 

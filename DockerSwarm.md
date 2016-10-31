@@ -407,7 +407,7 @@ ssh ${MYUSER}@${MYSERVER} -L 8080:$(docker-machine ip swmaster):8080 -Nv
 
 Then open your web browser at the page http://localhost:8080 and you should see a lovely blue whale, as below:
 
-![](http://localhost:8080/static/img/docker.png)
+![](images/docker.png)
 
 
 # scale service
@@ -491,7 +491,7 @@ docker $(docker-machine config swmaster) service ps docker-demo
 Then open your web browser at the page http://localhost:8080 and you should now see a lovely **red** whale.
 
 
-![](http://localhost:8080/static/img/docker_red.png)
+![](images/docker_red.png)
 
 
 
